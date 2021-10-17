@@ -6,16 +6,31 @@
 #define MALLOCWORLD_WORLD_H
 
 #include "zone.h"
+#include "respawn.h"
 
 #define NB_ZONE 3
 
 typedef struct World{
     Zone** originalWorld;
-    Zone** currentWorld;
+    Respawn respawnHeader;
 } World;
 
+/**
+ * Generate the world
+ * @return The world generated
+ */
 World* generateWorld();
+
+/**
+ * Printed into the console the world
+ * @param world The world
+ */
 void printOriginalWorld(World world);
+
+/**
+ * Free the world (including zone and respawn) from memory
+ * @param world The world
+ */
 void freeWorld(World* world);
 
 #endif //MALLOCWORLD_WORLD_H

@@ -257,6 +257,33 @@ src/monster.c.s:
 	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/monster.c.s
 .PHONY : src/monster.c.s
 
+src/respawn.obj: src/respawn.c.obj
+
+.PHONY : src/respawn.obj
+
+# target to build an object file
+src/respawn.c.obj:
+	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/respawn.c.obj
+.PHONY : src/respawn.c.obj
+
+src/respawn.i: src/respawn.c.i
+
+.PHONY : src/respawn.i
+
+# target to preprocess a source file
+src/respawn.c.i:
+	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/respawn.c.i
+.PHONY : src/respawn.c.i
+
+src/respawn.s: src/respawn.c.s
+
+.PHONY : src/respawn.s
+
+# target to generate assembly for a file
+src/respawn.c.s:
+	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/respawn.c.s
+.PHONY : src/respawn.c.s
+
 src/world.obj: src/world.c.obj
 
 .PHONY : src/world.obj
@@ -335,6 +362,9 @@ help:
 	@echo ... src/monster.obj
 	@echo ... src/monster.i
 	@echo ... src/monster.s
+	@echo ... src/respawn.obj
+	@echo ... src/respawn.i
+	@echo ... src/respawn.s
 	@echo ... src/world.obj
 	@echo ... src/world.i
 	@echo ... src/world.s

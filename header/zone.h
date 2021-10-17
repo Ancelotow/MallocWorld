@@ -37,14 +37,64 @@ typedef struct Zone{
     TypeZone type;
 } Zone;
 
+/**
+ * Generated a zone
+ * @param type The zone's type (1, 2 or 3)
+ * @return The zone
+ */
 Zone* generateZone(TypeZone type);
+
+/**
+ * Printed into console the zone
+ * @param zone The zone
+ */
 void printZone(Zone* zone);
+
+/**
+ * Free the zone (including the map) from memory
+ * @param zone The zone
+ */
 void freeZone(Zone* zone);
+
+/**
+ * Generated a portal (portal to pass between each zone) into a zone
+ * @param zone The zone
+ */
 void generatePortail(Zone* zone);
+
+/**
+ * Get plant from zone
+ * @param type The type of zone (1, 2 or 3)
+ * @return The plant
+ */
 Element getElementPlant(TypeZone type);
+
+/**
+ * Get wood from zone
+ * @param type The type of zone (1, 2 or 3)
+ * @return The wood
+ */
 Element getElementWood(TypeZone type);
+
+/**
+ * Get rock from zone
+ * @param type The type of zone (1, 2 or 3)
+ * @return The rock
+ */
 Element getElementRock(TypeZone type);
-int getRandomResource(TypeZone zone);
+
+/**
+ * Get a random resource (plant, wood or rock) for a zone
+ * @param typeZone The type of zone (1, 2 or 3)
+ * @return The random resource
+ */
+int getRandomResource(TypeZone typeZone);
+
+/**
+ * Get a random monster for a zone
+ * @param typeZone The type of zone (1, 2 or 3)
+ * @return The random monster
+ */
 int getRandomMonster(TypeZone typeZone);
 
 #endif //MALLOCWORLD_ZONE_H

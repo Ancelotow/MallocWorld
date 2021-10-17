@@ -44,7 +44,7 @@ char* getMonsterRaceName(MonsterRace race);
 
 /**
  * Printed into the console the information about a monster
- * @param monster monster
+ * @param monster Monster
  */
 void printMonster(Monster monster);
 

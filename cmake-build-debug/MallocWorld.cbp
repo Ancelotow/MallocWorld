@@ -86,6 +86,9 @@
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/header/monster.h">
 			<Option target="MallocWorld"/>
 		</Unit>
+		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/header/respawn.h">
+			<Option target="MallocWorld"/>
+		</Unit>
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/header/world.h">
 			<Option target="MallocWorld"/>
 		</Unit>
@@ -105,6 +108,9 @@
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/src/monster.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/src/respawn.c">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/src/world.c">

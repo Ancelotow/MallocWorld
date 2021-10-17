@@ -10,6 +10,10 @@
 #define HOUSE_WIDTH 7
 #define HOUSE_HEIGHT 7
 
+/**
+ * Generate a map of "Village"'s type for a zone
+ * @param zone The zone
+ */
 void generateVillage(Zone* zone);
 
 #endif //MALLOCWORLD_VILLAGE_H

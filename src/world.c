@@ -10,7 +10,6 @@
 World* generateWorld(){
     World* world = malloc(sizeof(World));
     world->originalWorld = malloc(sizeof(Zone*) * NB_ZONE);
-    //world->currentWorld = malloc(sizeof(Zone*) * NB_ZONE);
     world->originalWorld[0] = generateZone(ZONE_1);
     world->originalWorld[1] = generateZone(ZONE_2);
     world->originalWorld[2] = generateZone(ZONE_3);

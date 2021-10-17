@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MallocWorld.dir/src/inventory.c.obj"
   "CMakeFiles/MallocWorld.dir/src/map/village.c.obj"
   "CMakeFiles/MallocWorld.dir/src/monster.c.obj"
+  "CMakeFiles/MallocWorld.dir/src/respawn.c.obj"
   "CMakeFiles/MallocWorld.dir/src/world.c.obj"
   "CMakeFiles/MallocWorld.dir/src/zone.c.obj"
   "MallocWorld.exe"
