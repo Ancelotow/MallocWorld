@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/Documents/Projets/ESGI/MallocWorld/header/world.h
+zone.h
+F:/Documents/Projets/ESGI/MallocWorld/header/zone.h
+
+F:/Documents/Projets/ESGI/MallocWorld/header/zone.h
+
+F:/Documents/Projets/ESGI/MallocWorld/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+header/world.h
+F:/Documents/Projets/ESGI/MallocWorld/header/world.h
+
