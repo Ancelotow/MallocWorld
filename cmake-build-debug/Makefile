@@ -203,6 +203,33 @@ src/inventory.c.s:
 	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/inventory.c.s
 .PHONY : src/inventory.c.s
 
+src/map/forest.obj: src/map/forest.c.obj
+
+.PHONY : src/map/forest.obj
+
+# target to build an object file
+src/map/forest.c.obj:
+	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/map/forest.c.obj
+.PHONY : src/map/forest.c.obj
+
+src/map/forest.i: src/map/forest.c.i
+
+.PHONY : src/map/forest.i
+
+# target to preprocess a source file
+src/map/forest.c.i:
+	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/map/forest.c.i
+.PHONY : src/map/forest.c.i
+
+src/map/forest.s: src/map/forest.c.s
+
+.PHONY : src/map/forest.s
+
+# target to generate assembly for a file
+src/map/forest.c.s:
+	$(MAKE) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/src/map/forest.c.s
+.PHONY : src/map/forest.c.s
+
 src/map/village.obj: src/map/village.c.obj
 
 .PHONY : src/map/village.obj
@@ -356,6 +383,9 @@ help:
 	@echo ... src/inventory.obj
 	@echo ... src/inventory.i
 	@echo ... src/inventory.s
+	@echo ... src/map/forest.obj
+	@echo ... src/map/forest.i
+	@echo ... src/map/forest.s
 	@echo ... src/map/village.obj
 	@echo ... src/map/village.i
 	@echo ... src/map/village.s

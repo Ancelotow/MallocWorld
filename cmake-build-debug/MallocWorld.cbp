@@ -80,6 +80,9 @@
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/header/inventory.h">
 			<Option target="MallocWorld"/>
 		</Unit>
+		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/header/map/forest.h">
+			<Option target="MallocWorld"/>
+		</Unit>
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/header/map/village.h">
 			<Option target="MallocWorld"/>
 		</Unit>
@@ -102,6 +105,9 @@
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/src/inventory.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/src/map/forest.c">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="F:/Documents/Projets/ESGI/MallocWorld/src/map/village.c">

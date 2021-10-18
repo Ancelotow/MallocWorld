@@ -4,6 +4,7 @@
 #include "../header/inventory.h"
 #include "../header/zone.h"
 #include "../header/map/village.h"
+#include "../header/map/forest.h"
 
 Zone* generateZone(TypeZone type){
     Zone* zone = malloc(sizeof(Zone));
@@ -17,10 +18,13 @@ Zone* generateZone(TypeZone type){
             zone->map[i][j] = 0;
         }
     }
-    generateVillage(zone);
-    if(type == ZONE_1){
-        int posStart = getRandomNumber(0) % zone->column;
-        zone->map[0][posStart] = PLAYER;
+    if(getRandomNumber(0) % 2){
+        generateVillage(zone);
+    } else {
+        generateForest(zone);
+    }
+    if(zone->type == ZONE_1) {
+        placePlayer(zone);
     }
     return zone;
 }
@@ -41,6 +45,19 @@ void generatePortail(Zone* zone){
         case ZONE_3:
             zone->map[0][position] = PORTAL_ZONE_3;
             break;
+    }
+}
+
+void placePlayer(Zone* zone){
+    if(zone->type == ZONE_1){
+        int playerGenerate = 0;
+        while(!playerGenerate){
+            int colStart = getRandomNumber(0) % zone->column;
+            if(zone->map[0][colStart]  == 0){
+                zone->map[0][colStart] = PLAYER;
+                playerGenerate = 1;
+            }
+        }
     }
 }
 

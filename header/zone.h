@@ -45,6 +45,12 @@ typedef struct Zone{
 Zone* generateZone(TypeZone type);
 
 /**
+ * Placed the player in zone 1
+ * @param zone The zone 1
+ */
+void placePlayer(Zone* zone);
+
+/**
  * Printed into console the zone
  * @param zone The zone
  */

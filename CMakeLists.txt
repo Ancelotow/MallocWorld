@@ -13,6 +13,6 @@ set(CMAKE_C_STANDARD 99)
 #find_package(SDL2_Image REQUIRED)
 
 
-add_executable(MallocWorld main.c src/inventory.c header/inventory.h src/global.c header/global.h src/monster.c header/monster.h src/world.c header/world.h src/map/village.c header/map/village.h src/zone.c header/zone.h src/respawn.c header/respawn.h)
+add_executable(MallocWorld main.c src/inventory.c header/inventory.h src/global.c header/global.h src/monster.c header/monster.h src/world.c header/world.h src/map/village.c header/map/village.h src/zone.c header/zone.h src/respawn.c header/respawn.h src/map/forest.c header/map/forest.h)
 #include_directories(${PROJECT_SOURCE_DIR}/include ${SDL2_IMAGE_INCLUDE_DIR})
 #target_link_libraries(MallocWorld ${SDL2_LIBRARY})

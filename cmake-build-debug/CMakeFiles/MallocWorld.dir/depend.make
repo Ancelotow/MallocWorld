@@ -13,6 +13,12 @@ CMakeFiles/MallocWorld.dir/src/inventory.c.obj: ../header/global.h
 CMakeFiles/MallocWorld.dir/src/inventory.c.obj: ../header/inventory.h
 CMakeFiles/MallocWorld.dir/src/inventory.c.obj: ../src/inventory.c
 
+CMakeFiles/MallocWorld.dir/src/map/forest.c.obj: ../header/global.h
+CMakeFiles/MallocWorld.dir/src/map/forest.c.obj: ../header/map/forest.h
+CMakeFiles/MallocWorld.dir/src/map/forest.c.obj: ../header/map/village.h
+CMakeFiles/MallocWorld.dir/src/map/forest.c.obj: ../header/zone.h
+CMakeFiles/MallocWorld.dir/src/map/forest.c.obj: ../src/map/forest.c
+
 CMakeFiles/MallocWorld.dir/src/map/village.c.obj: ../header/global.h
 CMakeFiles/MallocWorld.dir/src/map/village.c.obj: ../header/map/village.h
 CMakeFiles/MallocWorld.dir/src/map/village.c.obj: ../header/zone.h
@@ -36,6 +42,7 @@ CMakeFiles/MallocWorld.dir/src/world.c.obj: ../src/world.c
 
 CMakeFiles/MallocWorld.dir/src/zone.c.obj: ../header/global.h
 CMakeFiles/MallocWorld.dir/src/zone.c.obj: ../header/inventory.h
+CMakeFiles/MallocWorld.dir/src/zone.c.obj: ../header/map/forest.h
 CMakeFiles/MallocWorld.dir/src/zone.c.obj: ../header/map/village.h
 CMakeFiles/MallocWorld.dir/src/zone.c.obj: ../header/zone.h
 CMakeFiles/MallocWorld.dir/src/zone.c.obj: ../src/zone.c
