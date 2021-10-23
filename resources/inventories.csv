@@ -1,0 +1,8 @@
+id;name;value;durability;maximum stack;type inventory
+1;Epee en bois;1;10;1;1
+2;Pioche en bois;0;10;1;5
+3;Serpe en bois;0;10;1;5
+4;Hache en bois;0;10;1;5
+5;Sapin;0;0;20;4
+6;Pierre;0;0;20;4
+7;Herbe;0;0;20;4

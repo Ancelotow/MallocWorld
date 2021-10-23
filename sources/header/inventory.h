@@ -20,6 +20,7 @@ typedef struct Inventory{
     char* name;
     int value;
     int durability;
+    int maxStack;
     InventoryType type;
 } Inventory;
 
@@ -52,5 +53,7 @@ void printInventory(Inventory inventory);
  * @param inventory
  */
 void freeInventory(Inventory* inventory);
+
+Inventory* getInventoryFromId(int id);
 
 #endif //MALLOCWORLD_INVENTORY_H

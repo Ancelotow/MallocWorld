@@ -49,3 +49,10 @@ int getRandomNumber(int min){
     struct tm tm = *localtime(&t);
     return (rand() % tm.tm_sec) + min;
 }
+
+int getFileLength(FILE* file){
+    fseek(file, 0, SEEK_END);
+    int length = ftell(file);
+    fseek(file, 0, SEEK_SET);
+    return length;
+}

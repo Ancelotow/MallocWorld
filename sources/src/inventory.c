@@ -26,7 +26,7 @@ void printInventory(Inventory inventory){
             break;
 
         case TOOL:
-            printf("Outil: %s,  %d durabilite", inventory.name, inventory.value);
+            printf("Outil: %s,  %d durabilite", inventory.name, inventory.durability);
             break;
 
         case CARE:
@@ -34,7 +34,7 @@ void printInventory(Inventory inventory){
             break;
 
         case RESOURCE:
-            printf("Soin: %s, %d maximum", inventory.name, inventory.value);
+            printf("Ressource: %s, %d maximum", inventory.name, inventory.value);
             break;
     }
 }
@@ -66,6 +66,28 @@ void freeInventory(Inventory* inventory){
     free(inventory);
 }
 
-/*Inventory** createAllInventory(){
-    Inventory** listInventories = malloc(sizeof())
-}*/
+Inventory* getInventoryFromId(int id){
+    FILE* csv = fopen("../resources/inventories.csv", "r");
+    if(csv != NULL){
+        int length = getFileLength(csv);
+        char inv[100];
+        char *split;
+        while(ftell(csv) < length){
+            fgets(inv, 100, csv);
+            split = strtok(inv, ";");
+            if(atoi(split) == id){
+                char *name = strtok(NULL, ";");
+                int value = atoi(strtok(NULL, ";"));
+                int durability = atoi(strtok(NULL, ";"));
+                int maxStack = atoi(strtok(NULL, ";"));
+                InventoryType type = atoi(strtok(NULL, ";"));
+                fclose(csv);
+                return createInventory(id, name, value, durability, type);
+            }
+        }
+        fclose(csv);
+        return NULL;
+    } else{
+        return NULL;
+    }
+}
