@@ -2,6 +2,7 @@
 #define MALLOCWORLD_MONSTER_H
 
 #include "inventory.h"
+#define FILENAME_MONSTERS "../resources/monsters.csv"
 
 typedef enum MonsterBreed{
     CREATURE = 1,

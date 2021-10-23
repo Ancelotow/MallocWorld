@@ -4,7 +4,6 @@
 #include "../header/inventory.h"
 #include "../header/global.h"
 
-
 Inventory* createInventory(int id, char* name, int value, int durability, InventoryType type){
     Inventory* inventory = malloc(sizeof(Inventory));
     inventory->id = id;
@@ -18,7 +17,7 @@ Inventory* createInventory(int id, char* name, int value, int durability, Invent
 void printInventory(Inventory inventory){
     switch(inventory.type){
         case WEAPON:
-            printf("Arme: %s,  %d dégâts, %d durabilite", inventory.name, inventory.value, inventory.durability);
+            printf("Arme: %s,  %d degats, %d durabilite", inventory.name, inventory.value, inventory.durability);
             break;
 
         case ARMOR:
@@ -67,7 +66,7 @@ void freeInventory(Inventory* inventory){
 }
 
 Inventory* getInventoryFromId(int id){
-    FILE* csv = fopen("../resources/inventories.csv", "r");
+    FILE* csv = fopen(FILENAME_INVENTORIES, "r");
     if(csv != NULL){
         int length = getFileLength(csv);
         char inv[100];

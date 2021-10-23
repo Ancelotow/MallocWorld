@@ -59,7 +59,7 @@ void freeMonster(Monster* monster){
 }
 
 Monster* getMonsterFromId(int id){
-    FILE* csv = fopen("../resources/monsters.csv", "r");
+    FILE* csv = fopen(FILENAME_MONSTERS, "r");
     if(csv != NULL){
         int length = getFileLength(csv);
         char inv[100];

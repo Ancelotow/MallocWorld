@@ -103,4 +103,6 @@ int getRandomResource(TypeZone typeZone);
  */
 int getRandomMonster(TypeZone typeZone);
 
+void printZoneDebug(Zone* zone);
+
 #endif //MALLOCWORLD_ZONE_H

@@ -11,9 +11,18 @@ typedef struct Player{
     int currentHp;
     int maxHp;
     Inventory** inventory;
+    int sizeInventory;
     int level;
     int xp;
     int xpNext;
 } Player;
+
+Player* createPlayer(int currentHp, int maxHp, Inventory** inventory, int sizeInventory, int level, int xp, int xpNext);
+
+Player* createPlayerLevel1();
+
+void printPlayer(Player player);
+
+void freePlayer(Player* player);
 
 #endif //MALLOCWORLD_PLAYER_H

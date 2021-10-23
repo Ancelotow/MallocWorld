@@ -1,6 +1,8 @@
 #ifndef MALLOCWORLD_INVENTORY_H
 #define MALLOCWORLD_INVENTORY_H
 
+#define FILENAME_INVENTORIES "../resources/inventories.csv"
+
 typedef enum InventoryType{
     WEAPON = 1,
     ARMOR = 2,

@@ -4,6 +4,9 @@
 #include "header/world.h"
 #include "header/inventory.h"
 #include "header/monster.h"
+#include "header/player.h"
+#include "header/game.h"
+#include "header/global.h"
 
 void testPrintWorld(){
     World* world = generateWorld();
@@ -19,17 +22,24 @@ void testPrintInventory(int idInventory){
     }
 }
 
-void testPrintMonster(int idInventory){
-    Monster* monster = getMonsterFromId(idInventory);
+void testPrintMonster(int idMonster){
+    Monster* monster = getMonsterFromId(idMonster);
     if(monster != NULL){
         printMonster(*monster);
         freeMonster(monster);
     }
 }
 
+void testPrintPlayer(){
+    Player* player = createPlayerLevel1();
+    printPlayer(*player);
+    freePlayer(player);
+}
+
 int main() {
-    testPrintMonster(40);
-    return 0;
+    printTitle();
+    runGame();
+    return (0);
 }
 
 

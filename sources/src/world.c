@@ -17,7 +17,7 @@ World* generateWorld(){
 void printOriginalWorld(World world){
     printf("====================== WORLD =========================\n\n\n");
     for(int i=0; i < NB_ZONE; i++){
-        printZone(world.originalWorld[i]);
+        printZoneDebug(world.originalWorld[i]);
     }
     printf("\n\n======================================================");
 }

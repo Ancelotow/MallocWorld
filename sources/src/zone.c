@@ -134,18 +134,29 @@ int getRandomMonster(TypeZone typeZone){
             break;
 
         case ZONE_2:
-            monsterStart = 22;
+            monsterStart = 24;
             break;
 
         case ZONE_3:
-            monsterStart = 32;
+            monsterStart = 36;
             break;
     }
-    return (getRandomNumber(0) % 10) + monsterStart;
+    return (getRandomNumber(0) % 11) + monsterStart + 1;
+}
+
+void printZoneDebug(Zone* zone){
+    printf("-- ZONE %d --  (row: %d, column: %d)\n", zone->type, zone->row, zone->column);
+    for(int i=0; i < zone->row; i++){
+        for(int j=0; j < zone->column; j++){
+            printf("%2d ", zone->map[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n\n");
 }
 
 void printZone(Zone* zone){
-    printf("-- ZONE %d --  (row: %d, column: %d)\n", zone->type, zone->row, zone->column);
+    printf("-- ZONE %d -- \n", zone->type);
     for(int i=0; i < zone->row; i++){
         for(int j=0; j < zone->column; j++){
             printf("%2d ", zone->map[i][j]);
