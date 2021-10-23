@@ -3,20 +3,21 @@
 
 #include "inventory.h"
 
-typedef enum MonsterRace{
+typedef enum MonsterBreed{
     CREATURE = 1,
     ORC = 2,
     TROLL = 3,
     GOBLIN = 5,
     DARK_ELF = 6,
     UNDEAD = 7,
-    DRAGON = 8
-} MonsterRace;
+    DRAGON = 8,
+    BALROG = 9
+} MonsterBreed;
 
 typedef struct Monster{
     int id;
     char* name;
-    MonsterRace race;
+    MonsterBreed breed;
     int xp;
     int damage;
     Inventory* object;
@@ -33,14 +34,14 @@ typedef struct Monster{
  * @param object Monster's object when he's defeated
  * @return A monster
  */
-Monster* createMonster(int id, char* name, MonsterRace race, int xp, int damage, Inventory object, int hp);
+Monster* createMonster(int id, char* name, MonsterBreed breed, int xp, int damage, Inventory object, int hp);
 
 /**
  * Get name of a monster race
  * @param race Race monster
  * @return Name of a monster race
  */
-char* getMonsterRaceName(MonsterRace race);
+char* getMonsterRaceName(MonsterBreed breed);
 
 /**
  * Printed into the console the information about a monster
