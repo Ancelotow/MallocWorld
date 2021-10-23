@@ -3,26 +3,32 @@
 #include <string.h>
 #include "header/world.h"
 #include "header/inventory.h"
+#include "header/monster.h"
 
 void testPrintWorld(){
     World* world = generateWorld();
     printOriginalWorld(*world);
     freeWorld(world);
-    char str[100];
-    scanf("Appuyez sur \"Entrée\" pour terminer... %s", str);
+}
+
+void testPrintInventory(int idInventory){
+    Inventory* inv = getInventoryFromId(34);
+    if(inv != NULL){
+        printInventory(*inv);
+        freeInventory(inv);
+    }
+}
+
+void testPrintMonster(int idInventory){
+    Monster* monster = getMonsterFromId(idInventory);
+    if(monster != NULL){
+        printMonster(*monster);
+        freeMonster(monster);
+    }
 }
 
 int main() {
-    Inventory* inv = getInventoryFromId(3);
-    char str[100];
-    if(inv == NULL){
-        scanf("Appuyez sur \"Entrée\" pour terminer (not exsists)... %s", str);
-
-        return 0;
-    }
-    printInventory(*inv);
-    freeInventory(inv);
-    scanf("Appuyez sur \"Entrée\" pour terminer... %s", str);
+    testPrintMonster(40);
     return 0;
 }
 

@@ -20,7 +20,7 @@ typedef struct Monster{
     MonsterBreed breed;
     int xp;
     int damage;
-    Inventory* object;
+    int idInventory;
     int hp;
 } Monster;
 
@@ -31,10 +31,10 @@ typedef struct Monster{
  * @param race Monster's race (ex: Goblin, Dark Elf, Orc, ...)
  * @param xp Monster's experience gain
  * @param damage Monster's damage
- * @param object Monster's object when he's defeated
+ * @param idInventory Monster's object when he's defeated
  * @return A monster
  */
-Monster* createMonster(int id, char* name, MonsterBreed breed, int xp, int damage, Inventory object, int hp);
+Monster* createMonster(int id, char* name, MonsterBreed breed, int xp, int damage, int idInventory, int hp);
 
 /**
  * Get name of a monster race
@@ -54,5 +54,7 @@ void printMonster(Monster monster);
  * @param monster
  */
 void freeMonster(Monster* monster);
+
+Monster* getMonsterFromId(int id);
 
 #endif //MALLOCWORLD_MONSTER_H

@@ -5,24 +5,24 @@
 #include "../header/global.h"
 
 
-Monster* createMonster(int id, char* name, MonsterRace race, int xp, int damage, Inventory object, int hp){
+Monster* createMonster(int id, char* name, MonsterBreed breed, int xp, int damage, int idInventory, int hp){
     Monster* monster = malloc(sizeof(Monster));
     monster->id = id;
-    monster->race = race;
+    monster->breed = breed;
     monster->xp = xp;
     monster->hp = hp;
     monster->damage = damage;
-    monster->object = createInventory(object.id, object.name, object.value, object.durability, object.type);
+    monster->idInventory = idInventory;
     monster->name = copyString(name);
     return monster;
 }
 
 void printMonster(Monster monster){
-    char* race = getMonsterRaceName(monster.race);
+    char* race = getMonsterRaceName(monster.breed);
     printf("%s : %s %dxp", race, monster.name, monster.xp);
 }
 
-char* getMonsterRaceName(MonsterRace race){
+char* getMonsterRaceName(MonsterBreed race){
     switch(race){
         case CREATURE:
             return "Creature";
@@ -45,13 +45,42 @@ char* getMonsterRaceName(MonsterRace race){
         case DRAGON:
             return "Dragon";
 
+        case BALROG:
+            return "Balrog";
+
         default:
             return NULL;
     }
 }
 
 void freeMonster(Monster* monster){
-    freeInventory(monster->object);
     free(monster->name);
     free(monster);
+}
+
+Monster* getMonsterFromId(int id){
+    FILE* csv = fopen("../resources/monsters.csv", "r");
+    if(csv != NULL){
+        int length = getFileLength(csv);
+        char inv[100];
+        char *split;
+        while(ftell(csv) < length){
+            fgets(inv, 100, csv);
+            split = strtok(inv, ";");
+            if(atoi(split) == id){
+                char *name = strtok(NULL, ";");
+                int hp = atoi(strtok(NULL, ";"));
+                int damage = atoi(strtok(NULL, ";"));
+                int xp = atoi(strtok(NULL, ";"));
+                MonsterBreed breed = atoi(strtok(NULL, ";"));
+                int idInventory = atoi(strtok(NULL, ";"));
+                fclose(csv);
+                return createMonster(id, name, breed, xp, damage, idInventory, hp);
+            }
+        }
+        fclose(csv);
+        return NULL;
+    } else{
+        return NULL;
+    }
 }

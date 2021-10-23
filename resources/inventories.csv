@@ -3,6 +3,34 @@ id;name;value;durability;maximum stack;type inventory
 2;Pioche en bois;0;10;1;5
 3;Serpe en bois;0;10;1;5
 4;Hache en bois;0;10;1;5
-5;Sapin;0;0;20;4
-6;Pierre;0;0;20;4
-7;Herbe;0;0;20;4
+5;Sapin;0;1;20;4
+6;Pierre;0;1;20;4
+7;Herbe;0;1;20;4
+8;Epee en pierre;2;10;1;1
+9;Lance en pierre;3;8;1;1
+10;Marteau en pierre;4;5;1;1
+11;Plastron en pierre;10;-1;1;2
+12;Pioche en pierre;0;10;1;5
+13;Serpe en pierre;0;10;1;5
+14;Hache en pierre;0;10;1;5
+15;Potion de vie I;30;1;1;3
+16;Hetre;0;1;20;4
+17;Fer;0;1;20;4
+18;Lavande;0;1;20;4
+19;Epee en fer;5;10;1;1
+20;Lance en fer;7;8;1;1
+21;Marteau en fer;10;5;1;1
+22;Plastron en fer;20;-1;1;2
+23;Pioche en fer;0;10;1;5
+24;Serpe en fer;0;10;1;5
+25;Hache en fer;0;10;1;5
+26;Potion de vie II;80;1;1;3
+27;Chene ;0;1;20;4
+28;Diamant;0;1;20;4
+29;Chanvre;0;1;20;4
+30;Epee en diamant;10;10;1;1
+31;Lance en diamant;15;8;1;1
+32;Marteau en diamant;20;5;1;1
+33;Plastron en diamant;40;-1;1;2
+34;Potion de vie III;200;1;1;3
+35;Excalibur;20;-1;1;1
