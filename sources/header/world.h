@@ -11,7 +11,7 @@
 #define NB_ZONE 3
 
 typedef struct World{
-    Zone** originalWorld;
+    Zone** world;
     Respawn respawnHeader;
 } World;
 
