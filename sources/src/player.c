@@ -73,3 +73,11 @@ void freePlayer(Player* player){
     free(player->inventory);
     free(player);
 }
+
+void savePlayer(FILE* file, Player player){
+    fputs("=== PLAYER ===\n", file);
+    fprintf(file, "{%d}\n", player.level);
+    fprintf(file, "{%d}/{%d}\n", player.xp, player.xpNext);
+    fprintf(file, "{%d}/{%d}\n", player.currentHp, player.maxHp);
+    fputs("-- INVENTORY --\n", file);
+}

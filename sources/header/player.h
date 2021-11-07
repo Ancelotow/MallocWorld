@@ -30,4 +30,6 @@ void printInventoryPlayer(Player player);
 
 void freePlayer(Player* player);
 
+void savePlayer(FILE* file, Player player);
+
 #endif //MALLOCWORLD_PLAYER_H

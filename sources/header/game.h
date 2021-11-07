@@ -30,4 +30,6 @@ void moves(Position newPosition, Position* currentPos, World* world);
 
 void freeGame(Game* game);
 
+void saveGame(Game game);
+
 #endif //MALLOCWORLD_GAME_H

@@ -5,6 +5,8 @@
 #ifndef MALLOCWORLD_ZONE_H
 #define MALLOCWORLD_ZONE_H
 
+#include <stdio.h>
+
 typedef enum Element{
     PORTAL_ZONE_2 = -2,
     PORTAL_ZONE_3 = -3,
@@ -104,5 +106,7 @@ int getRandomResource(TypeZone typeZone);
 int getRandomMonster(TypeZone typeZone);
 
 void printZoneDebug(Zone* zone);
+
+void saveZone(FILE* file, Zone zone);
 
 #endif //MALLOCWORLD_ZONE_H

@@ -33,4 +33,6 @@ void printOriginalWorld(World world);
  */
 void freeWorld(World* world);
 
+void saveWorld(FILE* file, World world);
+
 #endif //MALLOCWORLD_WORLD_H

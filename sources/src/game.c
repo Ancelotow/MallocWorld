@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define PATH_SAVE "../resources/save/save.txt"
+
 #define CMD_CREATE_GAME "create"
 #define CMD_LOAD_GAME "load [save_file]"
 
@@ -43,6 +45,7 @@ void play(Game* game){
         scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
         scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
         if(input == CMD_SAVE){
+            saveGame(*game);
             continueGame = 0;
         } else if(input == CMD_INVENTORY) {
             printInventoryPlayer(*game->player);
@@ -103,4 +106,15 @@ void freeGame(Game* game){
     freePosition(game->position);
     freePlayer(game->player);
     free(game);
+}
+
+void saveGame(Game game){
+    FILE* file = fopen(PATH_SAVE, "w+");
+    if(file != NULL){
+        saveWorld(file, *game.world);
+        savePlayer(file, *game.player);
+        fclose(file);
+    } else{
+        printf("NULLkllll");
+    }
 }
