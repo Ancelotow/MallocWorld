@@ -48,6 +48,8 @@ Inventory* createInventory(int id, char* name, int value, int durability, int ma
  * Printed into the console the information about an inventory's object
  * @param inventory Inventory's object
  */
+void printInventoryDebug(Inventory inventory);
+
 void printInventory(Inventory inventory);
 
 /**

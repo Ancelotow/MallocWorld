@@ -48,14 +48,22 @@ void appendInventory(Player* player, Inventory* inventory){
     }
 }
 
-void printPlayer(Player player){
+void printPlayerDebug(Player player){
     printf("Joueur : %d/%dHP, %d/%dxp, lvl%d\n", player.currentHp, player.maxHp, player.xp, player.xpNext, player.level);
     printf("\t -- INVENTAIRE --\n");
     for(int i=0; i < player.sizeInventory; i++){
         printf("\t");
-        printStack(*player.inventory[i]);
+        printStackDebug(*player.inventory[i]);
         printf("\n");
     }
+}
+
+void printInventoryPlayer(Player player){
+    printf("======================= INVENTAIRE =======================\n");
+    for(int i = 0; i < player.sizeInventory; i++){
+        printStack(*player.inventory[i]);
+    }
+    printf("==========================================================\n\n");
 }
 
 void freePlayer(Player* player){

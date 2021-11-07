@@ -38,7 +38,7 @@ void testPrintPlayer(){
     appendInventory(player, getInventoryFromId(15));
     appendInventory(player, getInventoryFromId(15));
     appendInventory(player, getInventoryFromId(1));
-    printPlayer(*player);
+    printPlayerDebug(*player);
     freePlayer(player);
 }
 

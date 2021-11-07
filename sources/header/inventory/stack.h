@@ -20,6 +20,8 @@ Stack* createStackWithInventory(Inventory* inventory);
 
 int appendStack(Inventory* inventory, Stack* stack);
 
+void printStackDebug(Stack stack);
+
 void printStack(Stack stack);
 
 void deleteStack(int index, Stack* stack);

@@ -10,6 +10,7 @@
 #define CMD_LOAD_GAME "load [save_file]"
 
 #define CMD_SAVE 'l'
+#define CMD_INVENTORY 'i'
 #define CMD_UP 'z'
 #define CMD_DOWN 's'
 #define CMD_LEFT 'q'
@@ -43,6 +44,8 @@ void play(Game* game){
         scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
         if(input == CMD_SAVE){
             continueGame = 0;
+        } else if(input == CMD_INVENTORY) {
+            printInventoryPlayer(*game->player);
         } else {
             actionMove(input, game->position, game->world);
         }

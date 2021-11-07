@@ -29,9 +29,19 @@ int appendStack(Inventory* inventory, Stack* stack){
     }
 }
 
-void printStack(Stack stack){
+void printStackDebug(Stack stack){
     Inventory* inv = getInventoryFromId(stack.id);
     printf("\n\n=========== %s : %s  ||  %d/%d ===========\n", getInventoryTypeName(inv->type), inv->name, stack.length, stack.maximum);
+    for(int i =0; i < stack.length; i++){
+        printInventory(*stack.inventory[i]);
+    }
+    freeInventory(inv);
+}
+
+void printStack(Stack stack){
+    Inventory* inv = getInventoryFromId(stack.id);
+    printf("||                                                      ||\n");
+    printf("|| %s : %s ==== %d/%d \t\t\t||\n", getInventoryTypeName(inv->type), inv->name, stack.length, stack.maximum);
     for(int i =0; i < stack.length; i++){
         printInventory(*stack.inventory[i]);
     }

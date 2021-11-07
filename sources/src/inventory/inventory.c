@@ -15,7 +15,7 @@ Inventory* createInventory(int id, char* name, int value, int durability, int ma
     return inventory;
 }
 
-void printInventory(Inventory inventory){
+void printInventoryDebug(Inventory inventory){
     printf("\t -");
     switch(inventory.type){
         case WEAPON:
@@ -39,6 +39,31 @@ void printInventory(Inventory inventory){
             break;
     }
     printf("\n");
+}
+
+void printInventory(Inventory inventory){
+    printf("||\t -");
+    switch(inventory.type){
+        case WEAPON:
+            printf("%d degats, %d durabilite\t\t\t||\n",inventory.value, inventory.durability);
+            break;
+
+        case ARMOR:
+            printf("%d resistance\t\t\t\t\t||\n", inventory.value);
+            break;
+
+        case TOOL:
+            printf("%d durabilite\t\t\t\t\t||\n", inventory.durability);
+            break;
+
+        case CARE:
+            printf("restaure %d HP\t\t\t\t\t||\n", inventory.value);
+            break;
+
+        case RESOURCE:
+            printf("%d maximum\t\t\t\t\t||\n", inventory.value);
+            break;
+    }
 }
 
 char* getInventoryTypeName(InventoryType type){

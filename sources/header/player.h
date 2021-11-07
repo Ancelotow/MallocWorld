@@ -24,7 +24,9 @@ Player* createPlayerLevel1();
 
 void appendInventory(Player* player, Inventory* inventory);
 
-void printPlayer(Player player);
+void printPlayerDebug(Player player);
+
+void printInventoryPlayer(Player player);
 
 void freePlayer(Player* player);
 
