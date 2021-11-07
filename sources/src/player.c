@@ -5,7 +5,7 @@
 
 const int MAX_INVENTORY = 20;
 
-Player* createPlayer(int currentHp, int maxHp, Inventory** inventory, int sizeInventory, int level, int xp, int xpNext){
+Player* createPlayer(int currentHp, int maxHp, Stack** inventory, int sizeInventory, int level, int xp, int xpNext){
     Player* player = malloc(sizeof(Player));
     player->currentHp = currentHp;
     player->maxHp = maxHp;
@@ -20,17 +20,32 @@ Player* createPlayer(int currentHp, int maxHp, Inventory** inventory, int sizeIn
 Player* createPlayerLevel1(){
     int maxHp = 100;
     int currentHp = maxHp;
-    Inventory** inventory = malloc(sizeof(Inventory*) * 20);
-    inventory[0] = getInventoryFromId(1); // Epée en bois
-    inventory[1] = getInventoryFromId(2); // Pioche en bois
-    inventory[2] = getInventoryFromId(3); // Serpe en bois
-    inventory[3] = getInventoryFromId(4); // Hache en bois
-    Player* player = createPlayer(currentHp, maxHp, inventory, 4, 1, 0, 100);
-    /*for(int i=0; i < 4; i++){
-        freeInventory(inventory[0]);
-    }
-    free(inventory);*/
+    Stack** stack = malloc(sizeof(Stack*) * 20);
+    stack[0] = createStackWithInventory(getInventoryFromId(1)); // Epée en bois
+    stack[1] = createStackWithInventory(getInventoryFromId(2)); // Pioche en bois
+    stack[2] = createStackWithInventory(getInventoryFromId(3)); // Serpe en bois
+    stack[3] = createStackWithInventory(getInventoryFromId(4)); // Hache en bois
+    Player* player = createPlayer(currentHp, maxHp, stack, 4, 1, 0, 100);
     return player;
+}
+
+void appendInventory(Player* player, Inventory* inventory){
+    Stack* stack;
+    int stackVacant = 0;
+    for(int i = 0; i < player->sizeInventory; i++){
+        if(player->inventory[i]->id == inventory->id && player->inventory[i]->length < player->inventory[i]->maximum){
+            stack = player->inventory[i];
+            stackVacant = 1;
+            break;
+        }
+    }
+    if(stackVacant){
+        appendStack(inventory, stack);
+    } else if(player->sizeInventory < 20){
+        stack = createStackWithInventory(inventory);
+        player->inventory[player->sizeInventory] = stack;
+        player->sizeInventory += 1;
+    }
 }
 
 void printPlayer(Player player){
@@ -38,14 +53,14 @@ void printPlayer(Player player){
     printf("\t -- INVENTAIRE --\n");
     for(int i=0; i < player.sizeInventory; i++){
         printf("\t");
-        printInventory(*player.inventory[i]);
+        printStack(*player.inventory[i]);
         printf("\n");
     }
 }
 
 void freePlayer(Player* player){
     for(int i=0; i < player->sizeInventory; i++){
-        freeInventory(player->inventory[i]);
+        freeStack(player->inventory[i]);
     }
     free(player->inventory);
     free(player);

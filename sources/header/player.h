@@ -6,20 +6,23 @@
 #define MALLOCWORLD_PLAYER_H
 
 #include "inventory.h"
+#include "stack.h"
 
 typedef struct Player{
     int currentHp;
     int maxHp;
-    Inventory** inventory;
+    Stack** inventory;
     int sizeInventory;
     int level;
     int xp;
     int xpNext;
 } Player;
 
-Player* createPlayer(int currentHp, int maxHp, Inventory** inventory, int sizeInventory, int level, int xp, int xpNext);
+Player* createPlayer(int currentHp, int maxHp, Stack** inventory, int sizeInventory, int level, int xp, int xpNext);
 
 Player* createPlayerLevel1();
+
+void appendInventory(Player* player, Inventory* inventory);
 
 void printPlayer(Player player);
 

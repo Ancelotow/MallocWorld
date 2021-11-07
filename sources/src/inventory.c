@@ -4,17 +4,19 @@
 #include "../header/inventory.h"
 #include "../header/global.h"
 
-Inventory* createInventory(int id, char* name, int value, int durability, InventoryType type){
+Inventory* createInventory(int id, char* name, int value, int durability, int maxStack, InventoryType type){
     Inventory* inventory = malloc(sizeof(Inventory));
     inventory->id = id;
     inventory->value = value;
     inventory->name = copyString(name);
     inventory->durability = durability;
+    inventory->maxStack = maxStack;
     inventory->type = type;
     return inventory;
 }
 
 void printInventory(Inventory inventory){
+    printf("\t -");
     switch(inventory.type){
         case WEAPON:
             printf("Arme: %s,  %d degats, %d durabilite", inventory.name, inventory.value, inventory.durability);
@@ -36,6 +38,7 @@ void printInventory(Inventory inventory){
             printf("Ressource: %s, %d maximum", inventory.name, inventory.value);
             break;
     }
+    printf("\n");
 }
 
 char* getInventoryTypeName(InventoryType type){
@@ -81,7 +84,7 @@ Inventory* getInventoryFromId(int id){
                 int maxStack = atoi(strtok(NULL, ";"));
                 InventoryType type = atoi(strtok(NULL, ";"));
                 fclose(csv);
-                return createInventory(id, name, value, durability, type);
+                return createInventory(id, name, value, durability, maxStack, type);
             }
         }
         fclose(csv);

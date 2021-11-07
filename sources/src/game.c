@@ -1,6 +1,7 @@
 #include "../header/game.h"
 #include "../header/world.h"
 #include "../header/position.h"
+#include "../header/global.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,25 +21,13 @@ void runGame(){
     scanf("%s", input);
     printf("\n");
     if(!strcmp(CMD_CREATE_GAME, input)){
-        createVoidPartie();
+        createVoidGame();
     } else if(!strcmp(CMD_LOAD_GAME, input)){
         printf("Chargement de la partie");
     } else{
         printf("Commande inconnue\n");
         runGame();
     }
-}
-
-void printAction(){
-    printf("====================================  ACTION  =====================================\n");
-    printf("||                                      ||                                       ||\n");
-    printf("||  [Z] -> deplacement haut             ||   [B] -> retour au menu principal     ||\n");
-    printf("||  [Q] -> deplacement gauche           ||   [L] -> sauvegarde la partie         ||\n");
-    printf("||  [S] -> deplacement bas              ||   [P] -> sauvegarder et quitter       ||\n");
-    printf("||  [D] -> deplacement droite           ||   [C] -> quitter sans sauvegarder     ||\n");
-    printf("||  [I] -> regader mon inventaire       ||                                       ||\n");
-    printf("||                                      ||                                       ||\n");
-    printf("===================================================================================\n");
 }
 
 void play(World* world){
@@ -62,7 +51,8 @@ void play(World* world){
     freePosition(position);
 }
 
-void createVoidPartie(){
+void createVoidGame(){
+
     printf("Creation de la partie...\n");
     World* world = generateWorld();
     printf("Partie cree avec succes !\n\n");
@@ -71,26 +61,35 @@ void createVoidPartie(){
 
 void actionMove(char move, Position* position, World* world){
     world->world[position->zone]->map[position->y][position->x] = 0;
+    Position newPosition = *position;
     switch(move){
         case CMD_DOWN:
-            printf("DOWN\n");
-            position->y += 1;
+            newPosition.y += 1;
             break;
 
         case CMD_UP:
-            printf("UP\n");
-            position->y -= 1;
+            newPosition.y -= 1;
             break;
 
         case CMD_RIGHT:
-            printf("RIGHT\n");
-            position->x += 1;
+            newPosition.x += 1;
             break;
 
         case CMD_LEFT:
-            printf("LEFTcre\n");
-            position->x -= 1;
+            newPosition.x -= 1;
             break;
     }
-    world->world[position->zone]->map[position->y][position->x] = 1;
+    moves(newPosition, position, world);
+}
+
+void moves(Position newPosition, Position* currentPos, World* world){
+    if(world->world[newPosition.zone]->map[newPosition.y][newPosition.x] == -1){
+        printf("\n\n================================\n");
+        printf("|| Impossible de passer ici ! ||\n");
+        printf("================================\n\n");
+    } else{
+        currentPos->x = newPosition.x;
+        currentPos->y = newPosition.y;
+    }
+    world->world[currentPos->zone]->map[currentPos->y][currentPos->x] = 1;
 }

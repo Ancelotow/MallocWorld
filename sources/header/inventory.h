@@ -42,7 +42,7 @@ char* getInventoryTypeName(InventoryType type);
  * @param type Object's type (Tool, Weapon, Armor, Resource, Care)
  * @return Inventory's object created
  */
-Inventory* createInventory(int id, char* name, int value, int durability, InventoryType type);
+Inventory* createInventory(int id, char* name, int value, int durability, int maxStack, InventoryType type);
 
 /**
  * Printed into the console the information about an inventory's object

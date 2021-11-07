@@ -32,13 +32,19 @@ void testPrintMonster(int idMonster){
 
 void testPrintPlayer(){
     Player* player = createPlayerLevel1();
+    appendInventory(player, getInventoryFromId(15));
+    appendInventory(player, getInventoryFromId(15));
+    appendInventory(player, getInventoryFromId(15));
+    appendInventory(player, getInventoryFromId(15));
+    appendInventory(player, getInventoryFromId(15));
+    appendInventory(player, getInventoryFromId(1));
     printPlayer(*player);
     freePlayer(player);
 }
 
 int main() {
     printTitle();
-    runGame();
+    testPrintPlayer();
     return (0);
 }
 
