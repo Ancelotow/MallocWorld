@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../header/inventory.h"
-#include "../header/global.h"
+#include "../../header/inventory/inventory.h"
+#include "../../header/global.h"
 
 Inventory* createInventory(int id, char* name, int value, int durability, int maxStack, InventoryType type){
     Inventory* inventory = malloc(sizeof(Inventory));

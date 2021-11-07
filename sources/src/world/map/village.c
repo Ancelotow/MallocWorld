@@ -1,5 +1,5 @@
-#include "../../header/zone.h"
-#include "../../header/global.h"
+#include "../../../header/world/zone.h"
+#include "../../../header/global.h"
 
 const int HOUSE_HEIGHT = 7;
 const int HOUSE_WIDTH = 7;

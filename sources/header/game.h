@@ -5,23 +5,29 @@
 #ifndef MALLOCWORLD_GAME_H
 #define MALLOCWORLD_GAME_H
 
-#include "world.h"
+#include "world/world.h"
 #include "position.h"
 #include "player.h"
+#include "inventory/storage.h"
 
 typedef struct Game{
     World* world;
     Player* player;
     Position* position;
     Respawn* respawn;
+    Storage* storage;
 } Game;
 
 void runGame();
 
-void createVoidGame();
+Game* createVoidGame();
+
+void play(Game* game);
 
 void actionMove(char move, Position* position, World* world);
 
 void moves(Position newPosition, Position* currentPos, World* world);
+
+void freeGame(Game* game);
 
 #endif //MALLOCWORLD_GAME_H

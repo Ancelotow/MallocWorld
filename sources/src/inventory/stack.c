@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "../header/stack.h"
-#include "../header/inventory.h"
+#include "../../header/inventory/stack.h"
+#include "../../header/inventory/inventory.h"
 
 Stack* createStack(Inventory inventory){
     Stack* stack = malloc(sizeof(Stack));

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "header/world.h"
-#include "header/inventory.h"
+#include "header/world/world.h"
+#include "header/inventory/inventory.h"
 #include "header/monster.h"
 #include "header/player.h"
 #include "header/game.h"
@@ -44,7 +44,7 @@ void testPrintPlayer(){
 
 int main() {
     printTitle();
-    testPrintPlayer();
+    runGame();
     return (0);
 }
 

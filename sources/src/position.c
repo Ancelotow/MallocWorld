@@ -1,5 +1,5 @@
 #include "../header/position.h"
-#include "../header/world.h"
+#include "../header/world/world.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

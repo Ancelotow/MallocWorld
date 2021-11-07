@@ -1,5 +1,5 @@
-#include "../../header/zone.h"
-#include "../../header/global.h"
+#include "../../../header/world/zone.h"
+#include "../../../header/global.h"
 
 const int TREE_WIDTH = 7;
 const int TREE_HEIGHT = 7;

@@ -25,5 +25,5 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
-# Fortran module output directory.
+# Fortran module output inventory.
 set(CMAKE_Fortran_TARGET_MODULE_DIR "")

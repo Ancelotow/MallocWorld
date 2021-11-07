@@ -46,10 +46,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E 
 # Escaping for special characters.
 EQUALS = =
 
-# The top-level source directory on which CMake was run.
+# The top-level source inventory on which CMake was run.
 CMAKE_SOURCE_DIR = F:\Documents\Projets\ESGI\MallocWorld
 
-# The top-level build directory on which CMake was run.
+# The top-level build inventory on which CMake was run.
 CMAKE_BINARY_DIR = F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug
 
 #=============================================================================

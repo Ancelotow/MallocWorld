@@ -1,5 +1,5 @@
 #include "../header/game.h"
-#include "../header/world.h"
+#include "../header/world/world.h"
 #include "../header/position.h"
 #include "../header/global.h"
 #include <stdio.h>
@@ -21,7 +21,8 @@ void runGame(){
     scanf("%s", input);
     printf("\n");
     if(!strcmp(CMD_CREATE_GAME, input)){
-        createVoidGame();
+        Game* game = createVoidGame();
+        play(game);
     } else if(!strcmp(CMD_LOAD_GAME, input)){
         printf("Chargement de la partie");
     } else{
@@ -30,13 +31,12 @@ void runGame(){
     }
 }
 
-void play(World* world){
+void play(Game* game){
     int continueGame = 1;
     char input;
-    Position* position = seekPlayer(*world);
     do{
         printf("\n");
-        printZone(world->world[0]);
+        printZone(game->world->world[0]);
         printAction();
         printf("\nQuelle action souhaitez-vous faire ?");
         scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
@@ -44,19 +44,20 @@ void play(World* world){
         if(input == CMD_SAVE){
             continueGame = 0;
         } else {
-            actionMove(input, position, world);
+            actionMove(input, game->position, game->world);
         }
     } while(continueGame);
-    freeWorld(world);
-    freePosition(position);
+    freeGame(game);
 }
 
-void createVoidGame(){
-
-    printf("Creation de la partie...\n");
-    World* world = generateWorld();
-    printf("Partie cree avec succes !\n\n");
-    play(world);
+Game* createVoidGame(){
+    Game* game = malloc(sizeof(Game));
+    game->world = generateWorld();
+    game->player = createPlayerLevel1();
+    game->position = seekPlayer(*game->world);
+    game->respawn = NULL;
+    game->storage = NULL;
+    return game;
 }
 
 void actionMove(char move, Position* position, World* world){
@@ -92,4 +93,11 @@ void moves(Position newPosition, Position* currentPos, World* world){
         currentPos->y = newPosition.y;
     }
     world->world[currentPos->zone]->map[currentPos->y][currentPos->x] = 1;
+}
+
+void freeGame(Game* game){
+    freeWorld(game->world);
+    freePosition(game->position);
+    freePlayer(game->player);
+    free(game);
 }

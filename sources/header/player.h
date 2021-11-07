@@ -5,8 +5,8 @@
 #ifndef MALLOCWORLD_PLAYER_H
 #define MALLOCWORLD_PLAYER_H
 
-#include "inventory.h"
-#include "stack.h"
+#include "inventory/inventory.h"
+#include "inventory/stack.h"
 
 typedef struct Player{
     int currentHp;

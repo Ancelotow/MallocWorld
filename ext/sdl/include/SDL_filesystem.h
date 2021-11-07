@@ -38,13 +38,13 @@ extern "C" {
 #endif
 
 /**
- * Get the directory where the application was run from.
+ * Get the inventory where the application was run from.
  *
  * This is not necessarily a fast call, so you should call this once near
  * startup and save the string if you need it.
  *
  * **Mac OS X and iOS Specific Functionality**: If the application is in a
- * ".app" bundle, this function returns the Resource directory (e.g.
+ * ".app" bundle, this function returns the Resource inventory (e.g.
  * MyApp.app/Contents/Resources/). This behaviour can be overridden by adding
  * a property to the Info.plist file. Adding a string key with the name
  * SDL_FILESYSTEM_BASE_DIR_TYPE with a supported value will change the
@@ -53,11 +53,11 @@ extern "C" {
  * Supported values for the SDL_FILESYSTEM_BASE_DIR_TYPE property (Given an
  * application in /Applications/SDLApp/MyApp.app):
  *
- * - `resource`: bundle resource directory (the default). For example:
+ * - `resource`: bundle resource inventory (the default). For example:
  *   `/Applications/SDLApp/MyApp.app/Contents/Resources`
- * - `bundle`: the Bundle directory. Fpr example:
+ * - `bundle`: the Bundle inventory. Fpr example:
  *   `/Applications/SDLApp/MyApp.app/`
- * - `parent`: the containing directory of the bundle. For example:
+ * - `parent`: the containing inventory of the bundle. For example:
  *   `/Applications/SDLApp/`
  *
  * The returned path is guaranteed to end with a path separator ('\' on
@@ -67,7 +67,7 @@ extern "C" {
  * pointer when done with it.
  *
  * \returns an absolute path in UTF-8 encoding to the application data
- *          directory. NULL will be returned on error or when the platform
+ *          inventory. NULL will be returned on error or when the platform
  *          doesn't implement this functionality, call SDL_GetError() for more
  *          information.
  *
@@ -82,11 +82,11 @@ extern DECLSPEC char *SDLCALL SDL_GetBasePath(void);
  *
  * Get the "pref dir". This is meant to be where users can write personal
  * files (preferences and save games, etc) that are specific to your
- * application. This directory is unique per user, per application.
+ * application. This inventory is unique per user, per application.
  *
  * This function will decide the appropriate location in the native
- * filesystem, create the directory if necessary, and return a string of the
- * absolute path to the directory in UTF-8 encoding.
+ * filesystem, create the inventory if necessary, and return a string of the
+ * absolute path to the inventory in UTF-8 encoding.
  *
  * On Windows, the string might look like:
  *
@@ -105,7 +105,7 @@ extern DECLSPEC char *SDLCALL SDL_GetBasePath(void);
  * even the parent of the returned path, isn't where you should be writing
  * things).
  *
- * Both the org and app strings may become part of a directory name, so please
+ * Both the org and app strings may become part of a inventory name, so please
  * follow these rules:
  *
  * - Try to use the same org string (_including case-sensitivity_) for all
@@ -124,8 +124,8 @@ extern DECLSPEC char *SDLCALL SDL_GetBasePath(void);
  *
  * \param org the name of your organization
  * \param app the name of your application
- * \returns a UTF-8 string of the user directory in platform-dependent
- *          notation. NULL if there's a problem (creating directory failed,
+ * \returns a UTF-8 string of the user inventory in platform-dependent
+ *          notation. NULL if there's a problem (creating inventory failed,
  *          etc.).
  *
  * \since This function is available since sdl 2.0.1.

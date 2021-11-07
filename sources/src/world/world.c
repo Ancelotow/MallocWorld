@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include "../header/world.h"
+#include "../../header/world/world.h"
 
 
 World* generateWorld(){

@@ -351,7 +351,7 @@ extern DECLSPEC int SDLCALL SDL_AndroidShowToast(const char* message, int durati
  */
 typedef enum
 {
-    /** \brief The installed app's root directory.
+    /** \brief The installed app's root inventory.
         Files here are likely to be read-only. */
     SDL_WINRT_PATH_INSTALLED_LOCATION,
 

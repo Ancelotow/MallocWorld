@@ -1,4 +1,4 @@
-# Install script for directory: F:/Documents/Projets/ESGI/MallocWorld
+# Install script for inventory: F:/Documents/Projets/ESGI/MallocWorld
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../header/zone.h"
-#include "../header/global.h"
-#include "../header/map/village.h"
-#include "../header/map/forest.h"
-#include "../header/inventory.h"
+#include "../../header/world/zone.h"
+#include "../../header/global.h"
+#include "../../header/world/map/village.h"
+#include "../../header/world/map/forest.h"
+#include "../../header/inventory/inventory.h"
 
 Zone* generateZone(TypeZone type){
     Zone* zone = malloc(sizeof(Zone));
