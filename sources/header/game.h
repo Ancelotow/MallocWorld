@@ -24,9 +24,11 @@ Game* createVoidGame();
 
 void play(Game* game);
 
-void actionMove(char move, Position* position, World* world);
+void actionMove(char move, Game* game);
 
-void moves(Position newPosition, Position* currentPos, World* world);
+void moves(Position newPosition, Game* game);
+
+void mining(Game* game, int resource);
 
 void freeGame(Game* game);
 

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 
@@ -60,11 +61,11 @@ int getFileLength(FILE* file){
 void printAction(){
     printf("====================================  ACTION  =====================================\n");
     printf("||                                      ||                                       ||\n");
-    printf("||  [Z] -> deplacement haut             ||   [B] -> retour au menu principal     ||\n");
-    printf("||  [Q] -> deplacement gauche           ||   [L] -> sauvegarde la partie         ||\n");
-    printf("||  [S] -> deplacement bas              ||   [P] -> sauvegarder et quitter       ||\n");
-    printf("||  [D] -> deplacement droite           ||   [C] -> quitter sans sauvegarder     ||\n");
-    printf("||  [I] -> regader mon inventaire       ||                                       ||\n");
+    printf("||  [Z] -> deplacement haut             ||   [M] -> afficher la carte            ||\n");
+    printf("||  [Q] -> deplacement gauche           ||   [B] -> retour au menu principal     ||\n");
+    printf("||  [S] -> deplacement bas              ||   [L] -> sauvegarde la partie         ||\n");
+    printf("||  [D] -> deplacement droite           ||   [P] -> sauvegarder et quitter       ||\n");
+    printf("||  [I] -> regader mon inventaire       ||   [C] -> quitter sans sauvegarder     ||\n");
     printf("||                                      ||                                       ||\n");
     printf("===================================================================================\n");
 }

@@ -3,13 +3,15 @@
 #include <string.h>
 #include "../../header/inventory/inventory.h"
 #include "../../header/global.h"
+#include "../../header/world/zone.h"
 
-Inventory* createInventory(int id, char* name, int value, int durability, int maxStack, InventoryType type){
+Inventory* createInventory(int id, char* name, int value, float durability, int maxStack, InventoryType type){
     Inventory* inventory = malloc(sizeof(Inventory));
     inventory->id = id;
     inventory->value = value;
     inventory->name = copyString(name);
     inventory->durability = durability;
+    inventory->durabilityMax = durability;
     inventory->maxStack = maxStack;
     inventory->type = type;
     return inventory;
@@ -19,7 +21,7 @@ void printInventoryDebug(Inventory inventory){
     printf("\t -");
     switch(inventory.type){
         case WEAPON:
-            printf("Arme: %s,  %d degats, %d durabilite", inventory.name, inventory.value, inventory.durability);
+            printf("Arme: %s,  %d degats, %0.2f durabilite", inventory.name, inventory.value, inventory.durability);
             break;
 
         case ARMOR:
@@ -27,7 +29,7 @@ void printInventoryDebug(Inventory inventory){
             break;
 
         case TOOL:
-            printf("Outil: %s,  %d durabilite", inventory.name, inventory.durability);
+            printf("Outil: %s,  %0.2f durabilite", inventory.name, inventory.durability);
             break;
 
         case CARE:
@@ -35,7 +37,7 @@ void printInventoryDebug(Inventory inventory){
             break;
 
         case RESOURCE:
-            printf("Ressource: %s, %d maximum", inventory.name, inventory.value);
+            printf("Ressource: %s, %d maximum", inventory.name, inventory.maxStack);
             break;
     }
     printf("\n");
@@ -45,7 +47,7 @@ void printInventory(Inventory inventory){
     printf("||\t -");
     switch(inventory.type){
         case WEAPON:
-            printf("%d degats, %d durabilite\t\t\t||\n",inventory.value, inventory.durability);
+            printf("%d degats, %0.2f durabilite\t\t\t||\n",inventory.value, inventory.durability);
             break;
 
         case ARMOR:
@@ -53,7 +55,7 @@ void printInventory(Inventory inventory){
             break;
 
         case TOOL:
-            printf("%d durabilite\t\t\t\t\t||\n", inventory.durability);
+            printf("%0.2f durabilite\t\t\t\t\t||\n", inventory.durability);
             break;
 
         case CARE:
@@ -61,7 +63,7 @@ void printInventory(Inventory inventory){
             break;
 
         case RESOURCE:
-            printf("%d maximum\t\t\t\t\t||\n", inventory.value);
+            printf("%d maximum\t\t\t\t\t||\n", inventory.maxStack);
             break;
     }
 }
@@ -105,7 +107,7 @@ Inventory* getInventoryFromId(int id){
             if(atoi(split) == id){
                 char *name = strtok(NULL, ";");
                 int value = atoi(strtok(NULL, ";"));
-                int durability = atoi(strtok(NULL, ";"));
+                float durability = (float) atoi(strtok(NULL, ";"));
                 int maxStack = atoi(strtok(NULL, ";"));
                 InventoryType type = atoi(strtok(NULL, ";"));
                 fclose(csv);
@@ -116,5 +118,133 @@ Inventory* getInventoryFromId(int id){
         return NULL;
     } else{
         return NULL;
+    }
+}
+
+int isIdTool_Plant(Element element, int id){
+    switch (element) {
+        case PLANT_ZONE_1:
+            if(id == 3 || id == 13 || id == 24){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        case PLANT_ZONE_2:
+            if(id == 13 || id == 24){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        case PLANT_ZONE_3:
+            if(id == 24){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        default:
+            return 0;
+    }
+}
+
+int isIdTool_Rock(Element element, int id){
+    switch (element) {
+        case ROCK_ZONE_1:
+            if(id == 2 || id == 12 || id == 23){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        case ROCK_ZONE_2:
+            if(id == 12 || id == 23){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        case ROCK_ZONE_3:
+            if(id == 23){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        default:
+            return 0;
+    }
+}
+
+int isIdTool_Wood(Element element, int id){
+    switch (element) {
+        case WOOD_ZONE_1:
+            if(id == 4 || id == 14 || id == 25){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        case WOOD_ZONE_2:
+            if(id == 14 || id == 25){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        case WOOD_ZONE_3:
+            if(id == 25){
+                return 1;
+            } else{
+                return 0;
+            }
+
+        default:
+            return 0;
+    }
+}
+
+int isIdTool(Element element, int id){
+    switch (element) {
+        case PLANT_ZONE_1:
+        case PLANT_ZONE_2:
+        case PLANT_ZONE_3:
+            return isIdTool_Plant(element, id);
+
+        case WOOD_ZONE_1:
+        case WOOD_ZONE_2:
+        case WOOD_ZONE_3:
+            return isIdTool_Wood(element, id);
+
+        case ROCK_ZONE_1:
+        case ROCK_ZONE_2:
+        case ROCK_ZONE_3:
+            return isIdTool_Rock(element, id);
+
+        default:
+            return 0;
+    }
+}
+
+float getUsury(Element element){
+    switch (element) {
+        case PLANT_ZONE_1:
+        case WOOD_ZONE_1:
+        case ROCK_ZONE_1:
+            return 0.10f;
+
+        case PLANT_ZONE_2:
+        case WOOD_ZONE_2:
+        case ROCK_ZONE_2:
+            return 0.20f;
+
+        case PLANT_ZONE_3:
+        case WOOD_ZONE_3:
+        case ROCK_ZONE_3:
+            return 0.40f;
+
+        default:
+            return 0.00f;
     }
 }

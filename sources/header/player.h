@@ -26,7 +26,9 @@ void appendInventory(Player* player, Inventory* inventory);
 
 void printPlayerDebug(Player player);
 
-void printInventoryPlayer(Player player);
+void printInventoryPlayer(Player player, InventoryType type);
+
+int useToolToMining(Element element, Player* player);
 
 void freePlayer(Player* player);
 

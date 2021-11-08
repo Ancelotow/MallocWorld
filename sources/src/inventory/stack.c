@@ -41,7 +41,7 @@ void printStackDebug(Stack stack){
 void printStack(Stack stack){
     Inventory* inv = getInventoryFromId(stack.id);
     printf("||                                                      ||\n");
-    printf("|| %s : %s ==== %d/%d \t\t\t||\n", getInventoryTypeName(inv->type), inv->name, stack.length, stack.maximum);
+    printf("|| id : %d = %s : %s = %d/%d \t\t\t||\n", stack.id, getInventoryTypeName(inv->type), inv->name, stack.length, stack.maximum);
     for(int i =0; i < stack.length; i++){
         printInventory(*stack.inventory[i]);
     }

@@ -1,6 +1,8 @@
 #ifndef MALLOCWORLD_INVENTORY_H
 #define MALLOCWORLD_INVENTORY_H
 
+#include "../world/zone.h"
+
 #define FILENAME_INVENTORIES "../resources/inventories.csv"
 
 typedef enum InventoryType{
@@ -21,7 +23,8 @@ typedef struct Inventory{
     int id;
     char* name;
     int value;
-    int durability;
+    float durability;
+    float durabilityMax;
     int maxStack;
     InventoryType type;
 } Inventory;
@@ -42,7 +45,7 @@ char* getInventoryTypeName(InventoryType type);
  * @param type Object's type (Tool, Weapon, Armor, Resource, Care)
  * @return Inventory's object created
  */
-Inventory* createInventory(int id, char* name, int value, int durability, int maxStack, InventoryType type);
+Inventory* createInventory(int id, char* name, int value, float durability, int maxStack, InventoryType type);
 
 /**
  * Printed into the console the information about an inventory's object
@@ -59,5 +62,15 @@ void printInventory(Inventory inventory);
 void freeInventory(Inventory* inventory);
 
 Inventory* getInventoryFromId(int id);
+
+int isIdTool_Plant(Element element, int id);
+
+int isIdTool_Rock(Element element, int id);
+
+int isIdTool_Wood(Element element, int id);
+
+int isIdTool(Element element, int id);
+
+float getUsury(Element element);
 
 #endif //MALLOCWORLD_INVENTORY_H

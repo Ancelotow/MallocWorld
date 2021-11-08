@@ -33,6 +33,7 @@ int getRandomNumber(int min);
  */
 int getFileLength(FILE* file);
 
-
 void printAction();
+
+
 #endif //MALLOCWORLD_GLOBAL_H

@@ -109,4 +109,10 @@ void printZoneDebug(Zone* zone);
 
 void saveZone(FILE* file, Zone zone);
 
+int isResource(int id);
+
+int isMonster(int id);
+
+int getIdResource(Element element);
+
 #endif //MALLOCWORLD_ZONE_H
