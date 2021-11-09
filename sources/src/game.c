@@ -2,6 +2,7 @@
 #include "../header/world/world.h"
 #include "../header/position.h"
 #include "../header/global.h"
+#include "../header/action/mining.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -113,25 +114,6 @@ void moves(Position newPosition, Game* game){
         printZone(game->world->world[game->position->zone]);
     }
 
-}
-
-void mining(Game* game, int id){
-    int isUsed = useToolToMining(id, game->player);
-    if(isUsed){
-        printf("\n\n================================\n");
-        printf("|| Ressource recoltee !      ||\n");
-        printf("================================\n\n");
-        int nbResources = (getRandomNumber(0) % 4) + 1;
-        Inventory* inventory;
-        for(int i = 0; i < nbResources; i++){
-            inventory = getInventoryFromId(getIdResource(id));
-            appendInventory(game->player, inventory);
-        }
-    } else {
-        printf("\n\n==========================================\n");
-        printf("|| Vous n'avez pas l'outil adequat      ||\n");
-        printf("==========================================\n\n");
-    }
 }
 
 void freeGame(Game* game){

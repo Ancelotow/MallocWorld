@@ -63,14 +63,4 @@ void freeInventory(Inventory* inventory);
 
 Inventory* getInventoryFromId(int id);
 
-int isIdTool_Plant(Element element, int id);
-
-int isIdTool_Rock(Element element, int id);
-
-int isIdTool_Wood(Element element, int id);
-
-int isIdTool(Element element, int id);
-
-float getUsury(Element element);
-
 #endif //MALLOCWORLD_INVENTORY_H

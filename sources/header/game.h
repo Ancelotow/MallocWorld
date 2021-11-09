@@ -28,8 +28,6 @@ void actionMove(char move, Game* game);
 
 void moves(Position newPosition, Game* game);
 
-void mining(Game* game, int resource);
-
 void freeGame(Game* game);
 
 void saveGame(Game game);
