@@ -1,6 +1,10 @@
-//
-// Created by Admin on 17/10/2021.
-//
+/*
+**  Filename : zone.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'zone.c'. Manage a zone in the world
+*/
 
 #ifndef MALLOCWORLD_ZONE_H
 #define MALLOCWORLD_ZONE_H

@@ -1,5 +1,9 @@
-//
-// Created by Admin on 09/11/2021.
-//
+/*
+**  Filename : fight.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the fight's action when player meet a monster
+*/
 
 #include "../../header/action/fight.h"

@@ -1,3 +1,11 @@
+/*
+**  Filename : game.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the game, the interactions between the game and the player and also printing
+*/
+
 #include "../header/game.h"
 #include "../header/world/world.h"
 #include "../header/position.h"

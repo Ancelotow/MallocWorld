@@ -1,6 +1,10 @@
-//
-// Created by Admin on 17/10/2021.
-//
+/*
+**  Filename : village.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'village.c'. Generate type zone "Village"
+*/
 
 #ifndef MALLOCWORLD_VILLAGE_H
 #define MALLOCWORLD_VILLAGE_H

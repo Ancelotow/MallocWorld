@@ -1,6 +1,10 @@
-//
-// Created by Admin on 19/10/2021.
-//
+/*
+**  Filename : player.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'player.c'. Manage the player.
+*/
 
 #ifndef MALLOCWORLD_PLAYER_H
 #define MALLOCWORLD_PLAYER_H

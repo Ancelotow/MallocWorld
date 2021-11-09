@@ -1,6 +1,10 @@
-//
-// Created by Admin on 07/11/2021.
-//
+/*
+**  Filename : stack.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'stack.c'. It's used to manage inventory's stacks
+*/
 
 #ifndef MALLOCWORLD_STACK_H
 #define MALLOCWORLD_STACK_H

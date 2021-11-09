@@ -1,3 +1,11 @@
+/*
+**  Filename : global.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : It's the global functions which can be called anywhere in this project.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

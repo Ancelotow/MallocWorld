@@ -1,6 +1,10 @@
-//
-// Created by Admin on 18/10/2021.
-//
+/*
+**  Filename : forest.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'forest.c'. Generate type zone "Forest"
+*/
 
 #ifndef MALLOCWORLD_FOREST_H
 #define MALLOCWORLD_FOREST_H

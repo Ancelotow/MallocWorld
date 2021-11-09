@@ -1,3 +1,11 @@
+/*
+**  Filename : world.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the world (create three zones randomly)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

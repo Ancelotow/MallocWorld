@@ -1,3 +1,11 @@
+/*
+**  Filename : zone.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage zone of world (also create a zone's type randomly and his height and width)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../header/world/zone.h"

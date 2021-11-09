@@ -1,3 +1,12 @@
+/*
+**  Filename : player.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the player in the game
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

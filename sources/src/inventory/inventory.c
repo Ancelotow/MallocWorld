@@ -1,3 +1,11 @@
+/*
+**  Filename : inventory.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the inventory (tools, healths, armors, weapons and resources)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

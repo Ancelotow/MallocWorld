@@ -1,6 +1,11 @@
-//
-// Created by Admin on 09/11/2021.
-//
+/*
+**  Filename : mining.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the mining's action when player meet a mining a resource in the world
+*/
+
 
 #include "../../header/action/mining.h"
 #include "../../header/global.h"

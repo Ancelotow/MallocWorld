@@ -1,3 +1,11 @@
+/*
+**  Filename : stack.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the inventory's stack
+*/
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>

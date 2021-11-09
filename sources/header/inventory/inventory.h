@@ -1,3 +1,11 @@
+/*
+**  Filename : inventory.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'inventory.c'. It's used to manage inventory
+*/
+
 #ifndef MALLOCWORLD_INVENTORY_H
 #define MALLOCWORLD_INVENTORY_H
 

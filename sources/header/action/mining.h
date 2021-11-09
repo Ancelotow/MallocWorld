@@ -1,6 +1,10 @@
-//
-// Created by Admin on 09/11/2021.
-//
+/*
+**  Filename : mining.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'mining.c'. It's used for mining's action
+*/
 
 #ifndef MALLOCWORLD_MINING_H
 #define MALLOCWORLD_MINING_H
