@@ -1,0 +1,226 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/game.h
+world/world.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h
+position.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/position.h
+player.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/player.h
+inventory/storage.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/storage.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+stdio.h
+-
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/stack.h
+inventory.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/storage.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/monster.h
+inventory/inventory.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/player.h
+inventory/inventory.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+inventory/stack.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/stack.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/position.h
+world/zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+world/world.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/map/forest.h
+../zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/map/village.h
+../zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/respawn.h
+zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h
+zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+respawn.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/respawn.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+stdio.h
+-
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+header/world/world.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h
+header/inventory/inventory.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+header/monster.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/monster.h
+header/player.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/player.h
+header/game.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/game.h
+header/global.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game.c
+../header/game.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/game.h
+../header/world/world.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h
+../header/position.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/position.h
+../header/global.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/global.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/inventory/inventory.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+../../header/inventory/inventory.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+../../header/global.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/inventory/stack.c
+stdlib.h
+-
+string.h
+-
+stdio.h
+-
+../../header/inventory/stack.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/stack.h
+../../header/inventory/inventory.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/inventory/storage.c
+../../header/inventory/storage.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/storage.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/monster.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+../header/monster.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/monster.h
+../header/global.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/player.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+../header/player.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/player.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/position.c
+../header/position.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/position.h
+../header/world/world.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/forest.c
+../../../header/world/zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+../../../header/global.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/village.c
+../../../header/world/zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+../../../header/global.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/respawn.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+../../header/world/respawn.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/respawn.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/world.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+../../header/world/world.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h
+
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/zone.c
+stdio.h
+-
+stdlib.h
+-
+../../header/world/zone.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h
+../../header/global.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h
+../../header/world/map/village.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/map/village.h
+../../header/world/map/forest.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/map/forest.h
+../../header/inventory/inventory.h
+C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h
+
