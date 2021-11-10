@@ -20,9 +20,8 @@ Respawn* createRespawn(int id, Position* position){
     respawn->child = respawnChild;
 }
 
-void freeRespawn(Respawn* respawn){
-        freePosition(respawn->position);
-        free(respawn);
+void updateAllRespawn(Respawn* respawn) {
+    respawn->roundLeft--;
 }
 
 void printPosition(Position* position){
@@ -35,5 +34,10 @@ void printRespawn(Respawn* respawn){
     if(respawn->child != NULL){
         printRespawn(respawn->child);
     }
+}
+
+void freeRespawn(Respawn* respawn){
+    freePosition(respawn->position);
+    free(respawn);
 }
 

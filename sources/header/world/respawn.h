@@ -19,7 +19,7 @@ void freeRespawn(Respawn* respawn);
 
 void appendRespawn(Respawn* respawn, int id, Position* position);
 
-void updateAllRespawn(Respawn* respawn
+void updateAllRespawn(Respawn* respawn);
 
 void printRespawn(Respawn* respawn); // Pour voir les infos dedans
 
