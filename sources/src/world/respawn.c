@@ -20,6 +20,11 @@ Respawn* createRespawn(int id, Position* position){
     respawn->child = respawnChild;
 }
 
+void appendRespawn(Respawn* respawn, int id, Position* position) {
+    respawn->id = id;
+    respawn->position = position;
+}
+
 void updateAllRespawn(Respawn* respawn) {
     respawn->roundLeft--;
 }

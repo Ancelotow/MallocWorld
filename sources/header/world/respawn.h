@@ -15,12 +15,12 @@ typedef struct Respawn{
 
 Respawn* createRespawn(int id, Position* position); // doit retourner Respawn*
 
-void freeRespawn(Respawn* respawn);
-
 void appendRespawn(Respawn* respawn, int id, Position* position);
 
 void updateAllRespawn(Respawn* respawn);
 
 void printRespawn(Respawn* respawn); // Pour voir les infos dedans
+
+void freeRespawn(Respawn* respawn);
 
 #endif //MALLOCWORLD_RESPAWN_H
