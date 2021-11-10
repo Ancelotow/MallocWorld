@@ -21,12 +21,21 @@ Respawn* createRespawn(int id, Position* position){
 }
 
 void appendRespawn(Respawn* respawn, int id, Position* position) {
-    respawn->id = id;
-    respawn->position = position;
+    createRespawn(id, position);
 }
+
+/**
+ * presque, si le roundLeft est à 0, il faut le supprimer...
+ */
 
 void updateAllRespawn(Respawn* respawn) {
     respawn->roundLeft--;
+    if(respawn->roundLeft == 0){
+        //supprimer un respawn
+    }
+    if(respawn->child != NULL){
+        updateAllRespawn(respawn->child);
+    }
 }
 
 void printPosition(Position* position){
