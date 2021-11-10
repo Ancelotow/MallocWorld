@@ -4,9 +4,10 @@
 #include <string.h>
 #include "../../header/world/respawn.h"
 
-Respawn* createRespawn(id){
+Respawn* createRespawn(int id, Position* position){
     Respawn* respawn;
     Respawn* respawnChild;
+
     int roundLeft;
     if(id >= 3 && id <= 11){
         roundLeft = 10;
@@ -15,6 +16,7 @@ Respawn* createRespawn(id){
     }
     respawn->roundLeft=roundLeft;
     respawn->id=id;
+    respawn->position=position;
     respawnChild->child=respawn;
 }
 
