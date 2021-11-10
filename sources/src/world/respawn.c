@@ -14,12 +14,16 @@ Respawn* createRespawn(int id, Position* position){
     }else{
         roundLeft = 15;
     }
-    respawn->roundLeft=roundLeft;
-    respawn->id=id;
-    respawn->position=position;
-    respawnChild->child=respawn;
+    respawn->roundLeft = roundLeft;
+    respawn->id = id;
+    respawn->position = position;
+    respawn->child = respawnChild;
 }
 
+void freeRespawn(Respawn* respawn){
+        free(respawn->position);
+        free(respawn);
+}
 
 
 /*void recurrenceRespawn(Respawn respawn) {
