@@ -25,29 +25,15 @@ void freeRespawn(Respawn* respawn){
         free(respawn);
 }
 
+void printPosition(Position* position){
+    printf("%d %d %d", position->x, position->y, position->zone);
+}
 
-/*void recurrenceRespawn(Respawn respawn) {
-    if (#un tour est passé){
-        respawn.roundLeft--;
-    }
-
-    if(respawn.roundLeft == 0){
-        createRespawn(respawn);
+void printRespawn(Respawn* respawn){
+    printPosition(respawn->position);
+    printf("%d %d", respawn->id, respawn->roundLeft);
+    if(respawn->child != NULL){
+        printRespawn(respawn->child);
     }
 }
-*/
 
-
-
-/*
- * La fréquence de réapparition des ressources dans une zone est de 10 tours. (10
-actions de l’utilisateur sur la carte). Si le joueur se trouve sur la case à ce moment, la
-ressource réapparaît au tour suivant
- */
-
-
-/*
-* La fréquence de réapparition des monstres dans une zone est de 15 tours. (15 actions
-de l’utilisateur sur la carte). Si le joueur se trouve sur la case à ce moment, le monstre
-réapparaît au tour suivant.
-*/
