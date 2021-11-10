@@ -21,7 +21,7 @@ Respawn* createRespawn(int id, Position* position){
 }
 
 void freeRespawn(Respawn* respawn){
-        free(respawn->position);
+        freePosition(respawn->position);
         free(respawn);
 }
 
