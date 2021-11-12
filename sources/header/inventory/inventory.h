@@ -1,5 +1,15 @@
+/*
+**  Filename : inventory.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'inventory.c'. It's used to manage inventory
+*/
+
 #ifndef MALLOCWORLD_INVENTORY_H
 #define MALLOCWORLD_INVENTORY_H
+
+#include "../world/zone.h"
 
 #define FILENAME_INVENTORIES "../resources/inventories.csv"
 
@@ -21,7 +31,8 @@ typedef struct Inventory{
     int id;
     char* name;
     int value;
-    int durability;
+    float durability;
+    float durabilityMax;
     int maxStack;
     InventoryType type;
 } Inventory;
@@ -42,7 +53,7 @@ char* getInventoryTypeName(InventoryType type);
  * @param type Object's type (Tool, Weapon, Armor, Resource, Care)
  * @return Inventory's object created
  */
-Inventory* createInventory(int id, char* name, int value, int durability, int maxStack, InventoryType type);
+Inventory* createInventory(int id, char* name, int value, float durability, int maxStack, InventoryType type);
 
 /**
  * Printed into the console the information about an inventory's object

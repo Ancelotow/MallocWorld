@@ -1,6 +1,10 @@
-//
-// Created by Admin on 23/10/2021.
-//
+/*
+**  Filename : game.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'game.c'. Manage interactions between player/game and the printing.
+*/
 
 #ifndef MALLOCWORLD_GAME_H
 #define MALLOCWORLD_GAME_H
@@ -24,9 +28,9 @@ Game* createVoidGame();
 
 void play(Game* game);
 
-void actionMove(char move, Position* position, World* world);
+void actionMove(char move, Game* game);
 
-void moves(Position newPosition, Position* currentPos, World* world);
+void moves(Position newPosition, Game* game);
 
 void freeGame(Game* game);
 

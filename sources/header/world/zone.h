@@ -1,6 +1,10 @@
-//
-// Created by Admin on 17/10/2021.
-//
+/*
+**  Filename : zone.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'zone.c'. Manage a zone in the world
+*/
 
 #ifndef MALLOCWORLD_ZONE_H
 #define MALLOCWORLD_ZONE_H
@@ -108,5 +112,11 @@ int getRandomMonster(TypeZone typeZone);
 void printZoneDebug(Zone* zone);
 
 void saveZone(FILE* file, Zone zone);
+
+int isResource(int id);
+
+int isMonster(int id);
+
+int getIdResource(Element element);
 
 #endif //MALLOCWORLD_ZONE_H

@@ -1,3 +1,11 @@
+/*
+**  Filename : zone.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage zone of world (also create a zone's type randomly and his height and width)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../header/world/zone.h"
@@ -184,5 +192,53 @@ void saveZone(FILE* file, Zone zone){
             }
         }
         fputs("\n", file);
+    }
+}
+
+int isResource(int id){
+    if(id < 12 && id >= 3){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int getIdResource(Element element){
+    switch (element) {
+        default:
+        case PLANT_ZONE_1:
+            return 7;
+
+        case PLANT_ZONE_2:
+            return 18;
+
+        case PLANT_ZONE_3:
+            return 29;
+
+        case WOOD_ZONE_1:
+            return 5;
+
+        case WOOD_ZONE_2:
+            return 16;
+
+        case WOOD_ZONE_3:
+            return 27;
+
+        case ROCK_ZONE_1:
+            return 6;
+
+        case ROCK_ZONE_2:
+            return 17;
+
+        case ROCK_ZONE_3:
+            return 28;
+    }
+}
+
+int isMonster(int id){
+    if(id >= 12){
+        return 1;
+    } else {
+        return 0;
     }
 }

@@ -1,7 +1,16 @@
+/*
+**  Filename : game.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the game, the interactions between the game and the player and also printing
+*/
+
 #include "../header/game.h"
 #include "../header/world/world.h"
 #include "../header/position.h"
 #include "../header/global.h"
+#include "../header/action/mining.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,6 +26,7 @@
 #define CMD_DOWN 's'
 #define CMD_LEFT 'q'
 #define CMD_RIGHT 'd'
+#define CMD_MAP 'm'
 
 void runGame(){
     char input[50];
@@ -37,9 +47,9 @@ void runGame(){
 void play(Game* game){
     int continueGame = 1;
     char input;
+    printf("\n");
+    printZone(game->world->world[game->position->zone]);
     do{
-        printf("\n");
-        printZone(game->world->world[0]);
         printAction();
         printf("\nQuelle action souhaitez-vous faire ?");
         scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
@@ -48,9 +58,11 @@ void play(Game* game){
             saveGame(*game);
             continueGame = 0;
         } else if(input == CMD_INVENTORY) {
-            printInventoryPlayer(*game->player);
+            printInventoryPlayer(*game->player, 0);
+        } else if(input == CMD_MAP) {
+            printZone(game->world->world[game->position->zone]);
         } else {
-            actionMove(input, game->position, game->world);
+            actionMove(input, game);
         }
     } while(continueGame);
     freeGame(game);
@@ -66,9 +78,9 @@ Game* createVoidGame(){
     return game;
 }
 
-void actionMove(char move, Position* position, World* world){
-    world->world[position->zone]->map[position->y][position->x] = 0;
-    Position newPosition = *position;
+void actionMove(char move, Game* game){
+    game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 0;
+    Position newPosition = *game->position;
     switch(move){
         case CMD_DOWN:
             newPosition.y += 1;
@@ -86,19 +98,30 @@ void actionMove(char move, Position* position, World* world){
             newPosition.x -= 1;
             break;
     }
-    moves(newPosition, position, world);
+    moves(newPosition, game);
 }
 
-void moves(Position newPosition, Position* currentPos, World* world){
-    if(world->world[newPosition.zone]->map[newPosition.y][newPosition.x] == -1){
+void moves(Position newPosition, Game* game){
+    int id =  game->world->world[newPosition.zone]->map[newPosition.y][newPosition.x];
+    if(id == IMPASSABLE){
         printf("\n\n================================\n");
         printf("|| Impossible de passer ici ! ||\n");
         printf("================================\n\n");
+    } else if(isResource(id)){
+        mining(game, id);
+        game->position->x = newPosition.x;
+        game->position->y = newPosition.y;
+        game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;
+    } else if(isMonster(id)){
+        // TODO: Combat d'un monstre
     } else{
-        currentPos->x = newPosition.x;
-        currentPos->y = newPosition.y;
+        game->position->x = newPosition.x;
+        game->position->y = newPosition.y;
+        game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;
+        printf("\n");
+        printZone(game->world->world[game->position->zone]);
     }
-    world->world[currentPos->zone]->map[currentPos->y][currentPos->x] = 1;
+
 }
 
 void freeGame(Game* game){

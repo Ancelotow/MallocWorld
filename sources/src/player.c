@@ -1,7 +1,18 @@
+/*
+**  Filename : player.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the player in the game
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "../header/player.h"
+#include "../header/global.h"
+#include "../header/action/mining.h"
 
 const int MAX_INVENTORY = 20;
 
@@ -58,10 +69,21 @@ void printPlayerDebug(Player player){
     }
 }
 
-void printInventoryPlayer(Player player){
+void printInventoryPlayer(Player player, InventoryType type){
     printf("======================= INVENTAIRE =======================\n");
+    Inventory* inventory = NULL;
     for(int i = 0; i < player.sizeInventory; i++){
-        printStack(*player.inventory[i]);
+        if(type == 0){
+            printStack(*player.inventory[i]);
+        } else {
+           inventory = getInventoryFromId(player.inventory[i]->id);
+           if(inventory->type == type){
+               printStack(*player.inventory[i]);
+           }
+        }
+    }
+    if(inventory != NULL){
+        freeInventory(inventory);
     }
     printf("==========================================================\n\n");
 }
@@ -80,4 +102,21 @@ void savePlayer(FILE* file, Player player){
     fprintf(file, "{%d}/{%d}\n", player.xp, player.xpNext);
     fprintf(file, "{%d}/{%d}\n", player.currentHp, player.maxHp);
     fputs("-- INVENTORY --\n", file);
+}
+
+int useToolToMining(Element element, Player* player){
+    float usury = getUsury(element);
+    float newDurability;
+    for(int i = 0; i < player->sizeInventory; i++){
+        if(isIdTool(element, player->inventory[i]->id)){
+            for(int j = 0; j < player->inventory[i]->length; j++){
+                newDurability = player->inventory[i]->inventory[j]->durability - (usury * player->inventory[i]->inventory[j]->durabilityMax);
+                if(newDurability > 0){
+                    player->inventory[i]->inventory[j]->durability = newDurability;
+                    return 1;
+                }
+            }
+        }
+    }
+    return 0;
 }

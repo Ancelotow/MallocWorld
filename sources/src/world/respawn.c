@@ -1,3 +1,11 @@
+/*
+**  Filename : respawn.c
+**
+**  Made by : Elsa FIRMIN
+**
+**  Description : Manage the respawn of resources and monsters when player kill monster or mine a resource.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -54,4 +62,3 @@ void freeRespawn(Respawn* respawn){
     freePosition(respawn->position);
     free(respawn);
 }
-

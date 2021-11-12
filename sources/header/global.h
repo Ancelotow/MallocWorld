@@ -1,6 +1,10 @@
-//
-// Created by Admin on 16/10/2021.
-//
+/*
+**  Filename : global.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'global.c'. Gather the functions which can be called anywhere
+*/
 
 #ifndef MALLOCWORLD_GLOBAL_H
 #define MALLOCWORLD_GLOBAL_H
@@ -33,6 +37,7 @@ int getRandomNumber(int min);
  */
 int getFileLength(FILE* file);
 
-
 void printAction();
+
+
 #endif //MALLOCWORLD_GLOBAL_H

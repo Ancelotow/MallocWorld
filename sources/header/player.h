@@ -1,6 +1,10 @@
-//
-// Created by Admin on 19/10/2021.
-//
+/*
+**  Filename : player.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'player.c'. Manage the player.
+*/
 
 #ifndef MALLOCWORLD_PLAYER_H
 #define MALLOCWORLD_PLAYER_H
@@ -26,7 +30,9 @@ void appendInventory(Player* player, Inventory* inventory);
 
 void printPlayerDebug(Player player);
 
-void printInventoryPlayer(Player player);
+void printInventoryPlayer(Player player, InventoryType type);
+
+int useToolToMining(Element element, Player* player);
 
 void freePlayer(Player* player);
 

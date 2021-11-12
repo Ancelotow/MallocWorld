@@ -1,3 +1,11 @@
+/*
+**  Filename : monsters.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'monsters.c'. Manage monsters.
+*/
+
 #ifndef MALLOCWORLD_MONSTER_H
 #define MALLOCWORLD_MONSTER_H
 

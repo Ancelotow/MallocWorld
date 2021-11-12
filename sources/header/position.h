@@ -1,6 +1,10 @@
-//
-// Created by Admin on 01/11/2021.
-//
+/*
+**  Filename : position.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'position.c'. Manage the position of the player in the world (zone, row and column).
+*/
 
 #ifndef MALLOCWORLD_POSITION_H
 #define MALLOCWORLD_POSITION_H

@@ -1,3 +1,11 @@
+/*
+**  Filename : position.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the player's position in the world (zone, row and column)
+*/
+
 #include "../header/position.h"
 #include "../header/world/world.h"
 #include <stdio.h>

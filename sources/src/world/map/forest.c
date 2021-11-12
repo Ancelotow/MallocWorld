@@ -1,3 +1,11 @@
+/*
+**  Filename : forest.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Create a type's zone "Forest" when the world is generated.
+*/
+
 #include "../../../header/world/zone.h"
 #include "../../../header/global.h"
 

@@ -1,15 +1,25 @@
+/*
+**  Filename : inventory.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the inventory (tools, healths, armors, weapons and resources)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "../../header/inventory/inventory.h"
 #include "../../header/global.h"
+#include "../../header/world/zone.h"
 
-Inventory* createInventory(int id, char* name, int value, int durability, int maxStack, InventoryType type){
+Inventory* createInventory(int id, char* name, int value, float durability, int maxStack, InventoryType type){
     Inventory* inventory = malloc(sizeof(Inventory));
     inventory->id = id;
     inventory->value = value;
     inventory->name = copyString(name);
     inventory->durability = durability;
+    inventory->durabilityMax = durability;
     inventory->maxStack = maxStack;
     inventory->type = type;
     return inventory;
@@ -19,7 +29,7 @@ void printInventoryDebug(Inventory inventory){
     printf("\t -");
     switch(inventory.type){
         case WEAPON:
-            printf("Arme: %s,  %d degats, %d durabilite", inventory.name, inventory.value, inventory.durability);
+            printf("Arme: %s,  %d degats, %0.2f durabilite", inventory.name, inventory.value, inventory.durability);
             break;
 
         case ARMOR:
@@ -27,7 +37,7 @@ void printInventoryDebug(Inventory inventory){
             break;
 
         case TOOL:
-            printf("Outil: %s,  %d durabilite", inventory.name, inventory.durability);
+            printf("Outil: %s,  %0.2f durabilite", inventory.name, inventory.durability);
             break;
 
         case CARE:
@@ -35,7 +45,7 @@ void printInventoryDebug(Inventory inventory){
             break;
 
         case RESOURCE:
-            printf("Ressource: %s, %d maximum", inventory.name, inventory.value);
+            printf("Ressource: %s, %d maximum", inventory.name, inventory.maxStack);
             break;
     }
     printf("\n");
@@ -45,7 +55,7 @@ void printInventory(Inventory inventory){
     printf("||\t -");
     switch(inventory.type){
         case WEAPON:
-            printf("%d degats, %d durabilite\t\t\t||\n",inventory.value, inventory.durability);
+            printf("%d degats, %0.2f durabilite\t\t\t||\n",inventory.value, inventory.durability);
             break;
 
         case ARMOR:
@@ -53,7 +63,7 @@ void printInventory(Inventory inventory){
             break;
 
         case TOOL:
-            printf("%d durabilite\t\t\t\t\t||\n", inventory.durability);
+            printf("%0.2f durabilite\t\t\t\t\t||\n", inventory.durability);
             break;
 
         case CARE:
@@ -61,7 +71,7 @@ void printInventory(Inventory inventory){
             break;
 
         case RESOURCE:
-            printf("%d maximum\t\t\t\t\t||\n", inventory.value);
+            printf("%d maximum\t\t\t\t\t||\n", inventory.maxStack);
             break;
     }
 }
@@ -105,7 +115,7 @@ Inventory* getInventoryFromId(int id){
             if(atoi(split) == id){
                 char *name = strtok(NULL, ";");
                 int value = atoi(strtok(NULL, ";"));
-                int durability = atoi(strtok(NULL, ";"));
+                float durability = (float) atoi(strtok(NULL, ";"));
                 int maxStack = atoi(strtok(NULL, ";"));
                 InventoryType type = atoi(strtok(NULL, ";"));
                 fclose(csv);
@@ -118,3 +128,4 @@ Inventory* getInventoryFromId(int id){
         return NULL;
     }
 }
+
