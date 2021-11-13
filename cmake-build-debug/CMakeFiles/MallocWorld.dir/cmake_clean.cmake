@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MallocWorld.dir/sources/main.c.obj"
+  "CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.obj"
+  "CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/game.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/global.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/inventory/inventory.c.obj"
