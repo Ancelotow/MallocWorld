@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Elsa Firmin\CLionProjects\MallocWorld"
+CMAKE_SOURCE_DIR = F:\Documents\Projets\ESGI\MallocWorld
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug"
+CMAKE_BINARY_DIR = F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\CMakeFiles F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -151,6 +151,54 @@ sources/main.s: sources/main.c.s
 sources/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/main.c.s
 .PHONY : sources/main.c.s
+
+sources/src/action/fight.obj: sources/src/action/fight.c.obj
+.PHONY : sources/src/action/fight.obj
+
+# target to build an object file
+sources/src/action/fight.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.obj
+.PHONY : sources/src/action/fight.c.obj
+
+sources/src/action/fight.i: sources/src/action/fight.c.i
+.PHONY : sources/src/action/fight.i
+
+# target to preprocess a source file
+sources/src/action/fight.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.i
+.PHONY : sources/src/action/fight.c.i
+
+sources/src/action/fight.s: sources/src/action/fight.c.s
+.PHONY : sources/src/action/fight.s
+
+# target to generate assembly for a file
+sources/src/action/fight.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.s
+.PHONY : sources/src/action/fight.c.s
+
+sources/src/action/mining.obj: sources/src/action/mining.c.obj
+.PHONY : sources/src/action/mining.obj
+
+# target to build an object file
+sources/src/action/mining.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj
+.PHONY : sources/src/action/mining.c.obj
+
+sources/src/action/mining.i: sources/src/action/mining.c.i
+.PHONY : sources/src/action/mining.i
+
+# target to preprocess a source file
+sources/src/action/mining.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.i
+.PHONY : sources/src/action/mining.c.i
+
+sources/src/action/mining.s: sources/src/action/mining.c.s
+.PHONY : sources/src/action/mining.s
+
+# target to generate assembly for a file
+sources/src/action/mining.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.s
+.PHONY : sources/src/action/mining.c.s
 
 sources/src/game.obj: sources/src/game.c.obj
 .PHONY : sources/src/game.obj
@@ -476,6 +524,12 @@ help:
 	@echo ... sources/main.obj
 	@echo ... sources/main.i
 	@echo ... sources/main.s
+	@echo ... sources/src/action/fight.obj
+	@echo ... sources/src/action/fight.i
+	@echo ... sources/src/action/fight.s
+	@echo ... sources/src/action/mining.obj
+	@echo ... sources/src/action/mining.i
+	@echo ... sources/src/action/mining.s
 	@echo ... sources/src/game.obj
 	@echo ... sources/src/game.i
 	@echo ... sources/src/game.s
