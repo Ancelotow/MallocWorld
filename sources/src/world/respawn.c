@@ -12,6 +12,8 @@
 #include <string.h>
 #include "../../header/world/respawn.h"
 
+
+/*
 Respawn* createRespawn(int id, Position* position){
     Respawn* respawn;
     Respawn* respawnChild;
@@ -31,11 +33,11 @@ Respawn* createRespawn(int id, Position* position){
 void appendRespawn(Respawn* respawn, int id, Position* position) {
     createRespawn(id, position);
 }
-
+**/
 /**
  * presque, si le roundLeft est à 0, il faut le supprimer...
  */
-
+/**
 void updateAllRespawn(Respawn* respawn) {
     respawn->roundLeft--;
     if(respawn->roundLeft == 0){
@@ -61,4 +63,4 @@ void printRespawn(Respawn* respawn){
 void freeRespawn(Respawn* respawn){
     freePosition(respawn->position);
     free(respawn);
-}
+}**/
