@@ -9,7 +9,7 @@ set(SDL2_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/sdl/include/SDL2")
 set(SDL2_LIBRARY "${PROJECT_SOURCE_DIR}/sdl/lib")
 
 find_package(SDL2 REQUIRED)
-find_library(SDL2_LIBRARY NAME SDL2)
+#find_library(SDL2_LIBRARY NAME SDL2)
 #find_package(SDL2_Image REQUIRED)
 
 
