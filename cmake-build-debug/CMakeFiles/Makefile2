@@ -53,10 +53,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = F:\Documents\Projets\ESGI\MallocWorld
+CMAKE_SOURCE_DIR = "C:\Users\Elsa Firmin\CLionProjects\MallocWorld"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/MallocWorld.dir/clean
 CMakeFiles/MallocWorld.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target MallocWorld"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target MallocWorld"
 .PHONY : CMakeFiles/MallocWorld.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MallocWorld.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/MallocWorld.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/MallocWorld.dir/rule
 
 # Convenience name for target.
