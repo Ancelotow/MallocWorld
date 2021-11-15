@@ -56,10 +56,10 @@ void printRespawn(Respawn *respawn) {
     }
 }
 
-void freeRespawn(Respawn *respawn, int isRecursive) {
+void freeRespawn(Respawn *respawn) {
     freePosition(respawn->position);
-    if(isRecursive && respawn->child != NULL){
-        freeRespawn(respawn->child, isRecursive);
+    if(respawn->child != NULL){
+        freeRespawn(respawn->child);
     }
     free(respawn);
 }
