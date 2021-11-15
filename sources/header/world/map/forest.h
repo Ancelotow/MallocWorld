@@ -9,7 +9,7 @@
 #ifndef MALLOCWORLD_FOREST_H
 #define MALLOCWORLD_FOREST_H
 
-#include "../zone.h"
+typedef struct Zone Zone;
 
 void generateForest(Zone* zone);
 

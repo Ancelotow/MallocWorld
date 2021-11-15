@@ -6,12 +6,7 @@
 **  Description : Manage the world (create three zones randomly)
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include "../../header/world/world.h"
-
+#include "../../header/global.h"
 
 World* generateWorld(){
     World* world = malloc(sizeof(World));

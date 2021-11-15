@@ -6,13 +6,7 @@
 **  Description : Manage the player in the game
 */
 
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "../header/player.h"
 #include "../header/global.h"
-#include "../header/action/mining.h"
 
 const int MAX_INVENTORY = 20;
 

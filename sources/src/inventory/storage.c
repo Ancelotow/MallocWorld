@@ -6,5 +6,5 @@
 **  Description : Manage the PNJ's storage
 */
 
-#include "../../header/inventory/storage.h"
+#include "../../header/global.h"
 

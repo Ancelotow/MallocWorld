@@ -9,7 +9,7 @@
 #ifndef MALLOCWORLD_STACK_H
 #define MALLOCWORLD_STACK_H
 
-#include "inventory.h"
+typedef struct Inventory Inventory;
 
 typedef struct Stack{
     int id;

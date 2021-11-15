@@ -7,9 +7,7 @@
 */
 
 
-#include "../../header/action/mining.h"
 #include "../../header/global.h"
-
 
 void mining(Game* game, int id){
     int isUsed = useToolToMining(id, game->player);

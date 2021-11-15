@@ -6,13 +6,7 @@
 **  Description : Manage zone of world (also create a zone's type randomly and his height and width)
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "../../header/world/zone.h"
 #include "../../header/global.h"
-#include "../../header/world/map/village.h"
-#include "../../header/world/map/forest.h"
-#include "../../header/inventory/inventory.h"
 
 Zone* generateZone(TypeZone type){
     Zone* zone = malloc(sizeof(Zone));

@@ -6,4 +6,5 @@
 **  Description : Manage the fight's action when player meet a monster
 */
 
-#include "../../header/action/fight.h"
+#include "../../header/global.h"
+

@@ -9,7 +9,7 @@
 #ifndef MALLOCWORLD_POSITION_H
 #define MALLOCWORLD_POSITION_H
 
-#include "world/world.h"
+typedef struct World World;
 
 typedef struct Position{
     int x;

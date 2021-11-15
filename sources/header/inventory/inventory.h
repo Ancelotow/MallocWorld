@@ -9,7 +9,6 @@
 #ifndef MALLOCWORLD_INVENTORY_H
 #define MALLOCWORLD_INVENTORY_H
 
-#include "../world/zone.h"
 
 #define FILENAME_INVENTORIES "../resources/inventories.csv"
 

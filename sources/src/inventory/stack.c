@@ -6,11 +6,7 @@
 **  Description : Manage the inventory's stack
 */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include "../../header/inventory/stack.h"
-#include "../../header/inventory/inventory.h"
+#include "../../header/global.h"
 
 Stack* createStack(Inventory inventory){
     Stack* stack = malloc(sizeof(Stack));

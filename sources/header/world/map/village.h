@@ -9,7 +9,7 @@
 #ifndef MALLOCWORLD_VILLAGE_H
 #define MALLOCWORLD_VILLAGE_H
 
-#include "../zone.h"
+typedef struct Zone Zone;
 
 /**
  * Generate a map of "Village"'s type for a zone

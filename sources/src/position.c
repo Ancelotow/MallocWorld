@@ -6,10 +6,7 @@
 **  Description : Manage the player's position in the world (zone, row and column)
 */
 
-#include "../header/position.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "../header/global.h"
 
 Position* seekPlayer(World world){
     Position *position = malloc(sizeof(Position));

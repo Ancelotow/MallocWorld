@@ -6,14 +6,7 @@
 **  Description : Manage the game, the interactions between the game and the player and also printing
 */
 
-#include "../header/game.h"
-#include "../header/world/world.h"
-#include "../header/position.h"
 #include "../header/global.h"
-#include "../header/action/mining.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 #define PATH_SAVE "../resources/save/save.txt"
 
@@ -66,6 +59,18 @@ void play(Game* game){
         }
     } while(continueGame);
     freeGame(game);
+}
+
+void updateAllRespawn(Game *game) {
+    Respawn* current = game->respawn;
+    Position* position;
+    while(current != NULL){
+        current->roundLeft -= 1;
+        if(current->roundLeft <= 0){
+
+        }
+        current = current->child;
+    }
 }
 
 Game* createVoidGame(){

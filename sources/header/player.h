@@ -9,8 +9,10 @@
 #ifndef MALLOCWORLD_PLAYER_H
 #define MALLOCWORLD_PLAYER_H
 
-#include "inventory/inventory.h"
-#include "inventory/stack.h"
+typedef struct Stack Stack;
+typedef struct Inventory Inventory;
+typedef enum Element Element;
+typedef enum InventoryType InventoryType;
 
 typedef struct Player{
     int currentHp;

@@ -9,7 +9,8 @@
 #ifndef MALLOCWORLD_WORLD_H
 #define MALLOCWORLD_WORLD_H
 
-#include "zone.h"
+typedef struct Zone Zone;
+#include <stdio.h>
 
 #define NB_ZONE 3
 

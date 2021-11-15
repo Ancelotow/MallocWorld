@@ -9,11 +9,12 @@
 #ifndef MALLOCWORLD_GAME_H
 #define MALLOCWORLD_GAME_H
 
-#include "world/world.h"
-#include "position.h"
-#include "player.h"
-#include "inventory/storage.h"
-#include "world/respawn.h"
+typedef struct World World;
+typedef struct Player Player;
+typedef struct Position Position;
+typedef struct Respawn Respawn;
+typedef struct Storage Storage;
+
 
 typedef struct Game{
     World* world;
@@ -26,6 +27,8 @@ typedef struct Game{
 void runGame();
 
 Game* createVoidGame();
+
+void updateAllRespawn(Game* game);
 
 void play(Game* game);
 

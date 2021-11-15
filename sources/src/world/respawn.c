@@ -6,11 +6,8 @@
 **  Description : Manage the respawn of resources and monsters when player kill monster or mine a resource.
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include "../../header/world/respawn.h"
+#include "../../header/global.h"
+
 
 Respawn *createRespawn(int id, Position *position) {
     Respawn *respawn = malloc(sizeof(Respawn));
@@ -36,15 +33,6 @@ void appendRespawn(Respawn* respawn, int id, Position* position) {
     }
 }
 
-void updateAllRespawn(Respawn *respawn) {
-    respawn->roundLeft--;
-    if (respawn->roundLeft == 0) {
-        //supprimer un respawn
-    }
-    if (respawn->child != NULL) {
-        updateAllRespawn(respawn->child);
-    }
-}
 
 void printRespawn(Respawn *respawn) {
     printPosition(*respawn->position);

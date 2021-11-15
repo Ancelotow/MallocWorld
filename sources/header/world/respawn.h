@@ -9,20 +9,18 @@
 #ifndef MALLOCWORLD_RESPAWN_H
 #define MALLOCWORLD_RESPAWN_H
 
-#include "../position.h"
+typedef struct Position Position;
 
 typedef struct Respawn{
     int id;
     int roundLeft;
-    Position* position;
+    struct Position* position;
     struct Respawn* child;
 } Respawn;
 
-Respawn* createRespawn(int id, Position* position);
+Respawn* createRespawn(int id, struct Position* position);
 
-void appendRespawn(Respawn* respawn, int id, Position* position);
-
-void updateAllRespawn(Respawn* respawn);
+void appendRespawn(Respawn* respawn, int id, struct Position* position);
 
 void printRespawn(Respawn* respawn);
 

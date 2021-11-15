@@ -9,7 +9,8 @@
 #ifndef MALLOCWORLD_MINING_H
 #define MALLOCWORLD_MINING_H
 
-#include "../game.h"
+typedef enum Element Element;
+typedef struct Game Game;
 
 void mining(Game* game, int id);
 

@@ -6,8 +6,8 @@
 **  Description : Create a type's zone "Village" when the world is generated.
 */
 
-#include "../../../header/world/zone.h"
 #include "../../../header/global.h"
+
 
 const int HOUSE_HEIGHT = 7;
 const int HOUSE_WIDTH = 7;
