@@ -9,7 +9,6 @@
 #ifndef MALLOCWORLD_POSITION_H
 #define MALLOCWORLD_POSITION_H
 
-#include "world/zone.h"
 #include "world/world.h"
 
 typedef struct Position{
@@ -19,6 +18,8 @@ typedef struct Position{
 } Position;
 
 Position* seekPlayer(World world);
+
+void printPosition(Position position);
 
 void freePosition(Position* position);
 

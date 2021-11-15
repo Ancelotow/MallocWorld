@@ -10,13 +10,11 @@
 #define MALLOCWORLD_WORLD_H
 
 #include "zone.h"
-#include "respawn.h"
 
 #define NB_ZONE 3
 
 typedef struct World{
     Zone** world;
-    Respawn respawnHeader;
 } World;
 
 /**

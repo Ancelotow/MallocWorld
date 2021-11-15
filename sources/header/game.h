@@ -13,6 +13,7 @@
 #include "position.h"
 #include "player.h"
 #include "inventory/storage.h"
+#include "world/respawn.h"
 
 typedef struct Game{
     World* world;
