@@ -28,18 +28,14 @@ void appendStorage(Storage* storage, int id, int quantity) {
 }
 
 void deleteElement(Storage* storage, int id,  int newQuantity){
-    if(storage != NULL){
-        while (storage->next != NULL){
-            if (storage->id == id){
-                storage->quantity -= newQuantity;
-            }
+    while(storage != NULL){
+        if (storage->id == id){
+            storage->quantity -= newQuantity;
+            break;
         }
+        storage = storage->next;
     }
 }
-
-/*
- * brf faut que je rajoute 2 ligne et surtout que je change la condition
- */
 
 void printStorage(Storage *storage) {
     printf("ID :%d, Quantité : %d (", storage->id, storage->quantity);
