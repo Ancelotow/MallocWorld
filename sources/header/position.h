@@ -17,6 +17,8 @@ typedef struct Position{
     int zone;
 } Position;
 
+Position* createPositionFromExisting(Position posExisting);
+
 Position* seekPlayer(World world);
 
 void printPosition(Position position);

@@ -9,45 +9,56 @@
 
 #include "../../header/global.h"
 
-void mining(Game* game, int id){
+void mining(Game *game, int id, Position position) {
     int isUsed = useToolToMining(id, game->player);
-    if(isUsed){
-        printf("\n\n================================\n");
-        printf("|| Ressource recoltee !      ||\n");
-        printf("================================\n\n");
+    if (isUsed) {
+        int isCollect = 0;
+        int isAppend;
         int nbResources = (getRandomNumber(0) % 4) + 1;
-        Inventory* inventory;
-        for(int i = 0; i < nbResources; i++){
+        Inventory *inventory;
+        for (int i = 0; i < nbResources; i++) {
             inventory = getInventoryFromId(getIdResource(id));
-            appendInventory(game->player, inventory);
+            isAppend = appendInventory(game->player, inventory);
+            if (isAppend) {
+                isCollect = 1;
+            }
+        }
+        if(isCollect) {
+            Position* posResource = createPositionFromExisting(position);
+            printMessage("Ressource recoltee !");
+            if(game->respawn == NULL){
+                game->respawn = createRespawn(id, posResource);
+            } else {
+                appendRespawn(game->respawn, id, posResource);
+            }
+        } else {
+            printMessage("Votre inventaire est plein");
         }
     } else {
-        printf("\n\n==========================================\n");
-        printf("|| Vous n'avez pas l'outil adequat      ||\n");
-        printf("==========================================\n\n");
+        printMessage("Vous n'avez pas l'outil adequat");
     }
 }
 
-int isIdTool_Plant(Element element, int id){
+int isIdTool_Plant(Element element, int id) {
     switch (element) {
         case PLANT_ZONE_1:
-            if(id == 3 || id == 13 || id == 24){
+            if (id == 3 || id == 13 || id == 24) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
         case PLANT_ZONE_2:
-            if(id == 13 || id == 24){
+            if (id == 13 || id == 24) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
         case PLANT_ZONE_3:
-            if(id == 24){
+            if (id == 24) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
@@ -56,26 +67,26 @@ int isIdTool_Plant(Element element, int id){
     }
 }
 
-int isIdTool_Rock(Element element, int id){
+int isIdTool_Rock(Element element, int id) {
     switch (element) {
         case ROCK_ZONE_1:
-            if(id == 2 || id == 12 || id == 23){
+            if (id == 2 || id == 12 || id == 23) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
         case ROCK_ZONE_2:
-            if(id == 12 || id == 23){
+            if (id == 12 || id == 23) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
         case ROCK_ZONE_3:
-            if(id == 23){
+            if (id == 23) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
@@ -84,26 +95,26 @@ int isIdTool_Rock(Element element, int id){
     }
 }
 
-int isIdTool_Wood(Element element, int id){
+int isIdTool_Wood(Element element, int id) {
     switch (element) {
         case WOOD_ZONE_1:
-            if(id == 4 || id == 14 || id == 25){
+            if (id == 4 || id == 14 || id == 25) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
         case WOOD_ZONE_2:
-            if(id == 14 || id == 25){
+            if (id == 14 || id == 25) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
         case WOOD_ZONE_3:
-            if(id == 25){
+            if (id == 25) {
                 return 1;
-            } else{
+            } else {
                 return 0;
             }
 
@@ -112,7 +123,7 @@ int isIdTool_Wood(Element element, int id){
     }
 }
 
-int isIdTool(Element element, int id){
+int isIdTool(Element element, int id) {
     switch (element) {
         case PLANT_ZONE_1:
         case PLANT_ZONE_2:
@@ -134,7 +145,7 @@ int isIdTool(Element element, int id){
     }
 }
 
-float getUsury(Element element){
+float getUsury(Element element) {
     switch (element) {
         case PLANT_ZONE_1:
         case WOOD_ZONE_1:
@@ -155,3 +166,4 @@ float getUsury(Element element){
             return 0.00f;
     }
 }
+

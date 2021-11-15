@@ -61,18 +61,6 @@ void play(Game* game){
     freeGame(game);
 }
 
-void updateAllRespawn(Game *game) {
-    Respawn* current = game->respawn;
-    Position* position;
-    while(current != NULL){
-        current->roundLeft -= 1;
-        if(current->roundLeft <= 0){
-
-        }
-        current = current->child;
-    }
-}
-
 Game* createVoidGame(){
     Game* game = malloc(sizeof(Game));
     game->world = generateWorld();
@@ -109,11 +97,9 @@ void actionMove(char move, Game* game){
 void moves(Position newPosition, Game* game){
     int id =  game->world->world[newPosition.zone]->map[newPosition.y][newPosition.x];
     if(id == IMPASSABLE){
-        printf("\n\n================================\n");
-        printf("|| Impossible de passer ici ! ||\n");
-        printf("================================\n\n");
+        printMessage("Impossible de passer ici !");
     } else if(isResource(id)){
-        mining(game, id);
+        mining(game, id, newPosition);
         game->position->x = newPosition.x;
         game->position->y = newPosition.y;
         game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;
@@ -126,13 +112,15 @@ void moves(Position newPosition, Game* game){
         printf("\n");
         printZone(game->world->world[game->position->zone]);
     }
-
+    updateAllRespawn(game);
+    printRespawn(game->respawn);
 }
 
 void freeGame(Game* game){
     freeWorld(game->world);
     freePosition(game->position);
     freePlayer(game->player);
+    freeRespawn(game->respawn);
     free(game);
 }
 
@@ -145,4 +133,10 @@ void saveGame(Game game){
     } else{
         printf("NULLkllll");
     }
+}
+
+void printMessage(char* message){
+    printf("\n\n============================================\n");
+    printf("|| %s\t\t\t ||\n", message);
+    printf("============================================\n\n");
 }

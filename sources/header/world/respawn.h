@@ -22,6 +22,8 @@ Respawn* createRespawn(int id, struct Position* position);
 
 void appendRespawn(Respawn* respawn, int id, struct Position* position);
 
+void updateAllRespawn(Game* game);
+
 void printRespawn(Respawn* respawn);
 
 void freeRespawn(Respawn* respawn);

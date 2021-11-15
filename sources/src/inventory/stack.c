@@ -8,23 +8,23 @@
 
 #include "../../header/global.h"
 
-Stack* createStack(Inventory inventory){
-    Stack* stack = malloc(sizeof(Stack));
+Stack *createStack(Inventory inventory) {
+    Stack *stack = malloc(sizeof(Stack));
     stack->id = inventory.id;
     stack->maximum = inventory.maxStack;
     stack->length = 0;
-    stack->inventory = malloc(sizeof(Inventory*) * stack->maximum);
+    stack->inventory = malloc(sizeof(Inventory *) * stack->maximum);
     return stack;
 }
 
-Stack* createStackWithInventory(Inventory* inventory){
-    Stack* stack = createStack(*inventory);
+Stack *createStackWithInventory(Inventory *inventory) {
+    Stack *stack = createStack(*inventory);
     appendStack(inventory, stack);
     return stack;
 }
 
-int appendStack(Inventory* inventory, Stack* stack){
-    if(stack->length < stack->maximum){
+int appendStack(Inventory *inventory, Stack *stack) {
+    if (stack->length < stack->maximum) {
         stack->inventory[stack->length] = inventory;
         stack->length += 1;
         return 1;
@@ -33,28 +33,30 @@ int appendStack(Inventory* inventory, Stack* stack){
     }
 }
 
-void printStackDebug(Stack stack){
-    Inventory* inv = getInventoryFromId(stack.id);
-    printf("\n\n=========== %s : %s  ||  %d/%d ===========\n", getInventoryTypeName(inv->type), inv->name, stack.length, stack.maximum);
-    for(int i =0; i < stack.length; i++){
+void printStackDebug(Stack stack) {
+    Inventory *inv = getInventoryFromId(stack.id);
+    printf("\n\n=========== %s : %s  ||  %d/%d ===========\n", getInventoryTypeName(inv->type), inv->name, stack.length,
+           stack.maximum);
+    for (int i = 0; i < stack.length; i++) {
         printInventory(*stack.inventory[i]);
     }
     freeInventory(inv);
 }
 
-void printStack(Stack stack){
-    Inventory* inv = getInventoryFromId(stack.id);
+void printStack(Stack stack) {
+    Inventory *inv = getInventoryFromId(stack.id);
     printf("||                                                      ||\n");
-    printf("|| id : %d = %s : %s = %d/%d \t\t\t||\n", stack.id, getInventoryTypeName(inv->type), inv->name, stack.length, stack.maximum);
-    for(int i =0; i < stack.length; i++){
+    printf("|| id : %d = %s : %s = %d/%d \t\t\t||\n", stack.id, getInventoryTypeName(inv->type), inv->name,
+           stack.length, stack.maximum);
+    for (int i = 0; i < stack.length; i++) {
         printInventory(*stack.inventory[i]);
     }
     freeInventory(inv);
 }
 
-void deleteStack(int index, Stack* stack){
-    if(stack->length > 0 && index < stack->length){
-        for(int i = index + 1; i < stack->length; i++){
+void deleteStack(int index, Stack *stack) {
+    if (stack->length > 0 && index < stack->length) {
+        for (int i = index + 1; i < stack->length; i++) {
             stack->inventory[i - 1] = stack->inventory[i];
         }
         freeInventory(stack->inventory[stack->length - 1]);
@@ -62,8 +64,8 @@ void deleteStack(int index, Stack* stack){
     }
 }
 
-void freeStack(Stack* stack){
-    for(int i = 0; i < stack->length; i++){
+void freeStack(Stack *stack) {
+    for (int i = 0; i < stack->length; i++) {
         freeInventory(stack->inventory[i]);
     }
     free(stack);

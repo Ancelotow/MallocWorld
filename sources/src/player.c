@@ -34,7 +34,7 @@ Player* createPlayerLevel1(){
     return player;
 }
 
-void appendInventory(Player* player, Inventory* inventory){
+int appendInventory(Player* player, Inventory* inventory){
     Stack* stack;
     int stackVacant = 0;
     for(int i = 0; i < player->sizeInventory; i++){
@@ -46,10 +46,14 @@ void appendInventory(Player* player, Inventory* inventory){
     }
     if(stackVacant){
         appendStack(inventory, stack);
+        return 1;
     } else if(player->sizeInventory < 20){
         stack = createStackWithInventory(inventory);
         player->inventory[player->sizeInventory] = stack;
         player->sizeInventory += 1;
+        return 1;
+    } else {
+        return 0;
     }
 }
 

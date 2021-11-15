@@ -28,8 +28,6 @@ void runGame();
 
 Game* createVoidGame();
 
-void updateAllRespawn(Game* game);
-
 void play(Game* game);
 
 void actionMove(char move, Game* game);
@@ -39,5 +37,7 @@ void moves(Position newPosition, Game* game);
 void freeGame(Game* game);
 
 void saveGame(Game game);
+
+void printMessage(char* message);
 
 #endif //MALLOCWORLD_GAME_H

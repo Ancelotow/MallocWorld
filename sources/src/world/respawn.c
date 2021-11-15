@@ -24,6 +24,19 @@ Respawn *createRespawn(int id, Position *position) {
     return respawn;
 }
 
+void updateAllRespawn(Game *game) {
+    Respawn* current = game->respawn;
+    Position* pos;
+    while(current != NULL){
+        current->roundLeft -= 1;
+        if(current->roundLeft <= 0){
+            pos = current->position;
+            game->world->world[pos->zone]->map[pos->y][pos->x] = current->id;
+        }
+        current = current->child;
+    }
+}
+
 void appendRespawn(Respawn* respawn, int id, Position* position) {
     if(respawn != NULL){
         while(respawn->child != NULL){
@@ -33,21 +46,19 @@ void appendRespawn(Respawn* respawn, int id, Position* position) {
     }
 }
 
-
 void printRespawn(Respawn *respawn) {
-    printPosition(*respawn->position);
-    printf("ID :%d, Tour restant : %d (", respawn->id, respawn->roundLeft);
-    printPosition(*respawn->position);
-    printf(")\n");
-    if (respawn->child != NULL) {
+    if(respawn != NULL){
+        printf("ID :%d, Tour restant : %d (", respawn->id, respawn->roundLeft);
+        printPosition(*respawn->position);
+        printf(")\n");
         printRespawn(respawn->child);
     }
 }
 
 void freeRespawn(Respawn *respawn) {
-    freePosition(respawn->position);
-    if(respawn->child != NULL){
+    if(respawn != NULL){
+        freePosition(respawn->position);
         freeRespawn(respawn->child);
+        free(respawn);
     }
-    free(respawn);
 }

@@ -12,7 +12,7 @@
 typedef enum Element Element;
 typedef struct Game Game;
 
-void mining(Game* game, int id);
+void mining(Game* game, int id, Position position);
 
 int isIdTool_Plant(Element element, int id);
 

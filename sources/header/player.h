@@ -28,7 +28,7 @@ Player* createPlayer(int currentHp, int maxHp, Stack** inventory, int sizeInvent
 
 Player* createPlayerLevel1();
 
-void appendInventory(Player* player, Inventory* inventory);
+int appendInventory(Player* player, Inventory* inventory);
 
 void printPlayerDebug(Player player);
 

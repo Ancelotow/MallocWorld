@@ -8,6 +8,14 @@
 
 #include "../header/global.h"
 
+Position* createPositionFromExisting(Position posExisting){
+    Position* position = malloc(sizeof(Position));
+    position->x = posExisting.x;
+    position->y = posExisting.y;
+    position->zone = posExisting.zone;
+    return position;
+}
+
 Position* seekPlayer(World world){
     Position *position = malloc(sizeof(Position));
     position->x = -1;
