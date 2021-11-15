@@ -12,55 +12,51 @@
 #include <string.h>
 #include "../../header/world/respawn.h"
 
-
-/*
-Respawn* createRespawn(int id, Position* position){
-    Respawn* respawn;
-    Respawn* respawnChild;
-
+Respawn *createRespawn(int id, Position *position) {
+    Respawn *respawn = malloc(sizeof(Respawn));
     int roundLeft;
-    if(id >= 3 && id <= 11){
+    if (id >= 3 && id <= 11) {
         roundLeft = 10;
-    }else{
+    } else {
         roundLeft = 15;
     }
     respawn->roundLeft = roundLeft;
     respawn->id = id;
     respawn->position = position;
-    respawn->child = respawnChild;
+    respawn->child = NULL;
+    return respawn;
 }
 
-void appendRespawn(Respawn* respawn, int id, Position* position) {
-    createRespawn(id, position);
+void appendRespawn(Respawn *respawn, int id, Position *position) {
+    if(respawn != NULL){
+        while(respawn->child != NULL){
+            respawn = respawn->child;
+        }
+        respawn->child = createRespawn(id, position);
+    }
 }
-**/
-/**
- * presque, si le roundLeft est à 0, il faut le supprimer...
- */
-/**
-void updateAllRespawn(Respawn* respawn) {
+
+void updateAllRespawn(Respawn *respawn) {
     respawn->roundLeft--;
-    if(respawn->roundLeft == 0){
+    if (respawn->roundLeft == 0) {
         //supprimer un respawn
     }
-    if(respawn->child != NULL){
+    if (respawn->child != NULL) {
         updateAllRespawn(respawn->child);
     }
 }
 
-void printPosition(Position* position){
-    printf("%d %d %d", position->x, position->y, position->zone);
-}
-
-void printRespawn(Respawn* respawn){
-    printPosition(respawn->position);
-    printf("%d %d", respawn->id, respawn->roundLeft);
-    if(respawn->child != NULL){
+void printRespawn(Respawn *respawn) {
+    printPosition(*respawn->position);
+    printf("ID :%d, Tour restant : %d (", respawn->id, respawn->roundLeft);
+    printPosition(*respawn->position);
+    printf(")\n");
+    if (respawn->child != NULL) {
         printRespawn(respawn->child);
     }
 }
 
-void freeRespawn(Respawn* respawn){
+void freeRespawn(Respawn *respawn) {
     freePosition(respawn->position);
     free(respawn);
-}**/
+}

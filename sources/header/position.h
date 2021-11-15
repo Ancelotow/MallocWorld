@@ -19,6 +19,8 @@ typedef struct Position{
 
 Position* seekPlayer(World world);
 
+void printPosition(Position position);
+
 void freePosition(Position* position);
 
 #endif //MALLOCWORLD_POSITION_H

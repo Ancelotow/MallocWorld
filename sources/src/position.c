@@ -7,7 +7,6 @@
 */
 
 #include "../header/position.h"
-#include "../header/world/world.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,6 +34,10 @@ Position* seekPlayer(World world){
         }
     }
     return position;
+}
+
+void printPosition(Position position){
+    printf("X : %d, Y : %d, ZONE : %d", position.x, position.y, position.zone);
 }
 
 void freePosition(Position* position){
