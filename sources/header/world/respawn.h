@@ -26,6 +26,6 @@ void updateAllRespawn(Respawn* respawn);
 
 void printRespawn(Respawn* respawn);
 
-void freeRespawn(Respawn* respawn);
+void freeRespawn(Respawn* respawn, int isRecursive);
 
 #endif //MALLOCWORLD_RESPAWN_H

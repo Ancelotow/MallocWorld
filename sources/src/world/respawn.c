@@ -27,7 +27,7 @@ Respawn *createRespawn(int id, Position *position) {
     return respawn;
 }
 
-void appendRespawn(Respawn *respawn, int id, Position *position) {
+void appendRespawn(Respawn* respawn, int id, Position* position) {
     if(respawn != NULL){
         while(respawn->child != NULL){
             respawn = respawn->child;
@@ -56,7 +56,10 @@ void printRespawn(Respawn *respawn) {
     }
 }
 
-void freeRespawn(Respawn *respawn) {
+void freeRespawn(Respawn *respawn, int isRecursive) {
     freePosition(respawn->position);
+    if(isRecursive && respawn->child != NULL){
+        freeRespawn(respawn->child, isRecursive);
+    }
     free(respawn);
 }
