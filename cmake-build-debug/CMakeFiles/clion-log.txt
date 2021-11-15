@@ -1,6 +1,4 @@
 "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "C:\Users\Elsa Firmin\CLionProjects\MallocWorld"
--- Found SDL2: C:/Users/Elsa Firmin/CLionProjects/MallocWorld/SDL/lib  
 -- Configuring done
-WARNING: Target "MallocWorld" requests linking to directory "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/SDL/lib".  Targets may link only to libraries.  CMake is dropping the item.
 -- Generating done
 -- Build files have been written to: C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug

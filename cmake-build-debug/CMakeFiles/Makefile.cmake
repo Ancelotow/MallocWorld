@@ -7,14 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckCSourceCompiles.cmake"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckIncludeFile.cmake"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckLibraryExists.cmake"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindPackageHandleStandardArgs.cmake"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindPackageMessage.cmake"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindSDL2.cmake"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindThreads.cmake"
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/Internal/CheckSourceCompiles.cmake"
   "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/share/cmake-3.20/Modules/CMakeCInformation.cmake"
   "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/share/cmake-3.20/Modules/CMakeCXXInformation.cmake"
   "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake"

@@ -16,15 +16,15 @@ typedef struct Storage{
     struct Storage* next;
 } Storage;
 
-Storage* createStorage(int id);
+Storage* createStorage(int id, int quantity); //FAIT
 
-void appendStorage(Storage storage, int id, int quantity);
+void appendStorage(Storage* storage, int id, int quantity); //FAIT
 
-void deleteElement (int id, int quantity);
+void deleteElement(Storage* storage, int id, int newQuantity);
 
-void printStorage(Storage* storage);
+void printStorage(Storage* storage);    //FAIT
 
-void freeStorage(Storage* storage);
+void freeStorage(Storage* storage); //FAIT
 
 
 
@@ -33,8 +33,6 @@ void freeStorage(Storage* storage);
 
 /**
 * tu peux supprimer un un élément (donc  tu  baisse la  quantité de 1 ou de N élement  pour un id inventaire donné)
-et si la  quantité est à 0,  tu supprime x
  et tu peux aussi ajouter :
-   - si l'inventaire n'existe pas,  tu  peux créé  un nouveau storage à la fin X
    - si l'inventaire existe, tu fait +1 à la quantité X
 */

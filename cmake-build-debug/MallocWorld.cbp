@@ -5,7 +5,7 @@
 		<Option title="MallocWorld"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\Program Files\;CMake Files\..\..\..\..\Program Files\JetBrains\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\Internal\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug"/>
@@ -24,7 +24,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/SDL/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -46,7 +45,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/SDL/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -82,35 +80,101 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/main.cpp">
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/action/fight.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/action/mining.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/game.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/global.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/inventory.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/stack.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/inventory/storage.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/monster.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/player.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/position.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/map/forest.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/map/village.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/respawn.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/world.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/zone.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/main.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/fight.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/mining.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/global.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/inventory/inventory.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/inventory/stack.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/inventory/storage.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/monster.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/player.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/position.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/forest.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/village.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/respawn.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/world.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/zone.c">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckCSourceCompiles.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckIncludeFile.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckLibraryExists.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindPackageHandleStandardArgs.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindPackageMessage.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindSDL2.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindThreads.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/Internal/CheckSourceCompiles.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\Internal\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
