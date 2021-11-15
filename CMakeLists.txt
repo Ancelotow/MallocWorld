@@ -3,10 +3,10 @@ project(MallocWorld)
 set(CMAKE_C_STANDARD 99)
 
 #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/SDL/lib/cmake")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules")
 
-set(SDL2_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/sdl/include/SDL2")
-set(SDL2_LIBRARY "${PROJECT_SOURCE_DIR}/sdl/lib")
+set(SDL2_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/SDL/include")
+set(SDL2_LIBRARY "${PROJECT_SOURCE_DIR}/SDL/lib")
 
 find_package(SDL2 REQUIRED)
 #find_library(SDL2_LIBRARY NAME SDL2)

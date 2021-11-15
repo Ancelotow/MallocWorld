@@ -5,7 +5,7 @@
 		<Option title="MallocWorld"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\Program Files\;CMake Files\..\..\..\..\Program Files\JetBrains\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\;CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\Internal\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug"/>
@@ -24,7 +24,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sdl/include/SDL2"/>
+					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/SDL/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -46,7 +46,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sdl/include/SDL2"/>
+					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/SDL/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -87,6 +87,30 @@
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckCSourceCompiles.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckIncludeFile.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/CheckLibraryExists.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindPackageHandleStandardArgs.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindPackageMessage.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindSDL2.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/FindThreads.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/../../../../Program Files/JetBrains/CLion 2021.2.3/bin/cmake/cygwin/share/cmake-3.20.2/Modules/Internal/CheckSourceCompiles.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\cygwin\share\cmake-3.20.2\Modules\Internal\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
