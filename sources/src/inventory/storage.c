@@ -29,6 +29,42 @@ void changeQuantityStorage(Storage* storage, int id, int quantity) {
     }
 }
 
+int stockInventory(Player* player){
+    Stack **inventory;
+    int quantity;
+    int isExist = 0;
+
+    printf("Quelles ressources souhaites-tu stocker? \n");
+    scanf("%s", &inventory);
+    for(int i = 0; i < player->sizeInventory; i++){
+        for(int j = 0; j < player->inventory[i]->length; j++){
+            if (inventory == player->inventory[i]){
+                isExist = 1;
+                break;
+            }
+        }
+        if(isExist){
+            break;
+        }
+    }
+    if (!isExist){
+        printf("Tu n'a pas cette ressource \n");
+        stockInventory(player);
+    }
+
+
+
+
+    printf("Quel quantité veut tu stocker? \n");
+    scanf("%d", &quantity);
+    if (quantity > player->sizeInventory) {
+        printf("Tu n'en a pas assez \n");
+        stockInventory(player);
+    }
+}
+
+
+
 void printStorage(Storage *storage) {
     printf("ID :%d, Quantité : %d", storage->id, storage->quantity);
     if (storage->next != NULL) {
