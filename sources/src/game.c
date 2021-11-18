@@ -104,7 +104,7 @@ void moves(Position newPosition, Game* game){
         game->position->y = newPosition.y;
         game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;
     } else if(isMonster(id)){
-        // TODO: Combat d'un monstre
+        startFight(id, game);
     } else{
         game->position->x = newPosition.x;
         game->position->y = newPosition.y;

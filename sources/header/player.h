@@ -36,8 +36,14 @@ void printInventoryPlayer(Player player, InventoryType type);
 
 int useToolToMining(Element element, Player* player);
 
+void gainExperience(Player* player, int experience);
+
 void freePlayer(Player* player);
 
 void savePlayer(FILE* file, Player player);
+
+Inventory* findInventory(int id);
+
+int getLengthInventoryType(Player player, InventoryType type);
 
 #endif //MALLOCWORLD_PLAYER_H

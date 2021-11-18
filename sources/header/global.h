@@ -58,5 +58,6 @@ int getFileLength(FILE* file);
 
 void printAction();
 
+void printActionFight();
 
 #endif //MALLOCWORLD_GLOBAL_H

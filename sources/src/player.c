@@ -86,6 +86,25 @@ void printInventoryPlayer(Player player, InventoryType type){
     printf("==========================================================\n\n");
 }
 
+int getLengthInventoryType(Player player, InventoryType type){
+    Inventory* inventory = NULL;
+    int length = 0;
+    for(int i = 0; i < player.sizeInventory; i++){
+        if(type == 0){
+            length += 1;
+        } else {
+            inventory = getInventoryFromId(player.inventory[i]->id);
+            if(inventory->type == type){
+                length += 1;
+            }
+        }
+    }
+    if(inventory != NULL){
+        freeInventory(inventory);
+    }
+    return length;
+}
+
 void freePlayer(Player* player){
     for(int i=0; i < player->sizeInventory; i++){
         freeStack(player->inventory[i]);
@@ -118,3 +137,15 @@ int useToolToMining(Element element, Player* player){
     }
     return 0;
 }
+
+
+void gainExperience(Player* player, int experience){
+    player->xp += experience;
+    if(player->xp >= player->xpNext){
+        printMessage("Vous avez gagné un niveau !");
+        player->xp = player->xpNext - player->xp;
+        player->xpNext *= 2;
+        player->level += 1;
+    }
+}
+
