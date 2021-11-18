@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MallocWorld.dir/sources/src/monster.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/player.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/position.c.obj"
+  "CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/world/map/forest.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/world/map/village.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/world/respawn.c.obj"
@@ -22,6 +23,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C)
+foreach(lang C CXX)
   include(CMakeFiles/MallocWorld.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

@@ -110,6 +110,9 @@
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/position.h">
 			<Option target="MallocWorld"/>
 		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/restaure.h">
+			<Option target="MallocWorld"/>
+		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/world/map/forest.h">
 			<Option target="MallocWorld"/>
 		</Unit>
@@ -156,6 +159,9 @@
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/position.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/restaure.cpp">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/forest.c">

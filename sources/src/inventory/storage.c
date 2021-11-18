@@ -8,8 +8,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <string.h>
 #include "../../header/inventory/storage.h"
 
 Storage *createStorage(int id, int quantity) {
@@ -21,16 +19,10 @@ Storage *createStorage(int id, int quantity) {
     return storage;
 }
 
-void appendStorage(Storage* storage, int id, int quantity) {
-    if(storage != NULL){
-        storage->quantity  += 1;
-    }
-}
-
-void deleteElement(Storage* storage, int id,  int newQuantity){
+void changeQuantityStorage(Storage* storage, int id, int quantity) {
     while(storage != NULL){
         if (storage->id == id){
-            storage->quantity -= newQuantity;
+            storage->quantity += quantity;
             break;
         }
         storage = storage->next;
@@ -38,8 +30,7 @@ void deleteElement(Storage* storage, int id,  int newQuantity){
 }
 
 void printStorage(Storage *storage) {
-    printf("ID :%d, Quantité : %d (", storage->id, storage->quantity);
-    printf(")\n");
+    printf("ID :%d, Quantité : %d", storage->id, storage->quantity);
     if (storage->next != NULL) {
         printStorage(storage->next);
     }

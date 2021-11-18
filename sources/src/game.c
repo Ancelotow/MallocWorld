@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define PATH_SAVE "../resources/save/save.txt"
+#define PATH_SAVE "../resources/save.txt/save2.txt"
 
 #define CMD_CREATE_GAME "create"
 #define CMD_LOAD_GAME "load [save_file]"

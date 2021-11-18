@@ -392,6 +392,30 @@ sources/src/position.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/position.c.s
 .PHONY : sources/src/position.c.s
 
+sources/src/restaure.obj: sources/src/restaure.cpp.obj
+.PHONY : sources/src/restaure.obj
+
+# target to build an object file
+sources/src/restaure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj
+.PHONY : sources/src/restaure.cpp.obj
+
+sources/src/restaure.i: sources/src/restaure.cpp.i
+.PHONY : sources/src/restaure.i
+
+# target to preprocess a source file
+sources/src/restaure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.i
+.PHONY : sources/src/restaure.cpp.i
+
+sources/src/restaure.s: sources/src/restaure.cpp.s
+.PHONY : sources/src/restaure.s
+
+# target to generate assembly for a file
+sources/src/restaure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.s
+.PHONY : sources/src/restaure.cpp.s
+
 sources/src/world/map/forest.obj: sources/src/world/map/forest.c.obj
 .PHONY : sources/src/world/map/forest.obj
 
@@ -554,6 +578,9 @@ help:
 	@echo ... sources/src/position.obj
 	@echo ... sources/src/position.i
 	@echo ... sources/src/position.s
+	@echo ... sources/src/restaure.obj
+	@echo ... sources/src/restaure.i
+	@echo ... sources/src/restaure.s
 	@echo ... sources/src/world/map/forest.obj
 	@echo ... sources/src/world/map/forest.i
 	@echo ... sources/src/world/map/forest.s

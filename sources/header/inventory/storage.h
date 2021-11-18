@@ -16,23 +16,14 @@ typedef struct Storage{
     struct Storage* next;
 } Storage;
 
-Storage* createStorage(int id, int quantity); //FAIT
+Storage* createStorage(int id, int quantity);
 
-void appendStorage(Storage* storage, int id, int quantity); //FAIT
+void changeQuantityStorage(Storage* storage, int id, int quantity); //ajouter - enlever des ressources
 
-void deleteElement(Storage* storage, int id, int newQuantity);
+void printStorage(Storage* storage);
 
-void printStorage(Storage* storage);    //FAIT
-
-void freeStorage(Storage* storage); //FAIT
+void freeStorage(Storage* storage);
 
 
 
 #endif //MALLOCWORLD_STORAGE_H
-
-
-/**
-* tu peux supprimer un un élément (donc  tu  baisse la  quantité de 1 ou de N élement  pour un id inventaire donné)
- et tu peux aussi ajouter :
-   - si l'inventaire existe, tu fait +1 à la quantité X
-*/
