@@ -161,7 +161,7 @@
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/position.c">
 			<Option target="MallocWorld"/>
 		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/restaure.cpp">
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/restaure.c">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/forest.c">

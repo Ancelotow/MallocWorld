@@ -273,18 +273,18 @@ CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\action\mining.c" -o CMakeFiles\MallocWorld.dir\sources\src\action\mining.c.s
 
-CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj: CMakeFiles/MallocWorld.dir/flags.make
-CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj: ../sources/src/restaure.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MallocWorld.dir\sources\src\restaure.cpp.obj -c "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\restaure.cpp"
+CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj: CMakeFiles/MallocWorld.dir/flags.make
+CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj: ../sources/src/restaure.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\MallocWorld.dir\sources\src\restaure.c.obj -c "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\restaure.c"
 
-CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\restaure.cpp" > CMakeFiles\MallocWorld.dir\sources\src\restaure.cpp.i
+CMakeFiles/MallocWorld.dir/sources/src/restaure.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MallocWorld.dir/sources/src/restaure.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\restaure.c" > CMakeFiles\MallocWorld.dir\sources\src\restaure.c.i
 
-CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\restaure.cpp" -o CMakeFiles\MallocWorld.dir\sources\src\restaure.cpp.s
+CMakeFiles/MallocWorld.dir/sources/src/restaure.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MallocWorld.dir/sources/src/restaure.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\restaure.c" -o CMakeFiles\MallocWorld.dir\sources\src\restaure.c.s
 
 # Object files for target MallocWorld
 MallocWorld_OBJECTS = \
@@ -304,7 +304,7 @@ MallocWorld_OBJECTS = \
 "CMakeFiles/MallocWorld.dir/sources/src/inventory/storage.c.obj" \
 "CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.obj" \
 "CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj" \
-"CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj"
+"CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj"
 
 # External object files for target MallocWorld
 MallocWorld_EXTERNAL_OBJECTS =
@@ -325,12 +325,12 @@ MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/inventory/stack.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/inventory/storage.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj
-MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj
+MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/build.make
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/linklibs.rsp
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/objects1.rsp
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable MallocWorld.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable MallocWorld.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MallocWorld.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -33,12 +33,15 @@ int stockInventory(Player* player){
     Stack **inventory;
     int quantity;
     int isExist = 0;
+    int result = 0;
+    int quantInit = 0;
 
     printf("Quelles ressources souhaites-tu stocker? \n");
     scanf("%s", &inventory);
     for(int i = 0; i < player->sizeInventory; i++){
         for(int j = 0; j < player->inventory[i]->length; j++){
             if (inventory == player->inventory[i]){
+                quantInit += player->inventory[i]->length;
                 isExist = 1;
                 break;
             }
@@ -53,14 +56,15 @@ int stockInventory(Player* player){
     }
 
 
+    do {
+        printf("Quelle quantité veux tu stocker? \n");
+        scanf("%d", &quantity);
+        if (quantity > quantInit) {
+            printf("Tu n'en a pas assez \n");
+            result++;
+        }
+    } while (result == 0);
 
-
-    printf("Quel quantité veut tu stocker? \n");
-    scanf("%d", &quantity);
-    if (quantity > player->sizeInventory) {
-        printf("Tu n'en a pas assez \n");
-        stockInventory(player);
-    }
 }
 
 

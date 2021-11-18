@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "C"
-  "CXX"
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
@@ -20,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/monster.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/monster.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/player.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/player.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/position.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/position.c.obj"
+  "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/restaure.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/forest.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/world/map/forest.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/map/village.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/world/map/village.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/world/respawn.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/world/respawn.c.obj"
@@ -30,14 +30,6 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  )
-set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/restaure.cpp" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/restaure.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
