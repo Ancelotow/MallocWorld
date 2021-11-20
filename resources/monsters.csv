@@ -1,41 +1,41 @@
 
 id;name;hp;damage;xp;breed;id inventory
-12;Feu Follet;2;2;4;7;5
-13;Gnoll;3;5;15;1;3
-14;Gobelin;3;6;18;5;6
-15;Hobgobelin;4;6;24;5;6
-16;Capitaine Hobgobelin;4;8;32;5;15
-17;Goule;5;7;35;7;7
-18;Spectre;5;8;40;7;15
-19;Molosse;7;8;56;1;7
-20;Orque;8;8;64;2;8
-21;Syvanien;10;8;80;1;5
-22;Troll des cavernes;10;15;150;3;10
-23;Flagelleur Mental;20;15;300;1;11
-24;Dryade;20;10;200;1;16
-25;Hippogriffe;21;11;231;1;18
-26;Skaven;21;12;252;1;17
-27;Liche;25;12;300;7;18
-28;Momie;24;15;360;7;17
-29;Gobelours;26;15;390;5;16
-30;Chef Gobelours;28;17;476;5;19
-31;Warg;25;20;500;1;18
-32;Uruk-hai;30;18;540;2;23
-33;Gith;31;18;558;1;26
-34;Salamandre de feu;28;22;616;1;26
-35;Shelob (Arachne);40;20;800;1;22
-36;Chef Uruk-hai;31;21;630;2;27
-37;Cube gelatineux;15;50;750;1;29
-38;Jeune dragon rouge;35;22;770;8;28
-39;Diable epineux;35;25;875;1;29
-40;Horreur casque;38;26;988;1;26
-41;Swamp thing;40;28;1120;1;27
-42;Dragon d'argent;42;30;1260;8;28
-43;Shai-Hulud;60;25;1500;1;34
-44;Ombre;45;40;1800;7;27
-45;Dragon d'or venerable;50;42;2100;8;28
-46;Troll de pierre;60;40;2400;3;34
-47;Fleau de Durin;55;55;3025;9;30
-48;Gothmogs;60;65;3900;9;31
-49;Annatar;70;75;5250;9;33
-50;Morgoths;200;100;20000;6;35
+12;Feu Follet;2;2;8;7;5
+13;Gnoll;3;5;30;1;3
+14;Gobelin;3;6;36;5;6
+15;Hobgobelin;4;6;48;5;6
+16;Capitaine Hobgobelin;4;8;64;5;15
+17;Goule;5;7;70;7;7
+18;Spectre;5;8;80;7;15
+19;Molosse;7;8;112;1;7
+20;Orque;8;8;128;2;8
+21;Syvanien;10;8;160;1;5
+22;Troll des cavernes;10;15;300;3;10
+23;Flagelleur Mental;20;15;600;1;11
+24;Dryade;20;10;400;1;16
+25;Hippogriffe;21;11;462;1;18
+26;Skaven;21;12;504;1;17
+27;Liche;25;12;600;7;18
+28;Momie;24;15;720;7;17
+29;Gobelours;26;15;780;5;16
+30;Chef Gobelours;28;17;952;5;19
+31;Warg;25;20;1000;1;18
+32;Uruk-hai;30;18;1080;2;23
+33;Gith;31;18;1106;1;26
+34;Salamandre de feu;28;22;1302;1;26
+35;Shelob (Arachne);40;20;1600;1;22
+36;Chef Uruk-hai;31;21;1260;2;27
+37;Cube gelatineux;15;50;1500;1;29
+38;Jeune dragon rouge;35;22;1540;8;28
+39;Diable epineux;35;25;1750;1;29
+40;Horreur casque;38;26;1976;1;26
+41;Swamp thing;40;28;2240;1;27
+42;Dragon d'argent;42;30;2520;8;28
+43;Shai-Hulud;60;25;3000;1;34
+44;Ombre;45;40;3600;7;27
+45;Dragon d'or venerable;50;42;4200;8;28
+46;Troll de pierre;60;40;4800;3;34
+47;Fleau de Durin;55;55;6050;9;30
+48;Gothmogs;60;65;7800;9;31
+49;Annatar;70;75;10500;9;33
+50;Morgoths;200;100;40000;6;35

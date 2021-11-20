@@ -29,6 +29,8 @@
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
+#define SDL_MAIN_HANDLED
+#include <SDL2/SDL.h>
 
 
 /**

@@ -1,11 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "header/world/world.h"
-#include "header/inventory/inventory.h"
-#include "header/monster.h"
-#include "header/player.h"
-#include "header/game.h"
 #include "header/global.h"
 
 void testPrintWorld(){
@@ -42,10 +34,10 @@ void testPrintPlayer(){
     freePlayer(player);
 }
 
-int main() {
+
+
+int main(int argc, char *argv[]) {
     printTitle();
     runGame();
     return (0);
 }
-
-
