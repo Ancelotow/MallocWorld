@@ -6,7 +6,7 @@
 **  Description : Manage the player in the game
 */
 
-#include "../header/global.h"
+#include "../../header/global.h"
 
 const int MAX_INVENTORY = 20;
 
@@ -113,28 +113,6 @@ void freePlayer(Player* player){
     free(player);
 }
 
-void savePlayer(FILE* file, Player player){
-    fputs("=== PLAYER ===\n", file);
-    fprintf(file, "{%d}\n", player.level);
-    fprintf(file, "{%d}/{%d}\n", player.xp, player.xpNext);
-    fprintf(file, "{%d}/{%d}\n", player.currentHp, player.maxHp);
-    fputs("-- INVENTORY --\n", file);
-    savePlayerInventory(file, player);
-}
-
-void savePlayerInventory(FILE* file, Player player){
-    Inventory* inv;
-    for(int i = 0; i < 20; i++){
-        if(i < player.sizeInventory){
-            inv = getInventoryFromId(player.inventory[i]->id);
-            fprintf(file, "{%d}@{%d}@{%.0f}\n", player.inventory[i]->length, player.inventory[i]->id, player.inventory[i]->inventory[0]->durability);
-        } else {
-            fprintf(file, "{0}@{0}@{0}\n");
-        }
-    }
-    freeInventory(inv);
-}
-
 int useToolToMining(Element element, Player* player){
     float usury = getUsury(element);
     float newDurability;
@@ -159,6 +137,14 @@ void gainExperience(Player* player, int experience){
         player->xp = player->xpNext - player->xp;
         player->xpNext *= 2;
         player->level += 1;
+        if(player->level < 6 ){
+            player->maxHp += 10;
+        } else if (player->level >= 6 && player->level <= 8){
+            player->maxHp += 50;
+        } else {
+            player->maxHp += 75;
+        }
+        player->currentHp = player->maxHp;
     }
 }
 

@@ -6,7 +6,7 @@
 **  Description : Manage the player's position in the world (zone, row and column)
 */
 
-#include "../header/global.h"
+#include "../../header/global.h"
 
 Position* createPositionFromExisting(Position posExisting){
     Position* position = malloc(sizeof(Position));

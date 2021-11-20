@@ -31,10 +31,3 @@ void freeWorld(World* world){
     }
     free(world);
 }
-
-void saveWorld(FILE* file, World world){
-    fputs("=== MAP ===\n", file);
-    for(int i = 0; i < NB_ZONE; i++){
-        saveZone(file, *world.world[i]);
-    }
-}

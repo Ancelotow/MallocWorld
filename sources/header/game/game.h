@@ -36,8 +36,6 @@ void moves(Position newPosition, Game* game);
 
 void freeGame(Game* game);
 
-void saveGame(Game game);
-
 void printMessage(char* message);
 
 #endif //MALLOCWORLD_GAME_H

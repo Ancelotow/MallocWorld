@@ -10,10 +10,12 @@
 #define MALLOCWORLD_GLOBAL_H
 
 #include <stdio.h>
-#include "position.h"
-#include "game.h"
-#include "monster.h"
-#include "player.h"
+#include "world/position.h"
+#include "game/game.h"
+#include "game/save.h"
+#include "game/restore.h"
+#include "agent/monster.h"
+#include "agent/player.h"
 #include "action/fight.h"
 #include "action/mining.h"
 #include "inventory/inventory.h"

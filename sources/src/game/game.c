@@ -6,9 +6,8 @@
 **  Description : Manage the game, the interactions between the game and the player and also printing
 */
 
-#include "../header/global.h"
+#include "../../header/global.h"
 
-#define PATH_SAVE "../resources/save/save.txt"
 
 #define CMD_CREATE_GAME "create"
 #define CMD_LOAD_GAME "load [save_file]"
@@ -131,16 +130,7 @@ void freeGame(Game* game){
     free(game);
 }
 
-void saveGame(Game game){
-    FILE* file = fopen(PATH_SAVE, "w+");
-    if(file != NULL){
-        saveWorld(file, *game.world);
-        savePlayer(file, *game.player);
-        fclose(file);
-    } else{
-        printf("NULLkllll");
-    }
-}
+
 
 void printMessage(char* message){
     printf("\n\n============================================\n");

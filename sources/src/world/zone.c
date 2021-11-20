@@ -176,19 +176,6 @@ void freeZone(Zone* zone){
     free(zone);
 }
 
-void saveZone(FILE* file, Zone zone){
-    fprintf(file, "-- ZONE %d --\n", zone.type);
-    for(int i = 0; i < zone.row; i++){
-        for(int j = 0; j < zone.column; j++){
-            fprintf(file, "%2d", zone.map[i][j]);
-            if(j + 1 < zone.column){
-                fputc(' ', file);
-            }
-        }
-        fputs("\n", file);
-    }
-}
-
 int isResource(int id){
     if(id < 12 && id >= 3){
         return 1;

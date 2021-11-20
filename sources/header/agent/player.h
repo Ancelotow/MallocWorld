@@ -40,10 +40,6 @@ void gainExperience(Player* player, int experience);
 
 void freePlayer(Player* player);
 
-void savePlayer(FILE* file, Player player);
-
-void savePlayerInventory(FILE* file, Player player);
-
 Inventory* findInventory(int id);
 
 int getLengthInventoryType(Player player, InventoryType type);

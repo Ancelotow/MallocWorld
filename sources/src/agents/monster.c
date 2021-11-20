@@ -6,7 +6,7 @@
 **  Description : Manage the monsters in the world
 */
 
-#include "../header/global.h"
+#include "../../header/global.h"
 
 Monster* createMonster(int id, char* name, MonsterBreed breed, int xp, int damage, int idInventory, int hp){
     Monster* monster = malloc(sizeof(Monster));
