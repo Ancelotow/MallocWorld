@@ -3,7 +3,7 @@
 **
 **  Made by : Owen ANCELOT
 **
-**  Description : Save the game into save file.
+**  Description : Header for "save.c". Save the game into save file.
 */
 
 #ifndef MALLOCWORLD_SAVE_H

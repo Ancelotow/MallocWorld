@@ -50,7 +50,6 @@ void printTitle(){
 
 int getRandomNumber(int min){
     time_t t = time(NULL);
-
     struct tm tm = *localtime(&t);
     return (rand() % tm.tm_sec) + min;
 }
