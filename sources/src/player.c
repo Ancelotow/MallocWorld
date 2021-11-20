@@ -119,6 +119,20 @@ void savePlayer(FILE* file, Player player){
     fprintf(file, "{%d}/{%d}\n", player.xp, player.xpNext);
     fprintf(file, "{%d}/{%d}\n", player.currentHp, player.maxHp);
     fputs("-- INVENTORY --\n", file);
+    savePlayerInventory(file, player);
+}
+
+void savePlayerInventory(FILE* file, Player player){
+    Inventory* inv;
+    for(int i = 0; i < 20; i++){
+        if(i < player.sizeInventory){
+            inv = getInventoryFromId(player.inventory[i]->id);
+            fprintf(file, "{%d}@{%d}@{%.0f}\n", player.inventory[i]->length, player.inventory[i]->id, player.inventory[i]->inventory[0]->durability);
+        } else {
+            fprintf(file, "{0}@{0}@{0}\n");
+        }
+    }
+    freeInventory(inv);
 }
 
 int useToolToMining(Element element, Player* player){
@@ -138,14 +152,15 @@ int useToolToMining(Element element, Player* player){
     return 0;
 }
 
-
 void gainExperience(Player* player, int experience){
     player->xp += experience;
     if(player->xp >= player->xpNext){
-        printMessage("Vous avez gagné un niveau !");
+        printMessage("Vous avez gagne un niveau !");
         player->xp = player->xpNext - player->xp;
         player->xpNext *= 2;
         player->level += 1;
     }
 }
+
+
 

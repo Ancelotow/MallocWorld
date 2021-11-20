@@ -13,9 +13,23 @@ Inventory* createInventory(int id, char* name, int value, float durability, int 
     inventory->id = id;
     inventory->value = value;
     inventory->name = copyString(name);
-    inventory->durability = durability;
-    inventory->durabilityMax = durability;
-    inventory->maxStack = maxStack;
+    switch(type){
+        case CARE:
+        case RESOURCE:
+            inventory->durability = 0.00f;
+            inventory->durabilityMax = 0.00f;
+            inventory->maxStack = maxStack;
+            break;
+
+        default:
+        case ARMOR:
+        case WEAPON:
+        case TOOL:
+            inventory->durability = durability;
+            inventory->durabilityMax = durability;
+            inventory->maxStack = 1;
+            break;
+    }
     inventory->type = type;
     return inventory;
 }

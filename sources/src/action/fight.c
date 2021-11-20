@@ -96,6 +96,7 @@ int attack(Monster* monster, Player* player, Inventory* weapon){
     if(monster->hp <= 0){
         monster->hp = 0;
         monsterIsDead = 1;
+        gainExperience(player, monster->xp);
     }
     return monsterIsDead;
 }
