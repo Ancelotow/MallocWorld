@@ -79,6 +79,7 @@ void printActionFight(){
     printf("||                                      ||                                       ||\n");
     printf("||  [A] -> Attaquer                     ||   [E] -> Fuir                         ||\n");
     printf("||  [H] -> Utiliser une potion          ||   [W] -> Changer d'arme               ||\n");
+    printf("||  [P] -> Changer d'armure             ||                                       ||\n");
     printf("||                                      ||                                       ||\n");
     printf("===================================================================================\n");
 }

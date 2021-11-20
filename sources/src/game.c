@@ -39,6 +39,7 @@ void runGame(){
 
 void play(Game* game){
     int continueGame = 1;
+    int restart = 0;
     char input;
     printf("\n");
     printZone(game->world->world[game->position->zone]);
@@ -56,9 +57,16 @@ void play(Game* game){
             printZone(game->world->world[game->position->zone]);
         } else {
             actionMove(input, game);
+            if(game->player->currentHp <= 0){
+                continueGame = 0;
+                restart = 1;
+            }
         }
     } while(continueGame);
     freeGame(game);
+    if(restart) {
+        runGame();
+    }
 }
 
 Game* createVoidGame(){
@@ -104,7 +112,7 @@ void moves(Position newPosition, Game* game){
         game->position->y = newPosition.y;
         game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;
     } else if(isMonster(id)){
-        startFight(id, game);
+        startFight(id, game, newPosition);
     } else{
         game->position->x = newPosition.x;
         game->position->y = newPosition.y;
@@ -113,7 +121,6 @@ void moves(Position newPosition, Game* game){
         printZone(game->world->world[game->position->zone]);
     }
     updateAllRespawn(game);
-    printRespawn(game->respawn);
 }
 
 void freeGame(Game* game){
