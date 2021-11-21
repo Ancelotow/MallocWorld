@@ -30,41 +30,34 @@ void changeQuantityStorage(Storage* storage, int id, int quantity) {
 }
 
 int stockInventory(Player* player){
-    Stack **inventory;
+    int idStr[10];
     int quantity;
-    int isExist = 0;
-    int result = 0;
-    int quantInit = 0;
+    int quantityTotal = 0;
+    Storage* ressource = NULL;
 
     printf("Quelles ressources souhaites-tu stocker? \n");
-    scanf("%s", &inventory);
-    for(int i = 0; i < player->sizeInventory; i++){
-        for(int j = 0; j < player->inventory[i]->length; j++){
-            if (inventory == player->inventory[i]){
-                quantInit += player->inventory[i]->length;
-                isExist = 1;
-                break;
-            }
+    scanf("%s", idStr);
+    int id = atoi(idStr);
+    for (int i = 0; i < player->sizeInventory; i++){
+        if (player->inventory[i]->id == id){
+            quantityTotal += player->inventory[i]->length;
         }
-        if(isExist){
-            break;
-        }
-    }
-    if (!isExist){
-        printf("Tu n'a pas cette ressource \n");
-        stockInventory(player);
     }
 
+    if (quantityTotal <= 0){
+        printf("Tu n'a pas cette ressource\n");
+        stockInventory(player);
+    }
 
     do {
         printf("Quelle quantité veux tu stocker? \n");
         scanf("%d", &quantity);
-        if (quantity > quantInit) {
-            printf("Tu n'en a pas assez \n");
-            result++;
+        if (quantity > quantityTotal) {
+            printf("Tu n'en a pas assez\n");
         }
-    } while (result == 0);
+    } while (quantity > quantityTotal);
 
+    ressource = createStorage(id, quantity);
 }
 
 
