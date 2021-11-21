@@ -223,3 +223,11 @@ int isMonster(int id){
         return 0;
     }
 }
+
+int isPortal(int id){
+    if(id == -2 || id == -3){
+        return 1;
+    } else {
+        return 0;
+    }
+}

@@ -65,4 +65,6 @@ void printAction();
 
 void printActionFight();
 
+void freeTab2D(int** tab, int row);
+
 #endif //MALLOCWORLD_GLOBAL_H

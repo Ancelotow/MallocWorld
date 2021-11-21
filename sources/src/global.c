@@ -82,3 +82,10 @@ void printActionFight(){
     printf("||                                      ||                                       ||\n");
     printf("===================================================================================\n");
 }
+
+void freeTab2D(int** tab, int row){
+    for(int i = 0; i < row; i++){
+        free(tab[i]);
+    }
+    free(tab);
+}

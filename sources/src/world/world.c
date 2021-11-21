@@ -31,3 +31,10 @@ void freeWorld(World* world){
     }
     free(world);
 }
+
+void changeZone(World* world){
+    for(int i=0; i < NB_ZONE; i++){
+        freeZone(world->world[i]);
+    }
+    free(world);
+}

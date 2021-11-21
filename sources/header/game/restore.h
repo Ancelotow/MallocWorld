@@ -13,17 +13,20 @@
 typedef struct Game Game;
 typedef struct World World;
 typedef struct Player Player;
+typedef enum TypeZone TypeZone;
 
 Game* restoreGame(char* path);
 
-void restoreMap(Game* game);
+void restoreMap(FILE* file, Game* game, int length);
 
-void restoreZone(World* world);
+int isEndZoneIntoSaveFile(char* string);
 
-void restorePlayer(Game* game);
+void restoreZone(FILE* file, World* world, int length, TypeZone typeZone);
 
-void restoreInventory(Player* player);
+void restorePlayer(FILE* file, Game* game);
 
-void restoreStorage(Game* Game);
+void restoreInventory(FILE* file, Player* player);
+
+void restoreStorage(FILE* file, Game* Game);
 
 #endif //MALLOCWORLD_RESTORE_H

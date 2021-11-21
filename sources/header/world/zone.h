@@ -119,4 +119,6 @@ int isMonster(int id);
 
 int getIdResource(Element element);
 
+int isPortal(int id);
+
 #endif //MALLOCWORLD_ZONE_H
