@@ -6,8 +6,6 @@
 **  Description : Header for 'storage.c'. It's used to manage the PNJ's storage
 */
 
-#include "../player.h"
-
 #ifndef MALLOCWORLD_STORAGE_H
 #define MALLOCWORLD_STORAGE_H
 
@@ -17,11 +15,14 @@ typedef struct Storage{
     struct Storage* next;
 } Storage;
 
+typedef struct Game Game;
+typedef struct Player Player;
+
 Storage* createStorage(int id, int quantity);
 
 void changeQuantityStorage(Storage* storage, int id, int quantity); //ajouter - enlever des ressources
 
-int stockInventory(Player* player); // Demande quel inventaire stocker et la quantité
+int stockInventory(Player* player, Game* game); // Demande quel inventaire stocker et la quantité
 
 void printStorage(Storage* storage);
 

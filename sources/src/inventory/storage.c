@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../header/inventory/storage.h"
+#include "../../header/game.h"
 
 Storage *createStorage(int id, int quantity) {
     Storage *storage = malloc(sizeof(Storage));
@@ -29,11 +30,10 @@ void changeQuantityStorage(Storage* storage, int id, int quantity) {
     }
 }
 
-int stockInventory(Player* player){
+int stockInventory(Player* player, Game* game){
     int idStr[10];
     int quantity;
     int quantityTotal = 0;
-    Storage* ressource = NULL;
 
     printf("Quelles ressources souhaites-tu stocker? \n");
     scanf("%s", idStr);
@@ -43,12 +43,10 @@ int stockInventory(Player* player){
             quantityTotal += player->inventory[i]->length;
         }
     }
-
     if (quantityTotal <= 0){
         printf("Tu n'a pas cette ressource\n");
-        stockInventory(player);
+        stockInventory(player, game);
     }
-
     do {
         printf("Quelle quantité veux tu stocker? \n");
         scanf("%d", &quantity);
@@ -56,9 +54,13 @@ int stockInventory(Player* player){
             printf("Tu n'en a pas assez\n");
         }
     } while (quantity > quantityTotal);
-
-    ressource = createStorage(id, quantity);
+    if (game->storage == NULL){
+        game->storage = createStorage(id, quantity);
+    } else{
+        changeQuantityStorage(game->storage, id, quantity);
+    }
 }
+
 
 
 
