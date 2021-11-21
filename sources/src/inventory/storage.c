@@ -30,8 +30,8 @@ void changeQuantityStorage(Storage* storage, int id, int quantity) {
     }
 }
 
-int stockInventory(Player* player, Game* game){
-    int idStr[10];
+void stockInventory(Player* player, Game* game){
+    char idStr[10];
     int quantity;
     int quantityTotal = 0;
 

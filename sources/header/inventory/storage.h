@@ -22,7 +22,7 @@ Storage* createStorage(int id, int quantity);
 
 void changeQuantityStorage(Storage* storage, int id, int quantity); //ajouter - enlever des ressources
 
-int stockInventory(Player* player, Game* game); // Demande quel inventaire stocker et la quantité
+void stockInventory(Player* player, Game* game); // Demande quel inventaire stocker et la quantité
 
 void printStorage(Storage* storage);
 

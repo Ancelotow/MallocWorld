@@ -24,6 +24,8 @@ void appendRespawn(Respawn* respawn, int id, Position* position);
 
 void updateAllRespawn(Respawn* respawn);
 
+void ClearElement(Respawn* prem, Respawn* val);
+
 void printRespawn(Respawn* respawn);
 
 void freeRespawn(Respawn* respawn);
