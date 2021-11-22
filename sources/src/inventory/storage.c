@@ -86,7 +86,7 @@ void stockInventory(Player* player, Game* game){
 }
 
 void printStorage(Storage *storage) {
-    printf("ID :%d, Quantité : %d", storage->id, storage->quantity);
+    printf("ID :%d, Quantite : %d\n", storage->id, storage->quantity);
     if (storage->next != NULL) {
         printStorage(storage->next);
     }

@@ -56,7 +56,15 @@ CMakeFiles/MallocWorld.dir/sources/src/inventory/stack.c.obj: \
  ../sources/header/world/zone.h \
  ../sources/src/inventory/stack.c
 CMakeFiles/MallocWorld.dir/sources/src/inventory/storage.c.obj: \
+ ../sources/header/game.h \
+ ../sources/header/inventory/inventory.h \
+ ../sources/header/inventory/stack.h \
  ../sources/header/inventory/storage.h \
+ ../sources/header/player.h \
+ ../sources/header/position.h \
+ ../sources/header/world/respawn.h \
+ ../sources/header/world/world.h \
+ ../sources/header/world/zone.h \
  ../sources/src/inventory/storage.c
 CMakeFiles/MallocWorld.dir/sources/src/monster.c.obj: \
  ../sources/header/global.h \
@@ -82,6 +90,9 @@ CMakeFiles/MallocWorld.dir/sources/src/position.c.obj: \
  ../sources/header/world/world.h \
  ../sources/header/world/zone.h \
  ../sources/src/position.c
+CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj: \
+ ../sources/header/restaure.h \
+ ../sources/src/restaure.c
 CMakeFiles/MallocWorld.dir/sources/src/world/map/forest.c.obj: \
  ../sources/header/global.h \
  ../sources/header/world/zone.h \

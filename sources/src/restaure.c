@@ -16,7 +16,7 @@ void Loadmap(char* save){
     while (fgets(chaine, 50, file) != NULL)
     {
         int i = 0;
-        restaure[i] = chaine;
+        //restaure[i] = chaine;
         printf("%s", chaine); // On affiche la chaîne qu'on vient de lire
         i++;
     }
