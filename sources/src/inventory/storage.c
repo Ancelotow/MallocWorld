@@ -21,6 +21,8 @@ Storage *createStorage(int id, int quantity) {
 }
 
 void changeQuantityStorage(Storage* storage, int id, int quantity) {
+    Storage *n,*precedent;
+
     while(storage != NULL){
         if (storage->id == id){
             storage->quantity += quantity;
@@ -28,6 +30,28 @@ void changeQuantityStorage(Storage* storage, int id, int quantity) {
         }
         storage = storage->next;
     }
+
+    if(storage->quantity <= 0){   //on cherche si c'est la 1ère valeur
+        n = storage;
+        storage = storage->next;
+        free(n);
+    }
+    else{               // on boucle jusqu'a trouver la valeur
+        precedent = storage;
+        n = storage->next;
+        while(n != NULL ){
+           if (n->quantity <= 0){
+                precedent->next = n->next;
+                free(n);
+                break;
+            }
+            precedent = n;
+            n = n->next;
+        }
+    }
+
+
+
 }
 
 void stockInventory(Player* player, Game* game){
@@ -60,9 +84,6 @@ void stockInventory(Player* player, Game* game){
         changeQuantityStorage(game->storage, id, quantity);
     }
 }
-
-
-
 
 void printStorage(Storage *storage) {
     printf("ID :%d, Quantité : %d", storage->id, storage->quantity);

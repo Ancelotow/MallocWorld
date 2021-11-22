@@ -37,12 +37,25 @@ void appendRespawn(Respawn* respawn, int id, Position* position) {
 }
 
 void updateAllRespawn(Respawn *respawn) {
+    Respawn *n,*precedent;
+
     respawn->roundLeft--;
-    if (respawn->roundLeft == 0) {
-        ClearElement(respawn, respawn);
-    }
-    if (respawn->child != NULL) {
-        updateAllRespawn(respawn->child);
+    if (respawn->roundLeft <= 0) {   //on cherche si c'est la 1ère valeur
+        n = respawn;
+        respawn = respawn->child;
+        free(n);
+    } else {               // on boucle jusqu'a trouver la valeur
+        precedent = respawn;
+        n = respawn->child;
+        while (n != NULL) {
+            if (respawn->roundLeft <= 0) {
+                precedent->child = n->child;
+                free(n);
+                break;
+            }
+            precedent = n;
+            n = n->child;
+        }
     }
 }
 
@@ -62,29 +75,4 @@ void freeRespawn(Respawn *respawn) {
         freeRespawn(respawn->child);
     }
     free(respawn);
-}
-
-void ClearElement(Respawn* liste,Respawn *val)
-{
-    Respawn *n,*precedent;
-    if(liste != NULL){
-        if(liste == val){   //on cherche si c'est la 1ère valeur
-            n = liste;
-            liste = liste->child;
-            free(n);
-        }
-        else{               // on boucle jusqu'a trouver la valeur
-            precedent = liste;
-            n = liste->child;
-            while(n != NULL ){
-                if (n == val){
-                    precedent->child = n->child;
-                    free(n);
-                    break;
-                }
-                precedent = n;
-                n = n->child;
-            }
-        }
-    }
 }
