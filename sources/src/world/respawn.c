@@ -26,15 +26,29 @@ Respawn *createRespawn(int id, Position *position) {
 
 void updateAllRespawn(Game *game) {
     Respawn* current = game->respawn;
+    Respawn* parent = NULL;
     Position* pos;
     while(current != NULL){
         current->roundLeft -= 1;
         if(current->roundLeft <= 0){
             pos = current->position;
             game->world->world[pos->zone]->map[pos->y][pos->x] = current->id;
+            freePosition(current->position);
+            if(parent != NULL){
+                parent->child = current->child;
+                free(current);
+                current = parent->child;
+            } else {
+                game->respawn = game->respawn->child;
+                free(current);
+                current = game->respawn;
+            }
+        } else {
+            parent = current;
+            current = current->child;
         }
-        current = current->child;
     }
+
 }
 
 void appendRespawn(Respawn* respawn, int id, Position* position) {

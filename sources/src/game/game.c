@@ -120,6 +120,7 @@ void moves(Position newPosition, Game* game){
         printZone(game->world->world[game->position->zone]);
     }
     updateAllRespawn(game);
+    printRespawn(game->respawn);
 }
 
 void freeGame(Game* game){
