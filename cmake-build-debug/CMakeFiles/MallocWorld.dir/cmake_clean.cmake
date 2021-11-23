@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MallocWorld.dir/sources/src/monster.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/player.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/position.c.obj"
+  "CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/world/map/forest.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/world/map/village.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/world/respawn.c.obj"

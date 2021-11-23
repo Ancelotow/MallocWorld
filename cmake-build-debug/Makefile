@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = F:\Documents\Projets\ESGI\MallocWorld
+CMAKE_SOURCE_DIR = "C:\Users\Elsa Firmin\CLionProjects\MallocWorld"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\CMakeFiles F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Documents\Projets\ESGI\MallocWorld\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -392,6 +392,30 @@ sources/src/position.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/position.c.s
 .PHONY : sources/src/position.c.s
 
+sources/src/restaure.obj: sources/src/restaure.c.obj
+.PHONY : sources/src/restaure.obj
+
+# target to build an object file
+sources/src/restaure.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj
+.PHONY : sources/src/restaure.c.obj
+
+sources/src/restaure.i: sources/src/restaure.c.i
+.PHONY : sources/src/restaure.i
+
+# target to preprocess a source file
+sources/src/restaure.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.c.i
+.PHONY : sources/src/restaure.c.i
+
+sources/src/restaure.s: sources/src/restaure.c.s
+.PHONY : sources/src/restaure.s
+
+# target to generate assembly for a file
+sources/src/restaure.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.c.s
+.PHONY : sources/src/restaure.c.s
+
 sources/src/world/map/forest.obj: sources/src/world/map/forest.c.obj
 .PHONY : sources/src/world/map/forest.obj
 
@@ -554,6 +578,9 @@ help:
 	@echo ... sources/src/position.obj
 	@echo ... sources/src/position.i
 	@echo ... sources/src/position.s
+	@echo ... sources/src/restaure.obj
+	@echo ... sources/src/restaure.i
+	@echo ... sources/src/restaure.s
 	@echo ... sources/src/world/map/forest.obj
 	@echo ... sources/src/world/map/forest.i
 	@echo ... sources/src/world/map/forest.s
