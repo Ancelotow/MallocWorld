@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../header/inventory/storage.h"
-#include "../../header/game.h"
+#include "../../header/global.h"
 
 Storage *createStorage(int id, int quantity) {
     Storage *storage = malloc(sizeof(Storage));
@@ -20,7 +20,28 @@ Storage *createStorage(int id, int quantity) {
     return storage;
 }
 
-void changeQuantityStorage(Storage* storage, int id, int quantity) {
+void DeleteStorage(Game* game){
+    Storage * current = game->storage;
+    Storage * parent = NULL;
+    while(current != NULL){
+        if(current->quantity <= 0){
+            if(parent != NULL){
+                parent->next = current->next;
+                free(current);
+                current = parent->next;
+            } else {
+                game->storage = game->storage->next;
+                free(current);
+                current = game->storage;
+            }
+        } else {
+            parent = current;
+            current = current->next;
+        }
+    }
+}
+
+void changeQuantityStorage(Storage* storage, int id, int quantity, Game* game) {
     Storage *n,*precedent;
 
     while(storage != NULL){
@@ -49,9 +70,7 @@ void changeQuantityStorage(Storage* storage, int id, int quantity) {
             n = n->next;
         }
     }
-
-
-
+    DeleteStorage(game);
 }
 
 void stockInventory(Player* player, Game* game){

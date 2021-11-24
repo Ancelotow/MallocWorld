@@ -200,29 +200,149 @@ sources/src/action/mining.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.s
 .PHONY : sources/src/action/mining.c.s
 
-sources/src/game.obj: sources/src/game.c.obj
-.PHONY : sources/src/game.obj
+sources/src/agents/monster.obj: sources/src/agents/monster.c.obj
+.PHONY : sources/src/agents/monster.obj
 
 # target to build an object file
-sources/src/game.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game.c.obj
-.PHONY : sources/src/game.c.obj
+sources/src/agents/monster.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/monster.c.obj
+.PHONY : sources/src/agents/monster.c.obj
 
-sources/src/game.i: sources/src/game.c.i
-.PHONY : sources/src/game.i
+sources/src/agents/monster.i: sources/src/agents/monster.c.i
+.PHONY : sources/src/agents/monster.i
 
 # target to preprocess a source file
-sources/src/game.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game.c.i
-.PHONY : sources/src/game.c.i
+sources/src/agents/monster.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/monster.c.i
+.PHONY : sources/src/agents/monster.c.i
 
-sources/src/game.s: sources/src/game.c.s
-.PHONY : sources/src/game.s
+sources/src/agents/monster.s: sources/src/agents/monster.c.s
+.PHONY : sources/src/agents/monster.s
 
 # target to generate assembly for a file
-sources/src/game.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game.c.s
-.PHONY : sources/src/game.c.s
+sources/src/agents/monster.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/monster.c.s
+.PHONY : sources/src/agents/monster.c.s
+
+sources/src/agents/player.obj: sources/src/agents/player.c.obj
+.PHONY : sources/src/agents/player.obj
+
+# target to build an object file
+sources/src/agents/player.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/player.c.obj
+.PHONY : sources/src/agents/player.c.obj
+
+sources/src/agents/player.i: sources/src/agents/player.c.i
+.PHONY : sources/src/agents/player.i
+
+# target to preprocess a source file
+sources/src/agents/player.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/player.c.i
+.PHONY : sources/src/agents/player.c.i
+
+sources/src/agents/player.s: sources/src/agents/player.c.s
+.PHONY : sources/src/agents/player.s
+
+# target to generate assembly for a file
+sources/src/agents/player.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/player.c.s
+.PHONY : sources/src/agents/player.c.s
+
+sources/src/agents/pnj.obj: sources/src/agents/pnj.c.obj
+.PHONY : sources/src/agents/pnj.obj
+
+# target to build an object file
+sources/src/agents/pnj.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.obj
+.PHONY : sources/src/agents/pnj.c.obj
+
+sources/src/agents/pnj.i: sources/src/agents/pnj.c.i
+.PHONY : sources/src/agents/pnj.i
+
+# target to preprocess a source file
+sources/src/agents/pnj.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.i
+.PHONY : sources/src/agents/pnj.c.i
+
+sources/src/agents/pnj.s: sources/src/agents/pnj.c.s
+.PHONY : sources/src/agents/pnj.s
+
+# target to generate assembly for a file
+sources/src/agents/pnj.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.s
+.PHONY : sources/src/agents/pnj.c.s
+
+sources/src/game/game.obj: sources/src/game/game.c.obj
+.PHONY : sources/src/game/game.obj
+
+# target to build an object file
+sources/src/game/game.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/game.c.obj
+.PHONY : sources/src/game/game.c.obj
+
+sources/src/game/game.i: sources/src/game/game.c.i
+.PHONY : sources/src/game/game.i
+
+# target to preprocess a source file
+sources/src/game/game.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/game.c.i
+.PHONY : sources/src/game/game.c.i
+
+sources/src/game/game.s: sources/src/game/game.c.s
+.PHONY : sources/src/game/game.s
+
+# target to generate assembly for a file
+sources/src/game/game.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/game.c.s
+.PHONY : sources/src/game/game.c.s
+
+sources/src/game/restore.obj: sources/src/game/restore.c.obj
+.PHONY : sources/src/game/restore.obj
+
+# target to build an object file
+sources/src/game/restore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj
+.PHONY : sources/src/game/restore.c.obj
+
+sources/src/game/restore.i: sources/src/game/restore.c.i
+.PHONY : sources/src/game/restore.i
+
+# target to preprocess a source file
+sources/src/game/restore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.i
+.PHONY : sources/src/game/restore.c.i
+
+sources/src/game/restore.s: sources/src/game/restore.c.s
+.PHONY : sources/src/game/restore.s
+
+# target to generate assembly for a file
+sources/src/game/restore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.s
+.PHONY : sources/src/game/restore.c.s
+
+sources/src/game/save.obj: sources/src/game/save.c.obj
+.PHONY : sources/src/game/save.obj
+
+# target to build an object file
+sources/src/game/save.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/save.c.obj
+.PHONY : sources/src/game/save.c.obj
+
+sources/src/game/save.i: sources/src/game/save.c.i
+.PHONY : sources/src/game/save.i
+
+# target to preprocess a source file
+sources/src/game/save.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/save.c.i
+.PHONY : sources/src/game/save.c.i
+
+sources/src/game/save.s: sources/src/game/save.c.s
+.PHONY : sources/src/game/save.s
+
+# target to generate assembly for a file
+sources/src/game/save.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/save.c.s
+.PHONY : sources/src/game/save.c.s
 
 sources/src/global.obj: sources/src/global.c.obj
 .PHONY : sources/src/global.obj
@@ -320,102 +440,6 @@ sources/src/inventory/storage.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/inventory/storage.c.s
 .PHONY : sources/src/inventory/storage.c.s
 
-sources/src/monster.obj: sources/src/monster.c.obj
-.PHONY : sources/src/monster.obj
-
-# target to build an object file
-sources/src/monster.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/monster.c.obj
-.PHONY : sources/src/monster.c.obj
-
-sources/src/monster.i: sources/src/monster.c.i
-.PHONY : sources/src/monster.i
-
-# target to preprocess a source file
-sources/src/monster.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/monster.c.i
-.PHONY : sources/src/monster.c.i
-
-sources/src/monster.s: sources/src/monster.c.s
-.PHONY : sources/src/monster.s
-
-# target to generate assembly for a file
-sources/src/monster.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/monster.c.s
-.PHONY : sources/src/monster.c.s
-
-sources/src/player.obj: sources/src/player.c.obj
-.PHONY : sources/src/player.obj
-
-# target to build an object file
-sources/src/player.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/player.c.obj
-.PHONY : sources/src/player.c.obj
-
-sources/src/player.i: sources/src/player.c.i
-.PHONY : sources/src/player.i
-
-# target to preprocess a source file
-sources/src/player.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/player.c.i
-.PHONY : sources/src/player.c.i
-
-sources/src/player.s: sources/src/player.c.s
-.PHONY : sources/src/player.s
-
-# target to generate assembly for a file
-sources/src/player.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/player.c.s
-.PHONY : sources/src/player.c.s
-
-sources/src/position.obj: sources/src/position.c.obj
-.PHONY : sources/src/position.obj
-
-# target to build an object file
-sources/src/position.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/position.c.obj
-.PHONY : sources/src/position.c.obj
-
-sources/src/position.i: sources/src/position.c.i
-.PHONY : sources/src/position.i
-
-# target to preprocess a source file
-sources/src/position.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/position.c.i
-.PHONY : sources/src/position.c.i
-
-sources/src/position.s: sources/src/position.c.s
-.PHONY : sources/src/position.s
-
-# target to generate assembly for a file
-sources/src/position.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/position.c.s
-.PHONY : sources/src/position.c.s
-
-sources/src/restaure.obj: sources/src/restaure.c.obj
-.PHONY : sources/src/restaure.obj
-
-# target to build an object file
-sources/src/restaure.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.c.obj
-.PHONY : sources/src/restaure.c.obj
-
-sources/src/restaure.i: sources/src/restaure.c.i
-.PHONY : sources/src/restaure.i
-
-# target to preprocess a source file
-sources/src/restaure.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.c.i
-.PHONY : sources/src/restaure.c.i
-
-sources/src/restaure.s: sources/src/restaure.c.s
-.PHONY : sources/src/restaure.s
-
-# target to generate assembly for a file
-sources/src/restaure.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/restaure.c.s
-.PHONY : sources/src/restaure.c.s
-
 sources/src/world/map/forest.obj: sources/src/world/map/forest.c.obj
 .PHONY : sources/src/world/map/forest.obj
 
@@ -463,6 +487,30 @@ sources/src/world/map/village.s: sources/src/world/map/village.c.s
 sources/src/world/map/village.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/world/map/village.c.s
 .PHONY : sources/src/world/map/village.c.s
+
+sources/src/world/position.obj: sources/src/world/position.c.obj
+.PHONY : sources/src/world/position.obj
+
+# target to build an object file
+sources/src/world/position.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/world/position.c.obj
+.PHONY : sources/src/world/position.c.obj
+
+sources/src/world/position.i: sources/src/world/position.c.i
+.PHONY : sources/src/world/position.i
+
+# target to preprocess a source file
+sources/src/world/position.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/world/position.c.i
+.PHONY : sources/src/world/position.c.i
+
+sources/src/world/position.s: sources/src/world/position.c.s
+.PHONY : sources/src/world/position.s
+
+# target to generate assembly for a file
+sources/src/world/position.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/world/position.c.s
+.PHONY : sources/src/world/position.c.s
 
 sources/src/world/respawn.obj: sources/src/world/respawn.c.obj
 .PHONY : sources/src/world/respawn.obj
@@ -554,9 +602,24 @@ help:
 	@echo ... sources/src/action/mining.obj
 	@echo ... sources/src/action/mining.i
 	@echo ... sources/src/action/mining.s
-	@echo ... sources/src/game.obj
-	@echo ... sources/src/game.i
-	@echo ... sources/src/game.s
+	@echo ... sources/src/agents/monster.obj
+	@echo ... sources/src/agents/monster.i
+	@echo ... sources/src/agents/monster.s
+	@echo ... sources/src/agents/player.obj
+	@echo ... sources/src/agents/player.i
+	@echo ... sources/src/agents/player.s
+	@echo ... sources/src/agents/pnj.obj
+	@echo ... sources/src/agents/pnj.i
+	@echo ... sources/src/agents/pnj.s
+	@echo ... sources/src/game/game.obj
+	@echo ... sources/src/game/game.i
+	@echo ... sources/src/game/game.s
+	@echo ... sources/src/game/restore.obj
+	@echo ... sources/src/game/restore.i
+	@echo ... sources/src/game/restore.s
+	@echo ... sources/src/game/save.obj
+	@echo ... sources/src/game/save.i
+	@echo ... sources/src/game/save.s
 	@echo ... sources/src/global.obj
 	@echo ... sources/src/global.i
 	@echo ... sources/src/global.s
@@ -569,24 +632,15 @@ help:
 	@echo ... sources/src/inventory/storage.obj
 	@echo ... sources/src/inventory/storage.i
 	@echo ... sources/src/inventory/storage.s
-	@echo ... sources/src/monster.obj
-	@echo ... sources/src/monster.i
-	@echo ... sources/src/monster.s
-	@echo ... sources/src/player.obj
-	@echo ... sources/src/player.i
-	@echo ... sources/src/player.s
-	@echo ... sources/src/position.obj
-	@echo ... sources/src/position.i
-	@echo ... sources/src/position.s
-	@echo ... sources/src/restaure.obj
-	@echo ... sources/src/restaure.i
-	@echo ... sources/src/restaure.s
 	@echo ... sources/src/world/map/forest.obj
 	@echo ... sources/src/world/map/forest.i
 	@echo ... sources/src/world/map/forest.s
 	@echo ... sources/src/world/map/village.obj
 	@echo ... sources/src/world/map/village.i
 	@echo ... sources/src/world/map/village.s
+	@echo ... sources/src/world/position.obj
+	@echo ... sources/src/world/position.i
+	@echo ... sources/src/world/position.s
 	@echo ... sources/src/world/respawn.obj
 	@echo ... sources/src/world/respawn.i
 	@echo ... sources/src/world/respawn.s

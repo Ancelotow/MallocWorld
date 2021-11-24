@@ -20,7 +20,7 @@ typedef struct Player Player;
 
 Storage* createStorage(int id, int quantity);
 
-void changeQuantityStorage(Storage* storage, int id, int quantity); //ajouter - enlever des ressources
+void changeQuantityStorage(Storage* storage, int id, int quantity, Game* game); //ajouter - enlever des ressources
 
 void stockInventory(Player* player, Game* game); // Demande quel inventaire stocker et la quantité
 
