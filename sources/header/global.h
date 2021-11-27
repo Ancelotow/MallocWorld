@@ -18,6 +18,8 @@
 #include "agent/player.h"
 #include "action/fight.h"
 #include "action/mining.h"
+#include "action/moving.h"
+#include "action/crafting.h"
 #include "inventory/inventory.h"
 #include "inventory/stack.h"
 #include "inventory/storage.h"

@@ -30,9 +30,9 @@ Game* createVoidGame();
 
 void play(Game* game);
 
-void actionMove(char move, Game* game);
+void movePlayer(char move, Game* game);
 
-void moves(Position newPosition, Game* game);
+void executeAction(Position newPosition, Game* game);
 
 void freeGame(Game* game);
 

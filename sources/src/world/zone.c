@@ -10,8 +10,8 @@
 
 Zone* generateZone(TypeZone type){
     Zone* zone = malloc(sizeof(Zone));
-    zone->row = getRandomNumber(20);
-    zone->column = getRandomNumber(20);
+    zone->row = 20; //getRandomNumber(20);
+    zone->column = 20; //getRandomNumber(20);
     zone->type = type;
     zone->map = malloc(sizeof(int*) * zone->row);
     for(int i=0; i < zone->row; i++){
@@ -230,4 +230,19 @@ int isPortal(int id){
     } else {
         return 0;
     }
+}
+
+Position getPositionPortal(Zone zone, Element portal){
+    Position posPortal;
+    for(int i = 0; i < zone.row; i++){
+        for(int j = 0; j < zone.column; j++){
+            if(zone.map[i][j] == portal){
+                posPortal.x = j;
+                posPortal.y = i;
+                posPortal.zone = (zone.type - 1);
+                return posPortal;
+            }
+        }
+    }
+    return posPortal;
 }

@@ -14,6 +14,8 @@ Respawn *createRespawn(int id, Position *position) {
     int roundLeft;
     if (id >= 3 && id <= 11) {
         roundLeft = 10;
+    } else if(id < 0){
+        roundLeft = 1;
     } else {
         roundLeft = 15;
     }

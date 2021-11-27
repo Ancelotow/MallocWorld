@@ -55,7 +55,7 @@ void play(Game* game){
         } else if(input == CMD_MAP) {
             printZone(game->world->world[game->position->zone]);
         } else {
-            actionMove(input, game);
+            movePlayer(input, game);
             if(game->player->currentHp <= 0){
                 continueGame = 0;
                 restart = 1;
@@ -78,8 +78,7 @@ Game* createVoidGame(){
     return game;
 }
 
-void actionMove(char move, Game* game){
-    game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 0;
+void movePlayer(char move, Game* game){
     Position newPosition = *game->position;
     switch(move){
         case CMD_DOWN:
@@ -98,29 +97,31 @@ void actionMove(char move, Game* game){
             newPosition.x -= 1;
             break;
     }
-    moves(newPosition, game);
+    if(!isFreeCase(newPosition, *game->world)){
+        printMessage("Impossible de passer ici !");
+        printZone(game->world->world[game->position->zone]);
+    } else {
+        game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 0;
+        executeAction(newPosition, game);
+    }
 }
 
-void moves(Position newPosition, Game* game){
+void executeAction(Position newPosition, Game* game){
     int id =  game->world->world[newPosition.zone]->map[newPosition.y][newPosition.x];
-    if(id == IMPASSABLE){
-        printMessage("Impossible de passer ici !");
-    } else if(isResource(id)){
+    printf("here");
+    if(isResource(id)){
         mining(game, id, newPosition);
         game->position->x = newPosition.x;
         game->position->y = newPosition.y;
         game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;
     } else if(isMonster(id)){
         startFight(id, game, newPosition);
-    } else{
-        game->position->x = newPosition.x;
-        game->position->y = newPosition.y;
-        game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;
-        printf("\n");
-        printZone(game->world->world[game->position->zone]);
+    } else if(isPortal(id)){
+        changeZone(game, id);
+    } else {
+        actionMove(newPosition, game);
     }
     updateAllRespawn(game);
-    printRespawn(game->respawn);
 }
 
 void freeGame(Game* game){
@@ -130,8 +131,6 @@ void freeGame(Game* game){
     freeRespawn(game->respawn);
     free(game);
 }
-
-
 
 void printMessage(char* message){
     printf("\n\n============================================\n");

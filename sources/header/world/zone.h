@@ -121,4 +121,6 @@ int getIdResource(Element element);
 
 int isPortal(int id);
 
+Position getPositionPortal(Zone zone, Element portal);
+
 #endif //MALLOCWORLD_ZONE_H
