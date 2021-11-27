@@ -1,12 +1,12 @@
-id;name;value;durability;maximum stack;type inventory;craft
-1;Epee en bois;1;10;1;1;5*3
-2;Pioche en bois;0;10;1;5;5*3
+id;name;value;durability;maximum stack;type inventory
+1;Epee en bois;1;10;1;1
+2;Pioche en bois;0;10;1;5
 3;Serpe en bois;0;10;1;5
 4;Hache en bois;0;10;1;5
 5;Sapin;0;0;20;4
 6;Pierre;0;0;20;4
 7;Herbe;0;0;20;4
-8;Epee en pierre;2;10;1;1;5*2@6*3
+8;Epee en pierre;2;10;1;1
 9;Lance en pierre;3;8;1;1
 10;Marteau en pierre;4;5;1;1
 11;Plastron en pierre;10;-1;1;2
@@ -17,7 +17,7 @@ id;name;value;durability;maximum stack;type inventory;craft
 16;Hetre;0;0;20;4
 17;Fer;0;0;20;4
 18;Lavande;0;0;20;4
-19;Epee en fer;5;10;1;1;16*2@17*4
+19;Epee en fer;5;10;1;1
 20;Lance en fer;7;8;1;1
 21;Marteau en fer;10;5;1;1
 22;Plastron en fer;20;-1;1;2
@@ -28,7 +28,7 @@ id;name;value;durability;maximum stack;type inventory;craft
 27;Chene ;0;0;20;4
 28;Diamant;0;0;20;4
 29;Chanvre;0;0;20;4
-30;Epee en diamant;10;10;1;1;27*2@28*5
+30;Epee en diamant;10;10;1;1
 31;Lance en diamant;15;8;1;1
 32;Marteau en diamant;20;5;1;1
 33;Plastron en diamant;40;-1;1;2

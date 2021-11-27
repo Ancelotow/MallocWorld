@@ -108,7 +108,6 @@ void movePlayer(char move, Game* game){
 
 void executeAction(Position newPosition, Game* game){
     int id =  game->world->world[newPosition.zone]->map[newPosition.y][newPosition.x];
-    printf("here");
     if(isResource(id)){
         mining(game, id, newPosition);
         game->position->x = newPosition.x;
@@ -118,6 +117,8 @@ void executeAction(Position newPosition, Game* game){
         startFight(id, game, newPosition);
     } else if(isPortal(id)){
         changeZone(game, id);
+    } else if(id == PNJ){
+        actionCraft(game);
     } else {
         actionMove(newPosition, game);
     }
@@ -134,6 +135,6 @@ void freeGame(Game* game){
 
 void printMessage(char* message){
     printf("\n\n============================================\n");
-    printf("|| %s\t\t\t ||\n", message);
+    printf("|| %s\n", message);
     printf("============================================\n\n");
 }

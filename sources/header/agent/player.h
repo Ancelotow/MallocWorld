@@ -44,4 +44,10 @@ Inventory* findInventory(int id);
 
 int getLengthInventoryType(Player player, InventoryType type);
 
+int getQuantityInventory(Player player, int idInventory);
+
+void removeQuantityInventory(Player* player, int id, int quantity);
+
+void deleteInventory(Player* player, int index);
+
 #endif //MALLOCWORLD_PLAYER_H

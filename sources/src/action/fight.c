@@ -65,6 +65,9 @@ void usePotion(Player* player){
             length = player->inventory[i]->length;
             if(player->inventory[i]->id == id && length > 0){
                 player->currentHp += player->inventory[i]->inventory[length - 1]->value;
+                if(player->currentHp > player->maxHp){
+                    player->currentHp = player->maxHp;
+                }
                 player->inventory[i]->inventory[length - 1]->durability -= 1;
                 if(player->inventory[i]->inventory[length - 1]->durability <= 0){
                     deleteStack(length - 1, player->inventory[i]);

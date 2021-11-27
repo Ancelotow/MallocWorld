@@ -105,6 +105,16 @@ int getLengthInventoryType(Player player, InventoryType type){
     return length;
 }
 
+int getQuantityInventory(Player player, int idInventory){
+    int quantity = 0;
+    for(int i = 0; i < player.sizeInventory; i++){
+        if(player.inventory[i]->id == idInventory){
+            quantity += player.inventory[i]->length;
+        }
+    }
+    return quantity;
+}
+
 void freePlayer(Player* player){
     for(int i=0; i < player->sizeInventory; i++){
         freeStack(player->inventory[i]);
@@ -145,6 +155,37 @@ void gainExperience(Player* player, int experience){
             player->maxHp += 75;
         }
         player->currentHp = player->maxHp;
+    }
+}
+
+void removeQuantityInventory(Player* player, int id, int quantity){
+    for(int i = 0; i < player->sizeInventory; i++){
+        if(player->inventory[i]->id == id){
+            for(int j = player->inventory[i]->length - 1; j >= 0; j--){
+                deleteStack(j, player->inventory[i]);
+                quantity -= 1;
+                if(quantity <= 0){
+                    return;
+                }
+            }
+            if(player->inventory[i]->length <= 0){
+                deleteInventory(player, i);
+                i = 0;
+            }
+        }
+        if(quantity <= 0){
+            return;
+        }
+    }
+}
+
+void deleteInventory(Player* player, int index){
+    if(player->sizeInventory > 0 && index < player->sizeInventory){
+        freeStack(player->inventory[index]);
+        for (int i = index + 1; i < player->sizeInventory; i++) {
+            player->inventory[i - 1] = player->inventory[i];
+        }
+        player->sizeInventory -= 1;
     }
 }
 
