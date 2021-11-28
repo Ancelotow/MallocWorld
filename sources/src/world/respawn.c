@@ -60,7 +60,21 @@ void updateAllRespawn(Game *game) {
             current = current->child;
         }
     }
+}
 
+/**
+ *
+ * @param game Le jeu
+ */
+void respawnAllElement(Game *game){
+    Respawn* current = game->respawn;
+    Position* pos;
+    while(current != NULL){
+            pos = current->position;
+            game->world->world[pos->zone]->map[pos->y][pos->x] = current->id; // fait réapparaitres les montres et ressources
+            freePosition(current->position);  // met l'ID à la poisition x et y
+            current = current->child;
+    }
 }
 
 /**

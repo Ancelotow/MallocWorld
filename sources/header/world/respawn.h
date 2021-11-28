@@ -42,6 +42,12 @@ void appendRespawn(Respawn* respawn, int id, struct Position* position);
 void updateAllRespawn(Game* game);
 
 /**
+ *
+ * @param game Le jeu
+ */
+void respawnAllElement(Game *game);
+
+/**
  * Fonction de test pour afficher tout les respawn
  * @param respawn La liste chaînée de respawn
  */
