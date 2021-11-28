@@ -1,1 +1,1 @@
-  -L"C:/Users/Elsa Firmin/CLionProjects/MallocWorldext/sdl/lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+  -LF:/Documents/Projets/ESGI/MallocWorldext/sdl/lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

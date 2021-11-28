@@ -1,0 +1,7 @@
+Pour installer le jeu “MallocWorld”, veuillez suivre les étapes dans l’ordre ci-dessous :
+   1. Téléchargez le fichier .zip “MallocWorld.zip”
+   2. Dézippez le fichier là où vous le souhaitez (dans le “Program Files” par exemple).
+   3. Un dossier “MallocWorld” à dû se créer. Allez dans le dossier “MallocWorld”
+   4. Allez dans le dossier “bin”.
+   5. Vous pouvez faire clique droit l'exécutable “MallocWorld.exe” pour créer un raccourci sur le bureau.
+   6. Vous n’avez plus qu'à double-cliquer sur l’exécutable ou bien sur le raccourci pour que  le jeu se lance sur votre invité de commande.
