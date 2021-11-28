@@ -1,5 +1,9 @@
-//
-// Created by Admin on 20/11/2021.
-//
+/*
+**  Filename : pnj.c
+**
+**  Made by : Elsa FIRMIN
+**
+**  Description : Manage pnj
+*/
 
 #include "../../header/agent/pnj.h"

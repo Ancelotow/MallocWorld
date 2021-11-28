@@ -34,13 +34,13 @@ void updateAllRespawn(Game *game) {
         current->roundLeft -= 1;
         if(current->roundLeft <= 0){
             pos = current->position;
-            game->world->world[pos->zone]->map[pos->y][pos->x] = current->id;
-            freePosition(current->position);
+            game->world->world[pos->zone]->map[pos->y][pos->x] = current->id;  //fait réapparaitres les montres et ressources
+            freePosition(current->position);                                        //met l'ID à la poisition x et y
             if(parent != NULL){
                 parent->child = current->child;
                 free(current);
                 current = parent->child;
-            } else {
+            } else {  //concerne uniquement le premier de la liste car pas de parents
                 game->respawn = game->respawn->child;
                 free(current);
                 current = game->respawn;

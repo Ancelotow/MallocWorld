@@ -1,6 +1,10 @@
-//
-// Created by Admin on 20/11/2021.
-//
+/*
+**  Filename : pnj.h
+**
+**  Made by : Elsa FIRMIN
+**
+**  Description : Header for 'pnj.c'
+*/
 
 #ifndef MALLOCWORLD_PNJ_H
 #define MALLOCWORLD_PNJ_H

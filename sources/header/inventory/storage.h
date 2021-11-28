@@ -1,11 +1,10 @@
 /*
 **  Filename : storage.h
 **
-**  Made by : Owen ANCELOT
+**  Made by : Elsa FIRMIN
 **
 **  Description : Header for 'storage.c'. It's used to manage the PNJ's storage
 */
-
 
 #ifndef MALLOCWORLD_STORAGE_H
 #define MALLOCWORLD_STORAGE_H
@@ -16,8 +15,17 @@ typedef struct Storage{
     struct Storage* next;
 } Storage;
 
-void appendStorage(Storage storage, int id, int quantity);
+typedef struct Game Game;
+typedef struct Player Player;
 
+Storage* createStorage(int id, int quantity);
 
+void changeQuantityStorage(Storage* storage, int id, int quantity, Game* game); //ajouter - enlever des ressources
+
+void stockInventory(Player* player, Game* game); // Demande quel inventaire stocker et la quantité
+
+void printStorage(Storage* storage);
+
+void freeStorage(Storage* storage);
 
 #endif //MALLOCWORLD_STORAGE_H
