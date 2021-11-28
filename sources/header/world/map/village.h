@@ -12,8 +12,8 @@
 typedef struct Zone Zone;
 
 /**
- * Generate a map of "Village"'s type for a zone
- * @param zone The zone
+ * Génération d'une zone de type "Village"
+ * @param zone La zone vide
  */
 void generateVillage(Zone* zone);
 

@@ -8,6 +8,11 @@
 
 #include "../../header/global.h"
 
+/**
+ * Créer une position depuis une position existante
+ * @param posExisting La position existante
+ * @return La position
+ */
 Position* createPositionFromExisting(Position posExisting){
     Position* position = malloc(sizeof(Position));
     position->x = posExisting.x;
@@ -16,6 +21,11 @@ Position* createPositionFromExisting(Position posExisting){
     return position;
 }
 
+/**
+ * Récupération de la position du joueur sur la map
+ * @param world Le monde (la map)
+ * @return La position du joueur
+ */
 Position* seekPlayer(World world){
     Position *position = malloc(sizeof(Position));
     position->x = -1;
@@ -41,10 +51,18 @@ Position* seekPlayer(World world){
     return position;
 }
 
+/**
+ * Fonction de test pour afficher la position
+ * @param position La position
+ */
 void printPosition(Position position){
     printf("X : %d, Y : %d, ZONE : %d", position.x, position.y, position.zone);
 }
 
+/**
+ * Libère la position de la mémoire
+ * @param position La position
+ */
 void freePosition(Position* position){
     free(position);
 }
