@@ -17,4 +17,6 @@ void repairPlayerInventory(Player* player);
 
 void stockStorage(Game* game);
 
+void retrieveStorage(Game* game);
+
 #endif //MALLOCWORLD_PNJ_H

@@ -45,6 +45,10 @@ int actionPNJ(char action, Game* game){
             printStorage(game->storage);
             return 1;
 
+        case CMD_RETRIEVE:
+            retrieveStorage(game);
+            return 1;
+
         case CMD_QUIT:
             return 0;
 
@@ -70,14 +74,30 @@ void stockStorage(Game* game){
         printInventoryPlayer(*game->player, 0);
         printf("\nSaississez l'ID de l'inventaire que vous souhaitez stocker (ou [Q] pour quitter) : ");
         scanf("%s", input);
-        //scanf("%s\n", input);
         if(!strcmp(input, "q")){
             continueInteraction = 0;
         } else {
             printf("\nQuelle quantitee ? ");
             scanf("%s", inputQty);
-            //scanf("%s\n", inputQty);
             storeIntoStorage(game, atoi(input), atoi(inputQty));
+        }
+    } while(continueInteraction);
+}
+
+void retrieveStorage(Game* game){
+    int continueInteraction = 1;
+    char input[50];
+    char inputQty[50];
+    do {
+        printStorage(game->storage);
+        printf("\nSaississez l'ID de l'inventaire que vous souhaitez recuperer (ou [Q] pour quitter) : ");
+        scanf("%s", input);
+        if(!strcmp(input, "q")){
+            continueInteraction = 0;
+        } else {
+            printf("\nQuelle quantitee ? ");
+            scanf("%s", inputQty);
+            retrieveFromStorage(game, atoi(input), atoi(inputQty));
         }
     } while(continueInteraction);
 }

@@ -88,7 +88,7 @@ void printActionPNJ(){
     printf("\n=============================== ACTIONS AVEC LE PNJ  ==============================\n");
     printf("||                                      ||                                       ||\n");
     printf("||  [R] -> Reparer mon equipement       ||   [C] -> Crafter de l'equipement      ||\n");
-    printf("||  [A] -> Stocker dans le coffre       ||   [W] -> Recuperer du coffre          ||\n");
+    printf("||  [A] -> Stocker dans le coffre       ||   [T] -> Recuperer du coffre          ||\n");
     printf("||  [S] -> Voir le coffre               ||   [Q] -> Quitter                      ||\n");
     printf("||                                      ||                                       ||\n");
     printf("===================================================================================\n");
