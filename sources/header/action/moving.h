@@ -1,6 +1,10 @@
-//
-// Created by Admin on 27/11/2021.
-//
+/*
+**  Filename : moving.h
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Header for 'moving.c'. Manage move.
+*/
 
 #ifndef MALLOCWORLD_MOVING_H
 #define MALLOCWORLD_MOVING_H
