@@ -16,6 +16,7 @@
 #include "game/restore.h"
 #include "agent/monster.h"
 #include "agent/player.h"
+#include "agent/pnj.h"
 #include "action/fight.h"
 #include "action/mining.h"
 #include "action/moving.h"
@@ -64,6 +65,8 @@ int getRandomNumber(int min);
 int getFileLength(FILE* file);
 
 void printAction();
+
+void printActionPNJ();
 
 void printActionFight();
 

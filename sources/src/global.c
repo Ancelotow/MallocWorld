@@ -51,7 +51,8 @@ void printTitle(){
 int getRandomNumber(int min){
     time_t t = time(NULL);
     struct tm tm = *localtime(&t);
-    return (rand() % tm.tm_sec) + min;
+    int divisor = (tm.tm_sec == 0) ? 1 : tm.tm_sec;
+    return (rand() % divisor) + min;
 }
 
 int getFileLength(FILE* file){
@@ -62,7 +63,7 @@ int getFileLength(FILE* file){
 }
 
 void printAction(){
-    printf("====================================  ACTION  =====================================\n");
+    printf("\n====================================  ACTION  =====================================\n");
     printf("||                                      ||                                       ||\n");
     printf("||  [Z] -> deplacement haut             ||   [M] -> afficher la carte            ||\n");
     printf("||  [Q] -> deplacement gauche           ||   [B] -> retour au menu principal     ||\n");
@@ -74,11 +75,21 @@ void printAction(){
 }
 
 void printActionFight(){
-    printf("===============================  ACTION DE COMBAT  ================================\n");
+    printf("\n===============================  ACTION DE COMBAT  ================================\n");
     printf("||                                      ||                                       ||\n");
     printf("||  [A] -> Attaquer                     ||   [E] -> Fuir                         ||\n");
     printf("||  [H] -> Utiliser une potion          ||   [W] -> Changer d'arme               ||\n");
     printf("||  [P] -> Changer d'armure             ||                                       ||\n");
+    printf("||                                      ||                                       ||\n");
+    printf("===================================================================================\n");
+}
+
+void printActionPNJ(){
+    printf("\n=============================== ACTIONS AVEC LE PNJ  ==============================\n");
+    printf("||                                      ||                                       ||\n");
+    printf("||  [R] -> Reparer mon equipement       ||   [C] -> Crafter de l'equipement      ||\n");
+    printf("||  [A] -> Stocker dans le coffre       ||   [W] -> Recuperer du coffre          ||\n");
+    printf("||  [S] -> Voir le coffre               ||   [Q] -> Quitter                      ||\n");
     printf("||                                      ||                                       ||\n");
     printf("===================================================================================\n");
 }

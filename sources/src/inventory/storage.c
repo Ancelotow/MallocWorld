@@ -11,21 +11,42 @@
 #include "../../header/inventory/storage.h"
 #include "../../header/global.h"
 
-Storage *createStorage(int id, int quantity) {
+Storage* createStorage(int id, int quantity) {
     Storage *storage = malloc(sizeof(Storage));
-
     storage->id = id;
     storage->quantity = quantity;
     storage->next = NULL;
     return storage;
 }
 
-void DeleteStorage(Game* game){
-    Storage * current = game->storage;
-    Storage * parent = NULL;
-    while(current != NULL){
-        if(current->quantity <= 0){
-            if(parent != NULL){
+void appendStorage(Game* game, Storage* newStorage) {
+    if(game->storage == NULL){
+        game->storage = newStorage;
+    } else {
+        Storage *current = game->storage;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = newStorage;
+    }
+}
+
+void retrieveFromStorage(Game *game, int id, int quantity) {
+    Storage *current = game->storage;
+    Storage *parent = NULL;
+    while (current != NULL) {
+        if (current->id == id) {
+            for (int i = 0; i < quantity; i++) {
+                Inventory *inventory = getInventoryFromId(id);
+                appendInventory(game->player, inventory);
+                current->quantity -= 1;
+                if (current->quantity <= 0) {
+                    break;
+                }
+            }
+        }
+        if (current->quantity <= 0) {
+            if (parent != NULL) {
                 parent->next = current->next;
                 free(current);
                 current = parent->next;
@@ -41,78 +62,42 @@ void DeleteStorage(Game* game){
     }
 }
 
-void changeQuantityStorage(Storage* storage, int id, int quantity, Game* game) {
-    Storage *n,*precedent;
-
-    while(storage != NULL){
-        if (storage->id == id){
-            storage->quantity += quantity;
-            break;
-        }
-        storage = storage->next;
-    }
-
-    if(storage->quantity <= 0){   //on cherche si c'est la 1ère valeur
-        n = storage;
-        storage = storage->next;
-        free(n);
-    }
-    else{               // on boucle jusqu'a trouver la valeur
-        precedent = storage;
-        n = storage->next;
-        while(n != NULL ){
-           if (n->quantity <= 0){
-                precedent->next = n->next;
-                free(n);
-                break;
+void storeIntoStorage(Game *game, int id, int quantity) {
+    int length = getQuantityInventory(*game->player, id);
+    if (length < quantity) {
+        printMessage("Vous n'en avez pas assez.");
+    } else {
+        Storage *current = game->storage;
+        int isAdded = 0;
+        while (current != NULL) {
+            if(current->id == id){
+                current->quantity += quantity;
+                isAdded = 1;
             }
-            precedent = n;
-            n = n->next;
+            current = current->next;
         }
-    }
-    DeleteStorage(game);
-}
-
-void stockInventory(Player* player, Game* game){
-    char idStr[10];
-    int quantity;
-    int quantityTotal = 0;
-
-    printf("Quelles ressources souhaites-tu stocker? \n");
-    scanf("%s", idStr);
-    int id = atoi(idStr);
-    for (int i = 0; i < player->sizeInventory; i++){
-        if (player->inventory[i]->id == id){
-            quantityTotal += player->inventory[i]->length;
+        if(!isAdded){
+            appendStorage(game, createStorage(id, quantity));
         }
-    }
-    if (quantityTotal <= 0){
-        printf("Tu n'a pas cette ressource\n");
-        stockInventory(player, game);
-    }
-    do {
-        printf("Quelle quantité veux tu stocker? \n");
-        scanf("%d", &quantity);
-        if (quantity > quantityTotal) {
-            printf("Tu n'en a pas assez\n");
-        }
-    } while (quantity > quantityTotal);
-    if (game->storage == NULL){
-        game->storage = createStorage(id, quantity);
-    } else{
-        changeQuantityStorage(game->storage, id, quantity);
+        removeQuantityInventory(game->player, id, quantity);
     }
 }
 
 void printStorage(Storage *storage) {
-    printf("ID :%d, Quantite : %d\n", storage->id, storage->quantity);
-    if (storage->next != NULL) {
-        printStorage(storage->next);
+    Storage *current = storage;
+    Inventory *inv;
+    printf("=================== COFFRE ===================\n");
+    while (current != NULL) {
+        inv = getInventoryFromId(current->id);
+        printf("|| %d : %s (x%d) \n", current->id, inv->name, current->quantity);
+        freeInventory(inv);
+        current = current->next;
     }
+    printf("==============================================\n\n");
 }
 
 void freeStorage(Storage *storage) {
-    if(storage->next != NULL){
+    if (storage->next != NULL) {
         freeStorage(storage->next);
     }
     free(storage);

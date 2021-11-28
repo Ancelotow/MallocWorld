@@ -64,23 +64,23 @@ void printInventory(Inventory inventory){
     printf("||\t -");
     switch(inventory.type){
         case WEAPON:
-            printf("%d degats, %0.2f durabilite\t\t\t||\n",inventory.value, inventory.durability);
+            printf("%d degats, %0.2f durabilite\n",inventory.value, inventory.durability);
             break;
 
         case ARMOR:
-            printf("%d resistance\t\t\t\t\t||\n", inventory.value);
+            printf("%d resistance\n", inventory.value);
             break;
 
         case TOOL:
-            printf("%0.2f durabilite\t\t\t\t\t||\n", inventory.durability);
+            printf("%0.2f durabilite\n", inventory.durability);
             break;
 
         case CARE:
-            printf("restaure %d HP\t\t\t\t\t||\n", inventory.value);
+            printf("restaure %d HP\n", inventory.value);
             break;
 
         case RESOURCE:
-            printf("%d maximum\t\t\t\t\t||\n", inventory.maxStack);
+            printf("%d maximum\n", inventory.maxStack);
             break;
     }
 }

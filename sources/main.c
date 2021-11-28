@@ -34,7 +34,7 @@ void testPrintPlayer(){
     freePlayer(player);
 }
 
-int main(int argc, char *argv[]) {*
+int main(int argc, char *argv[]) {
     printTitle();
     runGame();
     return (0);

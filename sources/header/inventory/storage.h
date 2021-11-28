@@ -9,20 +9,22 @@
 #ifndef MALLOCWORLD_STORAGE_H
 #define MALLOCWORLD_STORAGE_H
 
+typedef struct Game Game;
+typedef struct Player Player;
+
 typedef struct Storage{
     int id;
     int quantity;
     struct Storage* next;
 } Storage;
 
-typedef struct Game Game;
-typedef struct Player Player;
-
 Storage* createStorage(int id, int quantity);
 
-void changeQuantityStorage(Storage* storage, int id, int quantity, Game* game); //ajouter - enlever des ressources
+void retrieveFromStorage(Game* game, int id, int quantity);
 
-void stockInventory(Player* player, Game* game); // Demande quel inventaire stocker et la quantité
+void storeIntoStorage(Game *game, int id, int quantity);
+
+void appendStorage(Game* game, Storage* newStorage);
 
 void printStorage(Storage* storage);
 

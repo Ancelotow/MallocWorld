@@ -118,7 +118,7 @@ void executeAction(Position newPosition, Game* game){
     } else if(isPortal(id)){
         changeZone(game, id);
     } else if(id == PNJ){
-        actionCraft(game);
+        interactionWithPnj(game);
     } else {
         actionMove(newPosition, game);
     }

@@ -37,4 +37,5 @@ id;name;hp;damage;xp;breed;id inventory
 47;Fleau de Durin;55;55;6050;9;30
 48;Gothmogs;60;65;7800;9;31
 49;Annatar;70;75;10500;9;33
-50;Morgoths;200;100;40000;6;35
+50;Diablo;100;100;20000;1;35
+99;Morgoths;200;100;40000;6;33

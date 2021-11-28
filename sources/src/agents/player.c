@@ -165,7 +165,7 @@ void removeQuantityInventory(Player* player, int id, int quantity){
                 deleteStack(j, player->inventory[i]);
                 quantity -= 1;
                 if(quantity <= 0){
-                    return;
+                    break;
                 }
             }
             if(player->inventory[i]->length <= 0){
