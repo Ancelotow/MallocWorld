@@ -8,6 +8,11 @@
 
 #include "../header/global.h"
 
+/**
+ * Permet de dupliquer une chaîne de charactère
+ * @param string La chaîne de charactère à dupliquer
+ * @return La chaîne de charactère dupliquer
+ */
 char* copyString(char* string){
     int length = 1;
     for(int i=0; string[i] != '\0'; i++){
@@ -20,6 +25,9 @@ char* copyString(char* string){
     return newString;
 }
 
+/**
+ * Affiche le titre du jeu : "Malloc World"
+ */
 void printTitle(){
     printf("############################################################################################################\n");
     printf("############################################################################################################\n");
@@ -48,6 +56,11 @@ void printTitle(){
     printf("############################################################################################################\n");
 }
 
+/**
+ * Retourne un nombre aléatoire
+ * @param min La valeur minimum du nombre aléatoir
+ * @return Un nombre aléatoire
+ */
 int getRandomNumber(int min){
     time_t t = time(NULL);
     struct tm tm = *localtime(&t);
@@ -55,6 +68,11 @@ int getRandomNumber(int min){
     return (rand() % divisor) + min;
 }
 
+/**
+ * Récupère la taille d'un fichier
+ * @param file Le fihier
+ * @return La taille d'un fichier
+ */
 int getFileLength(FILE* file){
     fseek(file, 0, SEEK_END);
     int length = ftell(file);
@@ -62,6 +80,9 @@ int getFileLength(FILE* file){
     return length;
 }
 
+/**
+ * Affiche les actions possible en jeu
+ */
 void printAction(){
     printf("\n====================================  ACTION  =====================================\n");
     printf("||                                      ||                                       ||\n");
@@ -74,6 +95,9 @@ void printAction(){
     printf("===================================================================================\n");
 }
 
+/**
+ * Affiche les actions possible en combat
+ */
 void printActionFight(){
     printf("\n===============================  ACTION DE COMBAT  ================================\n");
     printf("||                                      ||                                       ||\n");
@@ -84,6 +108,9 @@ void printActionFight(){
     printf("===================================================================================\n");
 }
 
+/**
+ * Affiche les actions que peux effectuer le PNJ
+ */
 void printActionPNJ(){
     printf("\n=============================== ACTIONS AVEC LE PNJ  ==============================\n");
     printf("||                                      ||                                       ||\n");
@@ -94,6 +121,11 @@ void printActionPNJ(){
     printf("===================================================================================\n");
 }
 
+/**
+ * Libère un tableau de 'int' en 2 dimensions
+ * @param tab Tableau en 2 dimensions
+ * @param row Nombre de lignes
+ */
 void freeTab2D(int** tab, int row){
     for(int i = 0; i < row; i++){
         free(tab[i]);

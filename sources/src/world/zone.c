@@ -8,6 +8,11 @@
 
 #include "../../header/global.h"
 
+/**
+ * Génération du zone procéduralement
+ * @param type Type de la zone (1, 2, 3)
+ * @return La zone généré procéduralement
+ */
 Zone* generateZone(TypeZone type){
     Zone* zone = malloc(sizeof(Zone));
     zone->row = 20; //getRandomNumber(20);
@@ -33,6 +38,10 @@ Zone* generateZone(TypeZone type){
     return zone;
 }
 
+/**
+ * Génère le ou les portails de changement de zone sur une zone
+ * @param zone La zone
+ */
 void generatePortail(Zone* zone){
     int position = getRandomNumber(0) % zone->column;
     int position_bis = getRandomNumber(0) % zone->column;
@@ -52,6 +61,10 @@ void generatePortail(Zone* zone){
     }
 }
 
+/**
+ * Place le joueur sur sa case de départ (exclusivement ZONE 1)
+ * @param zone La zone
+ */
 void placePlayer(Zone* zone){
     if(zone->type == ZONE_1){
         int playerGenerate = 0;
@@ -65,6 +78,10 @@ void placePlayer(Zone* zone){
     }
 }
 
+/**
+ * Place le boss de fin sur sa case (exclusivement ZONE 3)
+ * @param zone La zone
+ */
 void placeFinalBoss(Zone* zone){
     if(zone->type == ZONE_3){
         int bossGenerate = 0;
@@ -79,6 +96,11 @@ void placeFinalBoss(Zone* zone){
     }
 }
 
+/**
+ * Retourne l'ID de la plante en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID de la plante
+ */
 Element getElementPlant(TypeZone type){
     switch(type){
         case ZONE_1:
@@ -95,6 +117,11 @@ Element getElementPlant(TypeZone type){
     }
 }
 
+/**
+ * Retourne l'ID du bois en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID du bois
+ */
 Element getElementWood(TypeZone type){
     switch(type){
         case ZONE_1:
@@ -111,6 +138,11 @@ Element getElementWood(TypeZone type){
     }
 }
 
+/**
+ * Retourne l'ID de la pierre en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID de la pierre
+ */
 Element getElementRock(TypeZone type){
     switch(type){
         case ZONE_1:
@@ -127,6 +159,11 @@ Element getElementRock(TypeZone type){
     }
 }
 
+/**
+ * Retourne l'ID d'une ressource aléatoirement en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID d'une ressource aléatoire
+ */
 Element getRandomResource(TypeZone typeZone){
     int type = (getRandomNumber(0) % 3) + 1;
     switch(type){
@@ -144,6 +181,11 @@ Element getRandomResource(TypeZone typeZone){
     }
 }
 
+/**
+ * Retourne l'ID d'un monstre en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID d'un monstre aléatoire
+ */
 int getRandomMonster(TypeZone typeZone){
     int monsterStart = 0;
     switch (typeZone){
@@ -162,6 +204,10 @@ int getRandomMonster(TypeZone typeZone){
     return (getRandomNumber(0) % 11) + monsterStart + 1;
 }
 
+/**
+ * Fonction de test qui affiche une zone
+ * @param zone La zone
+ */
 void printZoneDebug(Zone* zone){
     printf("-- ZONE %d --  (row: %d, column: %d)\n", zone->type, zone->row, zone->column);
     for(int i=0; i < zone->row; i++){
@@ -173,6 +219,10 @@ void printZoneDebug(Zone* zone){
     printf("\n\n");
 }
 
+/**
+ * Affiche une zone
+ * @param zone La zone
+ */
 void printZone(Zone* zone){
     printf("-- ZONE %d -- \n", zone->type);
     for(int i=0; i < zone->row; i++){
@@ -184,6 +234,10 @@ void printZone(Zone* zone){
     printf("\n\n");
 }
 
+/**
+ * Libère la zone de la mémoire
+ * @param zone La zone
+ */
 void freeZone(Zone* zone){
     for(int i=0; i < zone->row; i++){
         free(zone->map[i]);
@@ -192,6 +246,11 @@ void freeZone(Zone* zone){
     free(zone);
 }
 
+/**
+ * Spécifie si cette ID correspond à une ressource ou non
+ * @param id ID à vérifier
+ * @return Si c'est une ressource ou non
+ */
 int isResource(int id){
     if(id < 12 && id >= 3){
         return 1;
@@ -200,6 +259,11 @@ int isResource(int id){
     }
 }
 
+/**
+ * Retourne l'ID  de de la ressource correspondant à l'élément miné
+ * @param element Element miné
+ * @return L'ID de la ressource
+ */
 int getIdResource(Element element){
     switch (element) {
         default:
@@ -232,6 +296,11 @@ int getIdResource(Element element){
     }
 }
 
+/**
+ * Spécifie si cette ID correspond à un monstre ou non
+ * @param id ID à vérifier
+ * @return Si c'est un monstre ou non
+ */
 int isMonster(int id){
     if(id >= 12){
         return 1;
@@ -240,6 +309,11 @@ int isMonster(int id){
     }
 }
 
+/**
+ * Spécifie si cette ID correspond à un portail ou non
+ * @param id ID à vérifier
+ * @return Si c'est un portail ou non
+ */
 int isPortal(int id){
     if(id == -2 || id == -3){
         return 1;
@@ -248,6 +322,12 @@ int isPortal(int id){
     }
 }
 
+/**
+ * Récupération de la position du portail dans une zone
+ * @param zone La zone
+ * @param portal Le portail recherché
+ * @return La position du portail
+ */
 Position getPositionPortal(Zone zone, Element portal){
     Position posPortal;
     for(int i = 0; i < zone.row; i++){

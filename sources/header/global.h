@@ -39,37 +39,51 @@
 
 
 /**
- * Created a copy of string. It's used to initialize new string
- * @param string Source string
- * @return The string's copy
+ * Permet de dupliquer une chaîne de charactère
+ * @param string La chaîne de charactère à dupliquer
+ * @return La chaîne de charactère dupliquer
  */
 char* copyString(char* string);
 
 /**
- * Printed the game's title
+ * Affiche le titre du jeu : "Malloc World"
  */
 void printTitle();
 
 /**
- * Get a random number
- * @param min Minimum value
- * @return Random number
+ * Retourne un nombre aléatoire
+ * @param min La valeur minimum du nombre aléatoir
+ * @return Un nombre aléatoire
  */
 int getRandomNumber(int min);
 
 /**
- * Get file length
- * @param file The file
- * @return File length
+ * Récupère la taille d'un fichier
+ * @param file Le fihier
+ * @return La taille d'un fichier
  */
 int getFileLength(FILE* file);
 
+/**
+ * Affiche les actions possible en jeu
+ */
 void printAction();
 
+/**
+ * Affiche les actions que peux effectuer le PNJ
+ */
 void printActionPNJ();
 
+/**
+ * Affiche les actions possible en combat
+ */
 void printActionFight();
 
+/**
+ * Libère un tableau de 'int' en 2 dimensions
+ * @param tab Tableau en 2 dimensions
+ * @param row Nombre de lignes
+ */
 void freeTab2D(int** tab, int row);
 
 #endif //MALLOCWORLD_GLOBAL_H

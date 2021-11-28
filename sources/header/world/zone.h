@@ -44,85 +44,117 @@ typedef struct Zone{
 } Zone;
 
 /**
- * Generated a zone
- * @param type The zone's type (1, 2 or 3)
- * @return The zone
+ * Génération du zone procéduralement
+ * @param type Type de la zone (1, 2, 3)
+ * @return La zone généré procéduralement
  */
 Zone* generateZone(TypeZone type);
 
 /**
- * Placed the player in zone 1
- * @param zone The zone 1
+ * Place le joueur sur sa case de départ (exclusivement ZONE 1)
+ * @param zone La zone
  */
 void placePlayer(Zone* zone);
 
 /**
- * Printed into console the zone
- * @param zone The zone
+ * Affiche une zone
+ * @param zone La zone
  */
 void printZone(Zone* zone);
 
 /**
- * Free the zone (including the map) from memory
- * @param zone The zone
+ * Libère la zone de la mémoire
+ * @param zone La zone
  */
 void freeZone(Zone* zone);
 
 /**
- * Generated a portal (portal to pass between each zone) into a zone
- * @param zone The zone
+ * Génère le ou les portails de changement de zone sur une zone
+ * @param zone La zone
  */
 void generatePortail(Zone* zone);
 
 /**
- * Get plant from zone
- * @param type The type of zone (1, 2 or 3)
- * @return The plant
+ * Retourne l'ID de la plante en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID de la plante
  */
 Element getElementPlant(TypeZone type);
 
 /**
- * Get wood from zone
- * @param type The type of zone (1, 2 or 3)
- * @return The wood
+ * Retourne l'ID du bois en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID du bois
  */
 Element getElementWood(TypeZone type);
 
 /**
- * Get rock from zone
- * @param type The type of zone (1, 2 or 3)
- * @return The rock
+ * Retourne l'ID de la pierre en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID de la pierre
  */
 Element getElementRock(TypeZone type);
 
 /**
- * Get a random resource (plant, wood or rock) for a zone
- * @param typeZone The type of zone (1, 2 or 3)
- * @return The random resource
+ * Retourne l'ID d'une ressource aléatoirement en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID d'une ressource aléatoire
  */
-int getRandomResource(TypeZone typeZone);
+Element getRandomResource(TypeZone typeZone);
 
 /**
- * Get a random monster for a zone
- * @param typeZone The type of zone (1, 2 or 3)
- * @return The random monster
+ * Retourne l'ID d'un monstre en fonction du type de zone
+ * @param type Le type de la zone
+ * @return L'ID d'un monstre aléatoire
  */
 int getRandomMonster(TypeZone typeZone);
 
+/**
+ * Fonction de test qui affiche une zone
+ * @param zone La zone
+ */
 void printZoneDebug(Zone* zone);
 
-void saveZone(FILE* file, Zone zone);
-
+/**
+ * Spécifie si cette ID correspond à une ressource ou non
+ * @param id ID à vérifier
+ * @return Si c'est une ressource ou non
+ */
 int isResource(int id);
 
+/**
+ * Spécifie si cette ID correspond à un monstre ou non
+ * @param id ID à vérifier
+ * @return Si c'est un monstre ou non
+ */
 int isMonster(int id);
 
+/**
+ * Retourne l'ID  de de la ressource correspondant à l'élément miné
+ * @param element Element miné
+ * @return L'ID de la ressource
+ */
 int getIdResource(Element element);
 
+/**
+ * Spécifie si cette ID correspond à un portail ou non
+ * @param id ID à vérifier
+ * @return Si c'est un portail ou non
+ */
 int isPortal(int id);
 
+/**
+ * Récupération de la position du portail dans une zone
+ * @param zone La zone
+ * @param portal Le portail recherché
+ * @return La position du portail
+ */
 Position getPositionPortal(Zone zone, Element portal);
 
+/**
+ * Place le boss de fin sur sa case (exclusivement ZONE 3)
+ * @param zone La zone
+ */
 void placeFinalBoss(Zone* zone);
 
 #endif //MALLOCWORLD_ZONE_H
