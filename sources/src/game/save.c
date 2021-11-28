@@ -8,14 +8,28 @@
 
 #include "../../header/global.h"
 
-#define PATH_SAVE "../resources/save/save.txt"
+#define PATH_SAVE "../saves/"
+
+char* createFilenameSave(){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    char totalStr[10];
+    int total = tm.tm_sec + tm.tm_min + tm.tm_hour + tm.tm_mday + tm.tm_mon + tm.tm_year;
+    sprintf(totalStr, "%d", total);
+    char* filename = concatStr("save_", totalStr);
+    filename = concatStr(filename, ".txt");
+    return filename;
+}
 
 /**
  * Sauvegarde le jeu
  * @param game Le jeu
  */
 void saveGame(Game game){
-    FILE* file = fopen(PATH_SAVE, "w+");
+    char* filename = createFilenameSave();
+    char* fullpath = concatStr(PATH_SAVE, createFilenameSave());
+    mkdir(PATH_SAVE);
+    FILE* file = fopen(fullpath, "w+");
     if(file != NULL){
         saveWorld(file, *game.world);
         savePlayer(file, *game.player);
@@ -24,6 +38,7 @@ void saveGame(Game game){
     } else{
         printf("Impossible d'enregistrer !\n\n");
     }
+    free(filename);
 }
 
 /**

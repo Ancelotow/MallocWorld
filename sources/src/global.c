@@ -132,3 +132,16 @@ void freeTab2D(int** tab, int row){
     }
     free(tab);
 }
+
+/**
+ * Concaténtion de 2 chaînes de caractères
+ * @param str1 Chaîne de caractères 1
+ * @param str2 Chaîne de caractères 2
+ * @return Chaînes de caractères concaténées
+ */
+char* concatStr(char* str1, char* str2){
+    char *result = malloc(strlen(str1) + strlen(str2) + 1);
+    strcpy(result, str1);
+    strcat(result, str2);
+    return result;
+}

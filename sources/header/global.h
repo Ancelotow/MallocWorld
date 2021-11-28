@@ -32,6 +32,8 @@
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 
 /**
@@ -81,5 +83,13 @@ void printActionFight();
  * @param row Nombre de lignes
  */
 void freeTab2D(int** tab, int row);
+
+/**
+ * Concaténtion de 2 chaînes de caractères
+ * @param str1 Chaîne de caractères 1
+ * @param str2 Chaîne de caractères 2
+ * @return Chaînes de caractères concaténées
+ */
+char* concatStr(char* str1, char* str2);
 
 #endif //MALLOCWORLD_GLOBAL_H
