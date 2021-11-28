@@ -123,4 +123,6 @@ int isPortal(int id);
 
 Position getPositionPortal(Zone zone, Element portal);
 
+void placeFinalBoss(Zone* zone);
+
 #endif //MALLOCWORLD_ZONE_H

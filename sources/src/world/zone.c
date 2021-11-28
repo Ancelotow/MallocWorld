@@ -27,6 +27,8 @@ Zone* generateZone(TypeZone type){
     }
     if(zone->type == ZONE_1) {
         placePlayer(zone);
+    } else if (zone->type == ZONE_3){
+        placeFinalBoss(zone);
     }
     return zone;
 }
@@ -58,6 +60,20 @@ void placePlayer(Zone* zone){
             if(zone->map[0][colStart]  == 0){
                 zone->map[0][colStart] = PLAYER;
                 playerGenerate = 1;
+            }
+        }
+    }
+}
+
+void placeFinalBoss(Zone* zone){
+    if(zone->type == ZONE_3){
+        int bossGenerate = 0;
+        while(!bossGenerate){
+            int colStart = getRandomNumber(0) % zone->column;
+            int rowStart = getRandomNumber(0) % zone->row;
+            if(zone->map[rowStart][colStart]  == 0){
+                zone->map[rowStart][colStart] = BOSS;
+                bossGenerate = 1;
             }
         }
     }
