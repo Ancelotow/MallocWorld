@@ -15,6 +15,7 @@
 
 #define CMD_SAVE 'l'
 #define CMD_SAVE_QUIT 'p'
+#define CMD_SHOW_PLAYER 'j'
 #define CMD_QUIT_WITHOUT_SAVE 'c'
 #define CMD_INVENTORY 'i'
 #define CMD_UP 'z'
@@ -92,6 +93,10 @@ int executeActionPlayer(char action, Game* game){
 
         case CMD_QUIT_WITHOUT_SAVE:
             return 0;
+
+        case CMD_SHOW_PLAYER:
+            printPlayer(*game->player);
+            return 1;
 
         case CMD_DOWN:
         case CMD_UP:

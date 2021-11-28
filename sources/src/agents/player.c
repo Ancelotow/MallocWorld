@@ -257,5 +257,17 @@ void deleteInventory(Player* player, int index){
     }
 }
 
+/**
+ * Affiche les informations du joueur
+ * @param player Le joueur
+ */
+void printPlayer(Player player){
+    printf("\n============ JOUEUR ============\n");
+    printf("Niveau : %d\n", player.level);
+    printf("Experience : %d/%d\n", player.xp, player.xpNext);
+    printf("PV : %d/%d\n", player.currentHp, player.maxHp);
+    printf("================================\n\n");
+}
+
 
 

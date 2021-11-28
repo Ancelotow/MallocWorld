@@ -118,4 +118,10 @@ void removeQuantityInventory(Player* player, int id, int quantity);
  */
 void deleteInventory(Player* player, int index);
 
+/**
+ * Affiche les informations du joueur
+ * @param player Le joueur
+ */
+void printPlayer(Player player);
+
 #endif //MALLOCWORLD_PLAYER_H
