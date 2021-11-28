@@ -100,9 +100,6 @@
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/game/game.h">
 			<Option target="MallocWorld"/>
 		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/game/restore.h">
-			<Option target="MallocWorld"/>
-		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/game/save.h">
 			<Option target="MallocWorld"/>
 		</Unit>
@@ -161,9 +158,6 @@
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game/game.c">
-			<Option target="MallocWorld"/>
-		</Unit>
-		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game/restore.c">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game/save.c">

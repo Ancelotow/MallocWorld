@@ -317,24 +317,10 @@ CMakeFiles/MallocWorld.dir/sources/src/game/save.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MallocWorld.dir/sources/src/game/save.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\game\save.c" -o CMakeFiles\MallocWorld.dir\sources\src\game\save.c.s
 
-CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj: CMakeFiles/MallocWorld.dir/flags.make
-CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj: CMakeFiles/MallocWorld.dir/includes_C.rsp
-CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj: ../sources/src/game/restore.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\MallocWorld.dir\sources\src\game\restore.c.obj -c "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\game\restore.c"
-
-CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\game\restore.c" > CMakeFiles\MallocWorld.dir\sources\src\game\restore.c.i
-
-CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\game\restore.c" -o CMakeFiles\MallocWorld.dir\sources\src\game\restore.c.s
-
 CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj: CMakeFiles/MallocWorld.dir/flags.make
 CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj: CMakeFiles/MallocWorld.dir/includes_C.rsp
 CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj: ../sources/src/action/crafting.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\MallocWorld.dir\sources\src\action\crafting.c.obj -c "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\action\crafting.c"
 
 CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.i: cmake_force
@@ -348,7 +334,7 @@ CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.s: cmake_force
 CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj: CMakeFiles/MallocWorld.dir/flags.make
 CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj: CMakeFiles/MallocWorld.dir/includes_C.rsp
 CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj: ../sources/src/action/moving.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\MallocWorld.dir\sources\src\action\moving.c.obj -c "C:\Users\Elsa Firmin\CLionProjects\MallocWorld\sources\src\action\moving.c"
 
 CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.i: cmake_force
@@ -379,7 +365,6 @@ MallocWorld_OBJECTS = \
 "CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj" \
 "CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.obj" \
 "CMakeFiles/MallocWorld.dir/sources/src/game/save.c.obj" \
-"CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj" \
 "CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj" \
 "CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj"
 
@@ -404,14 +389,13 @@ MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/game/save.c.obj
-MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/build.make
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/linklibs.rsp
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/objects1.rsp
 MallocWorld.exe: CMakeFiles/MallocWorld.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Linking C executable MallocWorld.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Elsa Firmin\CLionProjects\MallocWorld\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Linking C executable MallocWorld.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MallocWorld.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

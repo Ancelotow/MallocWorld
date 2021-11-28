@@ -32,7 +32,7 @@ Respawn *createRespawn(int id, Position *position) {
 }
 
 /**
- * Modifie tout les respawn dans la liste chaîné en diminuer le "Tours restants" (roundLeft) de 1.
+ * Modifie tous les respawn dans la liste chaînée en diminuer le "Tour restant" (roundLeft) de 1.
  * Si "Tours restants" est à 0, on remet l'élément sur la map et on le supprime de la liste chaînée
  * @param game Le jeu
  */
@@ -63,7 +63,7 @@ void updateAllRespawn(Game *game) {
 }
 
 /**
- * Fait réapparaître tout les éléments dans le jeu
+ * Fait réapparaître tous les éléments dans le jeu
  * @param game Le jeu
  */
 void respawnAllElement(Game *game){

@@ -45,7 +45,7 @@ void runGame() {
 }
 
 /**
- * Intéraction avec le joueur pour qu'il puisse jouer sont personnage
+ * Intéraction avec le joueur pour qu'il puisse jouer son personnage
  * @param game le jeu
  */
 void play(Game *game) {
