@@ -99,10 +99,12 @@ void usePotion(Player* player){
  * @param player Le joueur
  * @param weapon L'arme du joueur
  */
-void printFight(Monster monster, Player player, Inventory weapon){
+void printFight(Monster monster, Player player, Inventory* weapon){
     printf("======= JOUEUR : LVL %d =======\n", player.level);
     printf("Vie : %d / %d\n", player.currentHp, player.maxHp);
-    printf("Arme : %s ; durabilite %0.2f\n\n", weapon.name, weapon.durability);
+    if(weapon != NULL){
+        printf("Arme : %s ; durabilite %0.2f\n\n", weapon->name, weapon->durability);
+    }
     printf("======= ENNEMI : %s =======\n", monster.name);
     printf("Vie : %d \n\n", monster.hp);
 }
@@ -110,13 +112,16 @@ void printFight(Monster monster, Player player, Inventory weapon){
 /**
  * Le joueur attaque le monstre
  * @param monster Le monstre
- * @param player Le joueur
+ * @param Game Le jeu
  * @param weapon L'arme du joueur
  * @return Si le monstre est mort ou non
  */
-int attack(Monster* monster, Player* player, Inventory* weapon){
+int attack(Monster* monster, Game* game, Inventory* weapon){
     int monsterIsDead = 0;
-    if(weapon->durability > 0){
+    if(weapon == NULL){
+        monster->hp -= 1;
+        sufferDamage(monster, game, NULL);
+    } else if(weapon->durability > 0){
         monster->hp -= weapon->value;
         weapon->durability -= 1;
     } else {
@@ -125,7 +130,7 @@ int attack(Monster* monster, Player* player, Inventory* weapon){
     if(monster->hp <= 0){
         monster->hp = 0;
         monsterIsDead = 1;
-        gainExperience(player, monster->xp);
+        gainExperience(game->player, monster->xp);
     }
     return monsterIsDead;
 }
@@ -164,7 +169,7 @@ int actionFight(char action, Monster* monster, Game* game, Inventory* weapon, In
     int isOver = 0;
     switch (action) {
         case CMD_FIGHT_ATTACK:
-            isOver = attack(monster, game->player, weapon);
+            isOver = attack(monster, game, weapon);
             break;
 
         case CMD_FIGHT_ESCAPE:
@@ -226,14 +231,14 @@ int sufferDamage(Monster* monster, Game* game, Inventory* armor){
  * @param position La position du monstre
  */
 void startFight(int id, Game* game, Position position){
-    Inventory* weapon = choiceWeapon(game->player);     //choix arme
+    Inventory* weapon = choiceWeapon(game->player); // choix arme
     Inventory* armor = choiceArmor(game->player);
     Position* posMonster = createPositionFromExisting(position);
     Monster* monster = getMonsterFromId(id);
     int isFinished;
     char action;
     do {
-        printFight(*monster, *game->player, *weapon);
+        printFight(*monster, *game->player, weapon);
         printf("\n");
         printActionFight();
         printf("Quel action souhaitez-vous faire : ");
@@ -246,8 +251,8 @@ void startFight(int id, Game* game, Position position){
         }
     } while(!isFinished);
     Inventory* inventoryMonster = getInventoryFromId(monster->idInventory);
-    appendInventory(game->player, inventoryMonster);    //ajouter le monstre à l'inventaire
-    appendRespawn(game->respawn, monster->id, posMonster);  //permet de repop
+    appendInventory(game->player, inventoryMonster);    // ajouter le monstre à l'inventaire
+    appendRespawn(game->respawn, monster->id, posMonster);  // permet de repop
     game->position->x = posMonster->x;
     game->position->y = posMonster->y;
     game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;

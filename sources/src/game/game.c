@@ -57,8 +57,7 @@ void play(Game *game) {
     do {
         printAction();
         printf("\nQuelle action souhaitez-vous faire ?");
-        scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
-        scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
+        scanf(" %c", &input);
         continueGame = executeActionPlayer(input, game);
     } while (continueGame);
     freeGame(game);
