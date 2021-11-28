@@ -30,7 +30,7 @@ typedef struct Inventory{
     int id;
     char* name;
     int value;
-    float durability;
+    float durability;       // =1 si c'est une ressource (sapin, hetre)
     float durabilityMax;
     int maxStack;
     InventoryType type;
