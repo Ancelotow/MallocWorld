@@ -9,8 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/main.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/main.c.obj"
+  "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/crafting.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/fight.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/mining.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj"
+  "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/moving.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/agents/monster.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/agents/monster.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/agents/player.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/agents/player.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/agents/pnj.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.obj"

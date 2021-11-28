@@ -22,7 +22,7 @@ Player* createPlayer(int currentHp, int maxHp, Stack** inventory, int sizeInvent
     return player;
 }
 
-Player* createPlayerLevel1(){
+Player* createPlayerLevel1(){   //xp = 100 pour etre au level2 puis doublé pour les autres
     int maxHp = 100;
     int currentHp = maxHp;
     Stack** stack = malloc(sizeof(Stack*) * 20);

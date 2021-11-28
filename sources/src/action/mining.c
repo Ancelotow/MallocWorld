@@ -10,24 +10,24 @@
 #include "../../header/global.h"
 
 void mining(Game *game, int id, Position position) {
-    int isUsed = useToolToMining(id, game->player);
+    int isUsed = useToolToMining(id, game->player); //cherche outil de minage
     if (isUsed) {
         int isCollect = 0;
         int isAppend;
         int nbResources = (getRandomNumber(0) % 4) + 1;
         Inventory *inventory;
         for (int i = 0; i < nbResources; i++) {
-            inventory = getInventoryFromId(getIdResource(id));
+            inventory = getInventoryFromId(getIdResource(id));  //regarde si sa correspond a la ressource
             isAppend = appendInventory(game->player, inventory);
             if (isAppend) {
-                isCollect = 1;
+                isCollect = 1;  //la mine et l'ajoute
             }
         }
         if(isCollect) {
             Position* posResource = createPositionFromExisting(position);
             printMessage("Ressource recoltee !");
             if(game->respawn == NULL){
-                game->respawn = createRespawn(id, posResource);
+                game->respawn = createRespawn(id, posResource);     //pour repop
             } else {
                 appendRespawn(game->respawn, id, posResource);
             }

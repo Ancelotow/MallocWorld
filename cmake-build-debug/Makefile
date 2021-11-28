@@ -152,6 +152,30 @@ sources/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/main.c.s
 .PHONY : sources/main.c.s
 
+sources/src/action/crafting.obj: sources/src/action/crafting.c.obj
+.PHONY : sources/src/action/crafting.obj
+
+# target to build an object file
+sources/src/action/crafting.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj
+.PHONY : sources/src/action/crafting.c.obj
+
+sources/src/action/crafting.i: sources/src/action/crafting.c.i
+.PHONY : sources/src/action/crafting.i
+
+# target to preprocess a source file
+sources/src/action/crafting.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.i
+.PHONY : sources/src/action/crafting.c.i
+
+sources/src/action/crafting.s: sources/src/action/crafting.c.s
+.PHONY : sources/src/action/crafting.s
+
+# target to generate assembly for a file
+sources/src/action/crafting.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.s
+.PHONY : sources/src/action/crafting.c.s
+
 sources/src/action/fight.obj: sources/src/action/fight.c.obj
 .PHONY : sources/src/action/fight.obj
 
@@ -199,6 +223,30 @@ sources/src/action/mining.s: sources/src/action/mining.c.s
 sources/src/action/mining.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.s
 .PHONY : sources/src/action/mining.c.s
+
+sources/src/action/moving.obj: sources/src/action/moving.c.obj
+.PHONY : sources/src/action/moving.obj
+
+# target to build an object file
+sources/src/action/moving.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj
+.PHONY : sources/src/action/moving.c.obj
+
+sources/src/action/moving.i: sources/src/action/moving.c.i
+.PHONY : sources/src/action/moving.i
+
+# target to preprocess a source file
+sources/src/action/moving.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.i
+.PHONY : sources/src/action/moving.c.i
+
+sources/src/action/moving.s: sources/src/action/moving.c.s
+.PHONY : sources/src/action/moving.s
+
+# target to generate assembly for a file
+sources/src/action/moving.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.s
+.PHONY : sources/src/action/moving.c.s
 
 sources/src/agents/monster.obj: sources/src/agents/monster.c.obj
 .PHONY : sources/src/agents/monster.obj
@@ -596,12 +644,18 @@ help:
 	@echo ... sources/main.obj
 	@echo ... sources/main.i
 	@echo ... sources/main.s
+	@echo ... sources/src/action/crafting.obj
+	@echo ... sources/src/action/crafting.i
+	@echo ... sources/src/action/crafting.s
 	@echo ... sources/src/action/fight.obj
 	@echo ... sources/src/action/fight.i
 	@echo ... sources/src/action/fight.s
 	@echo ... sources/src/action/mining.obj
 	@echo ... sources/src/action/mining.i
 	@echo ... sources/src/action/mining.s
+	@echo ... sources/src/action/moving.obj
+	@echo ... sources/src/action/moving.i
+	@echo ... sources/src/action/moving.s
 	@echo ... sources/src/agents/monster.obj
 	@echo ... sources/src/agents/monster.i
 	@echo ... sources/src/agents/monster.s
