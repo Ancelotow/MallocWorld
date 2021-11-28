@@ -8,6 +8,10 @@
 
 #include "../../header/global.h"
 
+/**
+ * Gère les intéraction du joueur avec les actions de crafting
+ * @param game Le jeu
+ */
 void actionCraft(Game* game){
     ListCraft* listCraft = getListCraftPossible(game);
     if(listCraft->length <= 0){
@@ -36,6 +40,12 @@ void actionCraft(Game* game){
     freeListCraft(listCraft);
 }
 
+/**
+ * Craft un objet
+ * @param listCraft Liste des craft disponible
+ * @param game Le jeu
+ * @param id L'ID de l'inventaire à crafter
+ */
 void crafting(ListCraft* listCraft, Game* game, int id){
     Craft* craft = NULL;
     for(int i = 0; i < listCraft->length; i++){
@@ -58,6 +68,16 @@ void crafting(ListCraft* listCraft, Game* game, int id){
     printInventoryPlayer(*game->player, 0);
 }
 
+/**
+ * Création d'un craft
+ * @param inventoryCraft L'inventaire qui sera crafter
+ * @param inv1 L'élement 1 pour crafter
+ * @param quantityInv1 La quantité d'élement 1 pour crafter
+ * @param inv2 L'élement 2 pour crafter
+ * @param quantityInv2 La quantité d'élement 2 pour crafter
+ * @param zoneMin La zone minimum requis pour crafter l'objet
+ * @return Le craft
+ */
 Craft* createCraft(Inventory* inventoryCraft, int inv1, int quantityInv1, int inv2, int quantityInv2, int zoneMin){
     Craft* craft = malloc(sizeof(Craft));
     craft->inventoryCraft = inventoryCraft;
@@ -69,12 +89,21 @@ Craft* createCraft(Inventory* inventoryCraft, int inv1, int quantityInv1, int in
     return craft;
 }
 
+/**
+ * Création d'une liste de crafts
+ * @return La liste de crafts
+ */
 ListCraft* createListCraft(){
     ListCraft* listCraft = malloc(sizeof(ListCraft));
     listCraft->length = 0;
     listCraft->list = malloc(sizeof(Craft) * MAX_LENGTH_LIST_CRAFT);
 }
 
+/**
+ * Création d'un craft en faisait des 'split' depuis une ligne d'un CSV
+ * @param csv La ligne CSV
+ * @return Le craft
+ */
 Craft* craftInventoryWithSplit(char* csv){
     char* split = strtok(csv, ";");
     int inv1 = atoi(strtok(NULL, ";"));
@@ -86,6 +115,10 @@ Craft* craftInventoryWithSplit(char* csv){
     return createCraft(inventory, inv1, quanityInv1, inv2, quanityInv2, zoneMin);
 }
 
+/**
+ * Affiche la liste des craft disponible
+ * @param listCraft Liste des crafts
+ */
 void printListCraft(ListCraft listCraft){
     printf("\n\n======== OBJETS CRAFTABLE ========\n");
     for(int i = 0; i < listCraft.length; i++){
@@ -94,6 +127,10 @@ void printListCraft(ListCraft listCraft){
     printf("\n\n");
 }
 
+/**
+ * Affiche un craft
+ * @param craft Le craft
+ */
 void printCraft(Craft craft){
     printf("%d : %s  ", craft.inventoryCraft->id, craft.inventoryCraft->name);
     if(craft.inventory1 > 0){
@@ -109,11 +146,22 @@ void printCraft(Craft craft){
     printf("\n");
 }
 
+/**
+ * Ajoute un craft dans la liste des crafts
+ * @param listCraft la liste des crafts
+ * @param craft Le craft
+ */
 void appendCraft(ListCraft* listCraft, Craft* craft){
     listCraft->list[listCraft->length] = craft;
     listCraft->length += 1;
 }
 
+/**
+ * Spécifie si le craft est possible ou non pour un objet
+ * @param craft Le craft
+ * @param game Le jeu
+ * @return Si c'est possible de crafter ou pas
+ */
 int craftIsPossible(Craft craft, Game game){
     int quantity1 = (craft.inventory1 > 0) ? getQuantityInventory(*game.player, craft.inventory1) : 0;
     int quantity2 = (craft.inventory2 > 0) ? getQuantityInventory(*game.player, craft.inventory2) : 0;
@@ -128,6 +176,11 @@ int craftIsPossible(Craft craft, Game game){
     }
 }
 
+/**
+ * Récupération de la liste des crafts possible
+ * @param game Le jeu
+ * @return Liste des crafts possible
+ */
 ListCraft* getListCraftPossible(Game* game){
     ListCraft* listCraft = createListCraft();
     Craft* craft;
@@ -155,10 +208,18 @@ ListCraft* getListCraftPossible(Game* game){
     }
 }
 
+/**
+ * Libère un craft de la mémoire
+ * @param craft Le craft
+ */
 void freeCraft(Craft* craft){
     free(craft);
 }
 
+/**
+ * Libère la liste des crafts de la mémoire
+ * @param listCraft La liste des crafts
+ */
 void freeListCraft(ListCraft* listCraft){
     for(int i = 0; i < listCraft->length; i++){
         free(listCraft->list[i]);

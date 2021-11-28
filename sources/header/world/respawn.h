@@ -42,10 +42,10 @@ void appendRespawn(Respawn* respawn, int id, struct Position* position);
 void updateAllRespawn(Game* game);
 
 /**
- *
+ * Fait réapparaître tout les éléments dans le jeu
  * @param game Le jeu
  */
-void respawnAllElement(Game *game);
+void respawnAllElement(Game *game)
 
 /**
  * Fonction de test pour afficher tout les respawn

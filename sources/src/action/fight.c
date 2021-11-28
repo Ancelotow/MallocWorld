@@ -14,7 +14,11 @@
 #define CMD_FIGHT_ARMOR 'p'
 #define CMD_FIGHT_WEAPON 'w'
 
-
+/**
+ * Demande au joueur de choisir une arme pour le combat
+ * @param player Le joueur
+ * @return L'arme choisie
+ */
 Inventory* choiceWeapon(Player* player){
     char strId[10];
     printf("Liste de vos armes :\n");
@@ -31,6 +35,11 @@ Inventory* choiceWeapon(Player* player){
     return NULL;
 }
 
+/**
+ * Demande au joueur de choisir une armure pour le combat
+ * @param player Le joueur
+ * @return L'armure choisie
+ */
 Inventory* choiceArmor(Player* player){
     int nbArmor = getLengthInventoryType(*player, ARMOR);
     if(nbArmor > 0){
@@ -50,6 +59,10 @@ Inventory* choiceArmor(Player* player){
     return NULL;
 }
 
+/**
+ * Demande au joueur d'utiliser une potion de vie
+ * @param player Le joueur
+ */
 void usePotion(Player* player){
     int nbHealth = getLengthInventoryType(*player, CARE);
     if(nbHealth > 0){
@@ -80,6 +93,12 @@ void usePotion(Player* player){
     }
 }
 
+/**
+ * Affiche le combat
+ * @param monster Le monstre
+ * @param player Le joueur
+ * @param weapon L'arme du joueur
+ */
 void printFight(Monster monster, Player player, Inventory weapon){
     printf("======= JOUEUR : LVL %d =======\n", player.level);
     printf("Vie : %d / %d\n", player.currentHp, player.maxHp);
@@ -88,6 +107,13 @@ void printFight(Monster monster, Player player, Inventory weapon){
     printf("Vie : %d \n\n", monster.hp);
 }
 
+/**
+ * Le joueur attaque le monstre
+ * @param monster Le monstre
+ * @param player Le joueur
+ * @param weapon L'arme du joueur
+ * @return Si le monstre est mort ou non
+ */
 int attack(Monster* monster, Player* player, Inventory* weapon){
     int monsterIsDead = 0;
     if(weapon->durability > 0){
@@ -104,8 +130,14 @@ int attack(Monster* monster, Player* player, Inventory* weapon){
     return monsterIsDead;
 }
 
+/**
+ * Tentative du joueur de s'enfuir du combat
+ * @param position La position du monstre
+ * @param game Le jeu
+ * @return Si le joueur à réussi à s'enfuir ou non
+ */
 int tryToEscape(Position* position, Game* game){
-    int random = getRandomNumber(0) % 3;
+    int random = getRandomNumber(0) % 3; // 33% de chance de pouvoir s'enfuir
     if(random == 0){
         printMessage("Vous avez fui !");
         position->x = game->position->x;
@@ -118,6 +150,16 @@ int tryToEscape(Position* position, Game* game){
     }
 }
 
+/**
+ * Exécute l'action de combat choisi par le joueur
+ * @param action L'action
+ * @param monster Le monstre
+ * @param game Le jeu
+ * @param weapon L'arme du joueur
+ * @param armor L'armure du joueur
+ * @param position La position du monstre
+ * @return Si le combat est fini ou non
+ */
 int actionFight(char action, Monster* monster, Game* game, Inventory* weapon, Inventory* armor, Position* position){
     int isOver = 0;
     switch (action) {
@@ -148,6 +190,13 @@ int actionFight(char action, Monster* monster, Game* game, Inventory* weapon, In
     return isOver;
 }
 
+/**
+ * La soumission des dégâts du monstre au joueur
+ * @param monster Le monstre
+ * @param game Le jeu
+ * @param armor L'armure du joueur
+ * @return Si le joueur est mort ou en vie
+ */
 int sufferDamage(Monster* monster, Game* game, Inventory* armor){
     int protection = 0;
     if(armor != NULL){
@@ -170,6 +219,12 @@ int sufferDamage(Monster* monster, Game* game, Inventory* armor){
     return 0;
 }
 
+/**
+ * Commence le combat contre le monstre
+ * @param id L'ID du monstre
+ * @param game Le jeu
+ * @param position La position du monstre
+ */
 void startFight(int id, Game* game, Position position){
     Inventory* weapon = choiceWeapon(game->player);     //choix arme
     Inventory* armor = choiceArmor(game->player);

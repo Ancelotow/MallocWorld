@@ -55,6 +55,7 @@ void play(Game* game){
         scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
         scanf("%c", &input); // TODO: Pourquoi il faut 2 scanf ?
         if(input == CMD_SAVE){
+            respawnAllElement(game);
             saveGame(*game);
             continueGame = 0;
         } else if(input == CMD_INVENTORY) {

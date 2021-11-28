@@ -63,7 +63,7 @@ void updateAllRespawn(Game *game) {
 }
 
 /**
- *
+ * Fait réapparaître tout les éléments dans le jeu
  * @param game Le jeu
  */
 void respawnAllElement(Game *game){
