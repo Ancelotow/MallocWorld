@@ -12,10 +12,10 @@
 #include "../../header/global.h"
 
 /**
- * Fonction qui créer un Storage
- * @param id
- * @param quantity
- * @return
+ * Création d'un stockage
+ * @param id L'ID de l'inventaire
+ * @param quantity La quantité
+ * @return Le stockage
  */
 Storage* createStorage(int id, int quantity) {
     Storage *storage = malloc(sizeof(Storage));
@@ -25,6 +25,11 @@ Storage* createStorage(int id, int quantity) {
     return storage;
 }
 
+/**
+ * Ajoute un stockage dans la liste chaînée des stockage
+ * @param game Le jeu
+ * @param newStorage Le stockage
+ */
 void appendStorage(Game* game, Storage* newStorage) {
     if(game->storage == NULL){
         game->storage = newStorage;
@@ -37,6 +42,12 @@ void appendStorage(Game* game, Storage* newStorage) {
     }
 }
 
+/**
+ * Récupération d'inventaires depuis le stockage
+ * @param game Le jeu
+ * @param id L'ID de l'inventaire à récupérer
+ * @param quantity La quantité à récupérer
+ */
 void retrieveFromStorage(Game *game, int id, int quantity) {
     Storage *current = game->storage;
     Storage *parent = NULL;
@@ -68,6 +79,12 @@ void retrieveFromStorage(Game *game, int id, int quantity) {
     }
 }
 
+/**
+ * Stocke un inventaire dans le stockage
+ * @param game Le jeu
+ * @param id L'ID de l'inventaire à stocker
+ * @param quantity La quantité à stocker
+ */
 void storeIntoStorage(Game *game, int id, int quantity) {
     int length = getQuantityInventory(*game->player, id);
     if (length < quantity) {
@@ -107,8 +124,8 @@ void printStorage(Storage *storage) {
 }
 
 /**
- * Libère le tableau de Storage
- * @param storage
+ * Libère la mémoire du stockage
+ * @param storage Le stockage
  */
 void freeStorage(Storage *storage) {
     if (storage->next != NULL) {

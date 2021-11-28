@@ -9,9 +9,9 @@
 #include "../../header/global.h"
 
 /**
- * Fonction qui créer une pile
- * @param inventory
- * @return
+ * Création d'une pile d'inventaire
+ * @param inventory L'inventaire à empiler
+ * @return La pile d'inventaire
  */
 Stack *createStack(Inventory inventory) {
     Stack *stack = malloc(sizeof(Stack));
@@ -22,12 +22,23 @@ Stack *createStack(Inventory inventory) {
     return stack;
 }
 
+/**
+ * Création d'une pile d'inventaire et en ajoute un dans la pile
+ * @param inventory L'inventaire à empiler
+ * @return La pile d'inventaire
+ */
 Stack *createStackWithInventory(Inventory *inventory) {
     Stack *stack = createStack(*inventory);
     appendStack(inventory, stack);
     return stack;
 }
 
+/**
+ * Ajoute un inventaire dans la pile
+ * @param inventory L'inventaire
+ * @param stack La pile
+ * @return Si l'inventaire à été ajouté ou non
+ */
 int appendStack(Inventory *inventory, Stack *stack) {
     if (stack->length < stack->maximum) {
         stack->inventory[stack->length] = inventory;
@@ -38,6 +49,10 @@ int appendStack(Inventory *inventory, Stack *stack) {
     }
 }
 
+/**
+ * Fonction test pour afficher une pile d'inventaire
+ * @param stack La pile
+ */
 void printStackDebug(Stack stack) {
     Inventory *inv = getInventoryFromId(stack.id);
     printf("\n\n=========== %s : %s  ||  %d/%d ===========\n", getInventoryTypeName(inv->type), inv->name, stack.length,
@@ -49,8 +64,8 @@ void printStackDebug(Stack stack) {
 }
 
 /**
- * Affiche la pile
- * @param stack
+ * Affiche une pile d'inventaire
+ * @param stack La pile
  */
 void printStack(Stack stack) {
     Inventory *inv = getInventoryFromId(stack.id);
@@ -64,9 +79,9 @@ void printStack(Stack stack) {
 }
 
 /**
- * Supprime la pile
- * @param index où se trouve la pile dans la liste
- * @param stack
+ * Suppression d'un inventaire dans la pile
+ * @param index L'index de l'inventaire à supprimer
+ * @param stack La pile
  */
 void deleteStack(int index, Stack *stack) {
     if (stack->length > 0 && index < stack->length) {
@@ -79,8 +94,8 @@ void deleteStack(int index, Stack *stack) {
 }
 
 /**
- * Libère le tableau de Stack
- * @param stack
+ * Libère la pile de la mémoire
+ * @param stack La pile
  */
 void freeStack(Stack *stack) {
     for (int i = 0; i < stack->length; i++) {

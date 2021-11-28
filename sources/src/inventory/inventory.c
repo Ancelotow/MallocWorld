@@ -9,14 +9,14 @@
 #include "../../header/global.h"
 
 /**
- * Fonction qui créer un inventaire
- * @param id de la ressource
- * @param name
- * @param value
- * @param durability si c'est une arme ou si c'est une ressource = 1
- * @param maxStack
- * @param type
- * @return
+ * Création d'un inventaire
+ * @param id L'ID
+ * @param name Le nom
+ * @param value La valeur (dégâts, sauvegarde de dégâts, nombre de HP restaurer)
+ * @param durability La durabilité
+ * @param maxStack L'empilation max
+ * @param type Le type (Armure, Arme, Outil, Ressource, Potion)
+ * @return L'inventaire créé
  */
 Inventory* createInventory(int id, char* name, int value, float durability, int maxStack, InventoryType type){
     Inventory* inventory = malloc(sizeof(Inventory));
@@ -24,6 +24,8 @@ Inventory* createInventory(int id, char* name, int value, float durability, int 
     inventory->value = value;
     inventory->name = copyString(name);
     switch(type){
+
+        // Si c'est un soin ou une ressource, il n'y a pas de durabilité
         case CARE:
         case RESOURCE:
             inventory->durability = 0.00f;
@@ -31,6 +33,7 @@ Inventory* createInventory(int id, char* name, int value, float durability, int 
             inventory->maxStack = maxStack;
             break;
 
+        // Si c'est un soin, une ressource ou un outil, l'empilement max est de 1
         default:
         case ARMOR:
         case WEAPON:
@@ -44,6 +47,10 @@ Inventory* createInventory(int id, char* name, int value, float durability, int 
     return inventory;
 }
 
+/**
+ * Fonction de test pour afficher un inventaire
+ * @param inventory L'inventaire
+ */
 void printInventoryDebug(Inventory inventory){
     printf("\t -");
     switch(inventory.type){
@@ -71,8 +78,8 @@ void printInventoryDebug(Inventory inventory){
 }
 
 /**
- * Affiche l'inventaire
- * @param inventory
+ * Affiche un inventaire
+ * @param inventory L'inventaire
  */
 void printInventory(Inventory inventory){
     printf("||\t -");
@@ -100,9 +107,9 @@ void printInventory(Inventory inventory){
 }
 
 /**
- * Fonction qui permet de récupérer les ressources de l'inventaire en fonction du type
- * @param type
- * @return
+ * Récupération du nom d'un type d'inventaire
+ * @param type Le type d'inventaire
+ * @return Le nom du type d'inventaire
  */
 char* getInventoryTypeName(InventoryType type){
     switch(type){
@@ -127,15 +134,19 @@ char* getInventoryTypeName(InventoryType type){
 }
 
 /**
- * Libère le tableau d'inventaire
- * @param inventory
+ * Libère de la mémoire l'inventaire
+ * @param inventory L'inventaire
  */
 void freeInventory(Inventory* inventory){
     free(inventory->name);
     free(inventory);
 }
 
-
+/**
+ * Récupération d'un inventaire depuis le CSV en fonction de l'ID
+ * @param id L'ID de l'inventaire
+ * @return L'inventaire
+ */
 Inventory* getInventoryFromId(int id){
     FILE* csv = fopen(FILENAME_INVENTORIES, "r");
     if(csv != NULL){

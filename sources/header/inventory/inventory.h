@@ -37,37 +37,47 @@ typedef struct Inventory{
 } Inventory;
 
 /**
- * Get name of inventory type
- * @param type Inventory type
- * @return Name of inventory type
+ * Récupération du nom d'un type d'inventaire
+ * @param type Le type d'inventaire
+ * @return Le nom du type d'inventaire
  */
 char* getInventoryTypeName(InventoryType type);
 
 /**
- * Create an inventory's object
- * @param id Object's id
- * @param name Object's name (ex: "Sword of Excalibur")
- * @param value Object's value (ex: 13 of damage for weapons)
- * @param durability Object's durability
- * @param type Object's type (Tool, Weapon, Armor, Resource, Care)
- * @return Inventory's object created
+ * Création d'un inventaire
+ * @param id L'ID
+ * @param name Le nom
+ * @param value La valeur (dégâts, sauvegarde de dégâts, nombre de HP restaurer)
+ * @param durability La durabilité
+ * @param maxStack L'empilation max
+ * @param type Le type (Armure, Arme, Outil, Ressource, Potion)
+ * @return L'inventaire créé
  */
 Inventory* createInventory(int id, char* name, int value, float durability, int maxStack, InventoryType type);
 
 /**
- * Printed into the console the information about an inventory's object
- * @param inventory Inventory's object
+ * Fonction de test pour afficher un inventaire
+ * @param inventory L'inventaire
  */
 void printInventoryDebug(Inventory inventory);
 
+/**
+ * Affiche un inventaire
+ * @param inventory L'inventaire
+ */
 void printInventory(Inventory inventory);
 
 /**
- * Free inventory object (including name) from memory
- * @param inventory
+ * Libère de la mémoire l'inventaire
+ * @param inventory L'inventaire
  */
 void freeInventory(Inventory* inventory);
 
+/**
+ * Récupération d'un inventaire depuis le CSV en fonction de l'ID
+ * @param id L'ID de l'inventaire
+ * @return L'inventaire
+ */
 Inventory* getInventoryFromId(int id);
 
 #endif //MALLOCWORLD_INVENTORY_H
