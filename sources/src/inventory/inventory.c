@@ -8,6 +8,16 @@
 
 #include "../../header/global.h"
 
+/**
+ * Fonction qui créer un inventaire
+ * @param id de la ressource
+ * @param name
+ * @param value
+ * @param durability si c'est une arme ou si c'est une ressource = 1
+ * @param maxStack
+ * @param type
+ * @return
+ */
 Inventory* createInventory(int id, char* name, int value, float durability, int maxStack, InventoryType type){
     Inventory* inventory = malloc(sizeof(Inventory));
     inventory->id = id;
@@ -60,6 +70,10 @@ void printInventoryDebug(Inventory inventory){
     printf("\n");
 }
 
+/**
+ * Affiche l'inventaire
+ * @param inventory
+ */
 void printInventory(Inventory inventory){
     printf("||\t -");
     switch(inventory.type){
@@ -85,6 +99,11 @@ void printInventory(Inventory inventory){
     }
 }
 
+/**
+ * Fonction qui permet de récupérer les ressources de l'inventaire en fonction du type
+ * @param type
+ * @return
+ */
 char* getInventoryTypeName(InventoryType type){
     switch(type){
         case WEAPON:
@@ -107,10 +126,15 @@ char* getInventoryTypeName(InventoryType type){
     }
 }
 
+/**
+ * Libère le tableau d'inventaire
+ * @param inventory
+ */
 void freeInventory(Inventory* inventory){
     free(inventory->name);
     free(inventory);
 }
+
 
 Inventory* getInventoryFromId(int id){
     FILE* csv = fopen(FILENAME_INVENTORIES, "r");

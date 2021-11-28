@@ -8,7 +8,12 @@
 
 #include "../../header/global.h"
 
-
+/**
+ * Fonction qui créer un Respawn pour repop les ressources ou monstres
+ * @param id de la ressource ou du montre
+ * @param position de celui ci
+ * @return
+ */
 Respawn *createRespawn(int id, Position *position) {
     Respawn *respawn = malloc(sizeof(Respawn));
     int roundLeft;
@@ -26,6 +31,10 @@ Respawn *createRespawn(int id, Position *position) {
     return respawn;
 }
 
+/**
+ * Enleve un tour pour chaque ressources ou monstres qui doit repop et réapparation de ceux ci si le nombre de tour est fini
+ * @param game
+ */
 void updateAllRespawn(Game *game) {
     Respawn* current = game->respawn;
     Respawn* parent = NULL;
@@ -53,6 +62,12 @@ void updateAllRespawn(Game *game) {
 
 }
 
+/**
+ * Ajoute une ressource ou un montre qui devront réapparaitre
+ * @param respawn Tableau de respawn
+ * @param id de la ressource ou du monstre
+ * @param position de celui ci
+ */
 void appendRespawn(Respawn* respawn, int id, Position* position) {
     if(respawn != NULL){
         while(respawn->child != NULL){
@@ -62,6 +77,10 @@ void appendRespawn(Respawn* respawn, int id, Position* position) {
     }
 }
 
+/**
+ * Affiche les ressources et monstres qui doivent repop avec leur tour restant
+ * @param respawn Tableau de Respawn
+ */
 void printRespawn(Respawn *respawn) {
     if(respawn != NULL){
         printf("ID :%d, Tour restant : %d (", respawn->id, respawn->roundLeft);
@@ -71,6 +90,10 @@ void printRespawn(Respawn *respawn) {
     }
 }
 
+/**
+ * Libére Respawn
+ * @param respawn Tableau de Respawn
+ */
 void freeRespawn(Respawn *respawn) {
     if(respawn != NULL){
         freePosition(respawn->position);

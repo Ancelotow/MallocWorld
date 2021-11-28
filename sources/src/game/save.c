@@ -1,11 +1,19 @@
-//
-// Created by Admin on 20/11/2021.
-//
+/*
+**  Filename : save.c
+**
+**  Made by : Owen ANCELOT
+**
+**  Description : Manage the backup
+*/
 
 #include "../../header/global.h"
 
 #define PATH_SAVE "../resources/save/save.txt"
 
+/**
+ * Sauvegarde le jeu
+ * @param game
+ */
 void saveGame(Game game){
     FILE* file = fopen(PATH_SAVE, "w+");
     if(file != NULL){
@@ -18,6 +26,11 @@ void saveGame(Game game){
     }
 }
 
+/**
+ * Sauvegarde le monde
+ * @param file
+ * @param world
+ */
 void saveWorld(FILE* file, World world){
     fputs("=== MAP ===\n", file);
     for(int i = 0; i < NB_ZONE; i++){
@@ -25,6 +38,11 @@ void saveWorld(FILE* file, World world){
     }
 }
 
+/**
+ * Sauvegarde la position du joueur et la zone
+ * @param file
+ * @param zone
+ */
 void saveZone(FILE* file, Zone zone){
     fprintf(file, "-- ZONE %d --\n", zone.type);
     for(int i = 0; i < zone.row; i++){
@@ -38,6 +56,11 @@ void saveZone(FILE* file, Zone zone){
     }
 }
 
+/**
+ * Sauvegarde les paramètres du joueurs (vie, niveau, expérience)
+ * @param file
+ * @param player
+ */
 void savePlayer(FILE* file, Player player){
     fputs("=== PLAYER ===\n", file);
     fprintf(file, "{%d}\n", player.level);
@@ -47,6 +70,11 @@ void savePlayer(FILE* file, Player player){
     savePlayerInventory(file, player);
 }
 
+/**
+ * Sauvegarde l'inventaire du joueur
+ * @param file
+ * @param player
+ */
 void savePlayerInventory(FILE* file, Player player){
     Inventory* inv;
     for(int i = 0; i < 20; i++){
@@ -60,6 +88,11 @@ void savePlayerInventory(FILE* file, Player player){
     freeInventory(inv);
 }
 
+/**
+ * Sauvegarde le storage
+ * @param file
+ * @param storage
+ */
 void saveStorage(FILE* file, Storage* storage){
     fputs("-- STORAGE --\n", file);
     while(storage != NULL){

@@ -9,6 +9,12 @@
 
 #include "../../header/global.h"
 
+/**
+ * Permet de miner une ressource
+ * @param game
+ * @param id
+ * @param position
+ */
 void mining(Game *game, int id, Position position) {
     int isUsed = useToolToMining(id, game->player); //cherche outil de minage
     if (isUsed) {

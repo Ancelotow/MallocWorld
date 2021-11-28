@@ -11,6 +11,12 @@
 #include "../../header/inventory/storage.h"
 #include "../../header/global.h"
 
+/**
+ * Fonction qui créer un Storage
+ * @param id
+ * @param quantity
+ * @return
+ */
 Storage* createStorage(int id, int quantity) {
     Storage *storage = malloc(sizeof(Storage));
     storage->id = id;
@@ -83,6 +89,10 @@ void storeIntoStorage(Game *game, int id, int quantity) {
     }
 }
 
+/**
+ * Affiche le Storage
+ * @param storage
+ */
 void printStorage(Storage *storage) {
     Storage *current = storage;
     Inventory *inv;
@@ -96,6 +106,10 @@ void printStorage(Storage *storage) {
     printf("==============================================\n\n");
 }
 
+/**
+ * Libère le tableau de Storage
+ * @param storage
+ */
 void freeStorage(Storage *storage) {
     if (storage->next != NULL) {
         freeStorage(storage->next);

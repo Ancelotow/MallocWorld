@@ -8,6 +8,11 @@
 
 #include "../../header/global.h"
 
+/**
+ * Fonction qui créer une pile
+ * @param inventory
+ * @return
+ */
 Stack *createStack(Inventory inventory) {
     Stack *stack = malloc(sizeof(Stack));
     stack->id = inventory.id;
@@ -43,6 +48,10 @@ void printStackDebug(Stack stack) {
     freeInventory(inv);
 }
 
+/**
+ * Affiche la pile
+ * @param stack
+ */
 void printStack(Stack stack) {
     Inventory *inv = getInventoryFromId(stack.id);
     printf("||\n");
@@ -54,6 +63,11 @@ void printStack(Stack stack) {
     freeInventory(inv);
 }
 
+/**
+ * Supprime la pile
+ * @param index où se trouve la pile dans la liste
+ * @param stack
+ */
 void deleteStack(int index, Stack *stack) {
     if (stack->length > 0 && index < stack->length) {
         for (int i = index + 1; i < stack->length; i++) {
@@ -64,6 +78,10 @@ void deleteStack(int index, Stack *stack) {
     }
 }
 
+/**
+ * Libère le tableau de Stack
+ * @param stack
+ */
 void freeStack(Stack *stack) {
     for (int i = 0; i < stack->length; i++) {
         freeInventory(stack->inventory[i]);
