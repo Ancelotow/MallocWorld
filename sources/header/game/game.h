@@ -67,4 +67,12 @@ void freeGame(Game* game);
  */
 void printMessage(char* message);
 
+/**
+ * Execute l'action du joueur
+ * @param action L'action du joueur
+ * @param game le jeu
+ * @return Si le jeu continue ou non
+ */
+int executeActionPlayer(char action, Game* game);
+
 #endif //MALLOCWORLD_GAME_H

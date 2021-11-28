@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/MallocWorld.dir/sources/src/agents/player.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/game/game.c.obj"
-  "CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/game/save.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/global.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/inventory/inventory.c.obj"

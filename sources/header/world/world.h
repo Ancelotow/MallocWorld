@@ -10,7 +10,6 @@
 #define MALLOCWORLD_WORLD_H
 
 typedef struct Zone Zone;
-#include <stdio.h>
 
 #define NB_ZONE 3
 

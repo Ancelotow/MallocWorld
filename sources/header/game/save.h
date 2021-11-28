@@ -9,6 +9,8 @@
 #ifndef MALLOCWORLD_SAVE_H
 #define MALLOCWORLD_SAVE_H
 
+#include <stdio.h>
+
 typedef struct Zone Zone;
 
 /**

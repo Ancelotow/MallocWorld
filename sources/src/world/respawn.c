@@ -111,7 +111,6 @@ void printRespawn(Respawn *respawn) {
  */
 void freeRespawn(Respawn *respawn) {
     if(respawn != NULL){
-        freePosition(respawn->position);
         freeRespawn(respawn->child);
         free(respawn);
     }

@@ -9,11 +9,9 @@
 #ifndef MALLOCWORLD_GLOBAL_H
 #define MALLOCWORLD_GLOBAL_H
 
-#include <stdio.h>
 #include "world/position.h"
 #include "game/game.h"
 #include "game/save.h"
-#include "game/restore.h"
 #include "agent/monster.h"
 #include "agent/player.h"
 #include "agent/pnj.h"
@@ -34,8 +32,6 @@
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
-#define SDL_MAIN_HANDLED
-#include <SDL2/SDL.h>
 
 
 /**
