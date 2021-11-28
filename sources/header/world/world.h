@@ -19,20 +19,20 @@ typedef struct World{
 } World;
 
 /**
- * Generate the world
- * @return The world generated
+ * Génération du monde
+ * @return Le monde généré
  */
 World* generateWorld();
 
 /**
- * Printed into the console the world
- * @param world The world
+ * Affiche le monde
+ * @param world Le monde
  */
 void printOriginalWorld(World world);
 
 /**
- * Free the world (including zone and respawn) from memory
- * @param world The world
+ * Libère le monde de la mémoire
+ * @param world Le monde
  */
 void freeWorld(World* world);
 

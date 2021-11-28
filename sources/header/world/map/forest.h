@@ -11,6 +11,10 @@
 
 typedef struct Zone Zone;
 
+/**
+ * Génération d'une zone de type "Foret"
+ * @param zone La zone vide
+ */
 void generateForest(Zone* zone);
 
 #endif //MALLOCWORLD_FOREST_H
