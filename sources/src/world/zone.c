@@ -15,8 +15,8 @@
  */
 Zone* generateZone(TypeZone type){
     Zone* zone = malloc(sizeof(Zone));
-    zone->row = 20; //getRandomNumber(20);
-    zone->column = 20; //getRandomNumber(20);
+    zone->row = getRandomNumber(20);
+    zone->column = getRandomNumber(20);
     zone->type = type;
     zone->map = malloc(sizeof(int*) * zone->row);
     for(int i=0; i < zone->row; i++){
