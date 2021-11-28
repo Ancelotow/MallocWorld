@@ -129,11 +129,11 @@ int actionFight(char action, Monster* monster, Game* game, Inventory* weapon, In
             isOver = tryToEscape(position, game);
             break;
 
-        case CMD_FIGHT_HEALTH:
+        case CMD_FIGHT_HEALTH:  //se soigner
             usePotion(game->player);
             break;
 
-        case CMD_FIGHT_WEAPON:
+        case CMD_FIGHT_WEAPON:  //changer arme
             weapon = choiceWeapon(game->player);
             break;
 
@@ -171,7 +171,7 @@ int sufferDamage(Monster* monster, Game* game, Inventory* armor){
 }
 
 void startFight(int id, Game* game, Position position){
-    Inventory* weapon = choiceWeapon(game->player);
+    Inventory* weapon = choiceWeapon(game->player);     //choix arme
     Inventory* armor = choiceArmor(game->player);
     Position* posMonster = createPositionFromExisting(position);
     Monster* monster = getMonsterFromId(id);
@@ -191,8 +191,8 @@ void startFight(int id, Game* game, Position position){
         }
     } while(!isFinished);
     Inventory* inventoryMonster = getInventoryFromId(monster->idInventory);
-    appendInventory(game->player, inventoryMonster);
-    appendRespawn(game->respawn, monster->id, posMonster);
+    appendInventory(game->player, inventoryMonster);    //ajouter le monstre à l'inventaire
+    appendRespawn(game->respawn, monster->id, posMonster);  //permet de repop
     game->position->x = posMonster->x;
     game->position->y = posMonster->y;
     game->world->world[game->position->zone]->map[game->position->y][game->position->x] = 1;

@@ -25,9 +25,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/ext/sdl/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
@@ -47,9 +44,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/ext/sdl/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
@@ -82,10 +76,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/action/crafting.h">
+			<Option target="MallocWorld"/>
+		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/action/fight.h">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/action/mining.h">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/action/moving.h">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/header/agent/monster.h">
@@ -139,10 +139,16 @@
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/main.c">
 			<Option target="MallocWorld"/>
 		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/crafting.c">
+			<Option target="MallocWorld"/>
+		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/fight.c">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/mining.c">
+			<Option target="MallocWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/action/moving.c">
 			<Option target="MallocWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/agents/monster.c">

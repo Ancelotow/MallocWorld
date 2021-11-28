@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MallocWorld.dir/sources/main.c.obj"
+  "CMakeFiles/MallocWorld.dir/sources/src/action/crafting.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/action/fight.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/action/mining.c.obj"
+  "CMakeFiles/MallocWorld.dir/sources/src/action/moving.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/agents/monster.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/agents/player.c.obj"
   "CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.obj"
