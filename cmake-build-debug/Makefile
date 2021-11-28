@@ -344,30 +344,6 @@ sources/src/game/game.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/game.c.s
 .PHONY : sources/src/game/game.c.s
 
-sources/src/game/restore.obj: sources/src/game/restore.c.obj
-.PHONY : sources/src/game/restore.obj
-
-# target to build an object file
-sources/src/game/restore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj
-.PHONY : sources/src/game/restore.c.obj
-
-sources/src/game/restore.i: sources/src/game/restore.c.i
-.PHONY : sources/src/game/restore.i
-
-# target to preprocess a source file
-sources/src/game/restore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.i
-.PHONY : sources/src/game/restore.c.i
-
-sources/src/game/restore.s: sources/src/game/restore.c.s
-.PHONY : sources/src/game/restore.s
-
-# target to generate assembly for a file
-sources/src/game/restore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MallocWorld.dir\build.make CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.s
-.PHONY : sources/src/game/restore.c.s
-
 sources/src/game/save.obj: sources/src/game/save.c.obj
 .PHONY : sources/src/game/save.obj
 
@@ -668,9 +644,6 @@ help:
 	@echo ... sources/src/game/game.obj
 	@echo ... sources/src/game/game.i
 	@echo ... sources/src/game/game.s
-	@echo ... sources/src/game/restore.obj
-	@echo ... sources/src/game/restore.i
-	@echo ... sources/src/game/restore.s
 	@echo ... sources/src/game/save.obj
 	@echo ... sources/src/game/save.i
 	@echo ... sources/src/game/save.s

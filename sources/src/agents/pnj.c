@@ -81,7 +81,7 @@ void repairPlayerInventory(Player* player){
 }
 
 /**
- * Stocke de l'inventaire dans le stockage
+ * Stocke de l'inventaire dans le storage
  * @param game Le jeu
  */
 void stockStorage(Game* game){
@@ -103,7 +103,7 @@ void stockStorage(Game* game){
 }
 
 /**
- * Récupère un inventaire du stockage
+ * Récupère un inventaire du storage
  * @param game Le jeu
  */
 void retrieveStorage(Game* game){

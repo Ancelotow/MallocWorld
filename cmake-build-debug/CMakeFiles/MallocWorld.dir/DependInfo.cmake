@@ -17,7 +17,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/agents/player.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/agents/player.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/agents/pnj.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/agents/pnj.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game/game.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/game/game.c.obj"
-  "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game/restore.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/game/restore.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/game/save.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/game/save.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/global.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/global.c.obj"
   "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/sources/src/inventory/inventory.c" "C:/Users/Elsa Firmin/CLionProjects/MallocWorld/cmake-build-debug/CMakeFiles/MallocWorld.dir/sources/src/inventory/inventory.c.obj"
