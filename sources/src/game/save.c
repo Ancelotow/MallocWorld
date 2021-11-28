@@ -12,7 +12,7 @@
 
 /**
  * Sauvegarde le jeu
- * @param game
+ * @param game Le jeu
  */
 void saveGame(Game game){
     FILE* file = fopen(PATH_SAVE, "w+");
@@ -28,8 +28,8 @@ void saveGame(Game game){
 
 /**
  * Sauvegarde le monde
- * @param file
- * @param world
+ * @param file Le fichier
+ * @param world Le monde
  */
 void saveWorld(FILE* file, World world){
     fputs("=== MAP ===\n", file);
@@ -39,9 +39,9 @@ void saveWorld(FILE* file, World world){
 }
 
 /**
- * Sauvegarde la position du joueur et la zone
- * @param file
- * @param zone
+ * Sauvegarde la zone
+ * @param file Le fichier
+ * @param zone La zone
  */
 void saveZone(FILE* file, Zone zone){
     fprintf(file, "-- ZONE %d --\n", zone.type);
@@ -58,8 +58,8 @@ void saveZone(FILE* file, Zone zone){
 
 /**
  * Sauvegarde les paramètres du joueurs (vie, niveau, expérience)
- * @param file
- * @param player
+ * @param file Le fichier
+ * @param player Le joueur
  */
 void savePlayer(FILE* file, Player player){
     fputs("=== PLAYER ===\n", file);
@@ -72,8 +72,8 @@ void savePlayer(FILE* file, Player player){
 
 /**
  * Sauvegarde l'inventaire du joueur
- * @param file
- * @param player
+ * @param file Le fichier
+ * @param player Le joueur
  */
 void savePlayerInventory(FILE* file, Player player){
     Inventory* inv;
@@ -89,9 +89,9 @@ void savePlayerInventory(FILE* file, Player player){
 }
 
 /**
- * Sauvegarde le storage
- * @param file
- * @param storage
+ * Sauvegarde le stockage
+ * @param file Le fichier
+ * @param storage Le stockage
  */
 void saveStorage(FILE* file, Storage* storage){
     fputs("-- STORAGE --\n", file);

@@ -20,6 +20,9 @@
 #define CMD_RIGHT 'd'
 #define CMD_MAP 'm'
 
+/**
+ * Lance le jeu
+ */
 void runGame(){
     char input[50];
     printf("\nSouhaitez-vous creer (%s) ou charger (%s) une partie ?", CMD_CREATE_GAME, CMD_LOAD_GAME);
@@ -36,6 +39,10 @@ void runGame(){
     }
 }
 
+/**
+ * Intéraction avec le joueur pour qu'il puisse jouer sont personnage
+ * @param game le jeu
+ */
 void play(Game* game){
     int continueGame = 1;
     int restart = 0;
@@ -68,6 +75,10 @@ void play(Game* game){
     }
 }
 
+/**
+ * Création du jeu à partir de zéro
+ * @return Le jeu
+ */
 Game* createVoidGame(){
     Game* game = malloc(sizeof(Game));
     game->world = generateWorld();
@@ -78,6 +89,11 @@ Game* createVoidGame(){
     return game;
 }
 
+/**
+ * Prévoie le déplacement du joueur pour savoir s'il doit miner, se battre, etc...
+ * @param move Direction de déplacement
+ * @param game Le jeu
+ */
 void movePlayer(char move, Game* game){
     Position newPosition = *game->position;
     switch(move){
@@ -106,6 +122,11 @@ void movePlayer(char move, Game* game){
     }
 }
 
+/**
+ * Execute l'action en fonction de la case où veux aller le joueur
+ * @param newPosition La nouvelle postion (la case que cible le joueur)
+ * @param game Le jeu
+ */
 void executeAction(Position newPosition, Game* game){
     int id =  game->world->world[newPosition.zone]->map[newPosition.y][newPosition.x];
     if(isResource(id)){
@@ -125,6 +146,10 @@ void executeAction(Position newPosition, Game* game){
     updateAllRespawn(game);
 }
 
+/**
+ * Libère le jeu de la mémoire
+ * @param game Le jeu
+ */
 void freeGame(Game* game){
     freeWorld(game->world);
     freePosition(game->position);
@@ -133,6 +158,10 @@ void freeGame(Game* game){
     free(game);
 }
 
+/**
+ * Affiche un message
+ * @param message Le message
+ */
 void printMessage(char* message){
     printf("\n\n============================================\n");
     printf("|| %s\n", message);
