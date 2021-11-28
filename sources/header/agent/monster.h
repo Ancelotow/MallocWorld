@@ -33,36 +33,42 @@ typedef struct Monster{
 } Monster;
 
 /**
- * Created a monster
- * @param id Monster's id
- * @param name Monsters's name
- * @param race Monster's race (ex: Goblin, Dark Elf, Orc, ...)
- * @param xp Monster's experience gain
- * @param damage Monster's damage
- * @param idInventory Monster's object when he's defeated
- * @return A monster
+ * La création d'un monstre
+ * @param id L'ID du monstre
+ * @param name Le nom du monstre
+ * @param breed La race du monstre
+ * @param xp L'expérience que rapporte le monstre
+ * @param damage Les dégâts qu'inflige le monstre
+ * @param idInventory L'ID de l'inventaire que laisse tomber une fois battu
+ * @param hp Les points de vies du monstre
+ * @return Le monstre
  */
 Monster* createMonster(int id, char* name, MonsterBreed breed, int xp, int damage, int idInventory, int hp);
 
 /**
- * Get name of a monster race
- * @param race Race monster
- * @return Name of a monster race
+ * Récupération du nom de la race du monstre
+ * @param race La race du monstre
+ * @return Le nom de la race du monstre
  */
 char* getMonsterRaceName(MonsterBreed breed);
 
 /**
- * Printed into the console the information about a monster
- * @param monster Monster
+ * Affiche le monstre
+ * @param monster Le monstre
  */
 void printMonster(Monster monster);
 
 /**
- * Free monster (including name and object) from memory
+ * Libère le monstre de la mémoire
  * @param monster
  */
 void freeMonster(Monster* monster);
 
+/**
+ * Récupération du monstre en fonction de l'ID depuis le CSV
+ * @param id L'ID du monstre
+ * @return Le monstre
+ */
 Monster* getMonsterFromId(int id);
 
 #endif //MALLOCWORLD_MONSTER_H

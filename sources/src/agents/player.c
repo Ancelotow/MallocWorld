@@ -10,6 +10,17 @@
 
 const int MAX_INVENTORY = 20;
 
+/**
+ * Création d'un joueur
+ * @param currentHp Les points de vie courant du joueur
+ * @param maxHp Les points de vie max du joueur
+ * @param inventory L'inventaire du joueur
+ * @param sizeInventory Le nombre d'inventaire du joueur
+ * @param level Le niveau du joueur
+ * @param xp L'expérience du joueur
+ * @param xpNext L'expérience nécessaire pour changer de niveau
+ * @return Le joueur
+ */
 Player* createPlayer(int currentHp, int maxHp, Stack** inventory, int sizeInventory, int level, int xp, int xpNext){
     Player* player = malloc(sizeof(Player));
     player->currentHp = currentHp;
@@ -22,10 +33,14 @@ Player* createPlayer(int currentHp, int maxHp, Stack** inventory, int sizeInvent
     return player;
 }
 
-Player* createPlayerLevel1(){   //xp = 100 pour etre au level2 puis doublé pour les autres
+/**
+ * Création d'un joueur de niveau 1
+ * @return Le joueur
+ */
+Player* createPlayerLevel1(){
     int maxHp = 100;
     int currentHp = maxHp;
-    Stack** stack = malloc(sizeof(Stack*) * 20);
+    Stack** stack = malloc(sizeof(Stack*) * 20); // xp = 100 pour être au level 2 puis doublé pour les autres
     stack[0] = createStackWithInventory(getInventoryFromId(1)); // Epée en bois
     stack[1] = createStackWithInventory(getInventoryFromId(2)); // Pioche en bois
     stack[2] = createStackWithInventory(getInventoryFromId(3)); // Serpe en bois
@@ -34,6 +49,12 @@ Player* createPlayerLevel1(){   //xp = 100 pour etre au level2 puis doublé pour
     return player;
 }
 
+/**
+ * Ajoute un inventaire à dans l'inventaire du joueur
+ * @param player Le joueur
+ * @param inventory L'inventaire à ajouter
+ * @return Si l'inventaire à été ajouté ou non
+ */
 int appendInventory(Player* player, Inventory* inventory){
     Stack* stack;
     int stackVacant = 0;
@@ -57,6 +78,10 @@ int appendInventory(Player* player, Inventory* inventory){
     }
 }
 
+/**
+ * Fonction de test pour afficher un joueur
+ * @param player Le joueur
+ */
 void printPlayerDebug(Player player){
     printf("Joueur : %d/%dHP, %d/%dxp, lvl%d\n", player.currentHp, player.maxHp, player.xp, player.xpNext, player.level);
     printf("\t -- INVENTAIRE --\n");
@@ -67,6 +92,11 @@ void printPlayerDebug(Player player){
     }
 }
 
+/**
+ * Affiche l'inventaire du joueur
+ * @param player Le joueur
+ * @param type Le type d'inventaire à afficher (0 pour tout afficher)
+ */
 void printInventoryPlayer(Player player, InventoryType type){
     printf("======================= INVENTAIRE =======================\n");
     Inventory* inventory = NULL;
@@ -86,6 +116,12 @@ void printInventoryPlayer(Player player, InventoryType type){
     printf("==========================================================\n\n");
 }
 
+/**
+ * Récupération du nombre d'inventaire pour un type donné
+ * @param player Le joueur
+ * @param type Le type d'inventaire
+ * @return Le nombre d'inventaire
+ */
 int getLengthInventoryType(Player player, InventoryType type){
     Inventory* inventory = NULL;
     int length = 0;
@@ -105,6 +141,12 @@ int getLengthInventoryType(Player player, InventoryType type){
     return length;
 }
 
+/**
+ * Récupération de la quantité d'un objet donné
+ * @param player Le joueur
+ * @param idInventory L'ID de l'inventaire
+ * @return La quantité
+ */
 int getQuantityInventory(Player player, int idInventory){
     int quantity = 0;
     for(int i = 0; i < player.sizeInventory; i++){
@@ -115,6 +157,10 @@ int getQuantityInventory(Player player, int idInventory){
     return quantity;
 }
 
+/**
+ * Libère le joueur de la mémoire
+ * @param player Le joueur
+ */
 void freePlayer(Player* player){
     for(int i=0; i < player->sizeInventory; i++){
         freeStack(player->inventory[i]);
@@ -123,6 +169,12 @@ void freePlayer(Player* player){
     free(player);
 }
 
+/**
+ * Utilisation d'un outil de minage (change la durabilité)
+ * @param element L'élément miné
+ * @param player Le joueur
+ * @return Si l'outil est utilisable ou non
+ */
 int useToolToMining(Element element, Player* player){
     float usury = getUsury(element);
     float newDurability;
@@ -140,6 +192,11 @@ int useToolToMining(Element element, Player* player){
     return 0;
 }
 
+/**
+ * Gain d'expérience pour le joueur
+ * @param player Le joueur
+ * @param experience L'expérience gagné
+ */
 void gainExperience(Player* player, int experience){
     player->xp += experience;
     if(player->xp >= player->xpNext){
@@ -158,6 +215,12 @@ void gainExperience(Player* player, int experience){
     }
 }
 
+/**
+ * Supprime un nombre d'objet donné de l'inventaire du joueur
+ * @param player Le joueur
+ * @param id L'ID de l'inventaire
+ * @param quantity La quantité à supprimer
+ */
 void removeQuantityInventory(Player* player, int id, int quantity){
     for(int i = 0; i < player->sizeInventory; i++){
         if(player->inventory[i]->id == id){
@@ -179,6 +242,11 @@ void removeQuantityInventory(Player* player, int id, int quantity){
     }
 }
 
+/**
+ * Suppression d'un inventaire à un index donné
+ * @param player Le joueur
+ * @param index L'index à supprimer
+ */
 void deleteInventory(Player* player, int index){
     if(player->sizeInventory > 0 && index < player->sizeInventory){
         freeStack(player->inventory[index]);

@@ -15,6 +15,10 @@
 #define CMD_SEE_COFFER 's'
 #define CMD_CRAFT 'c'
 
+/**
+ * Gère les intéraction du joueur avec le PNJ
+ * @param game Le jeu
+ */
 void interactionWithPnj(Game* game){
     int continueInteraction = 1;
     char chr;
@@ -27,6 +31,12 @@ void interactionWithPnj(Game* game){
     } while(continueInteraction);
 }
 
+/**
+ * Exécute l'action voulu par le joueur
+ * @param action Action
+ * @param game Le jeu
+ * @return Si on quitte le PNJ ou non
+ */
 int actionPNJ(char action, Game* game){
     switch(action){
         case CMD_CRAFT:
@@ -58,6 +68,10 @@ int actionPNJ(char action, Game* game){
     }
 }
 
+/**
+ * Répare tout l'inventaire du joueur
+ * @param player Le joueur
+ */
 void repairPlayerInventory(Player* player){
     for(int i = 0; i < player->sizeInventory; i++){
         for(int j = 0; j < player->inventory[i]->length; j++){
@@ -66,6 +80,10 @@ void repairPlayerInventory(Player* player){
     }
 }
 
+/**
+ * Stocke de l'inventaire dans le stockage
+ * @param game Le jeu
+ */
 void stockStorage(Game* game){
     int continueInteraction = 1;
     char input[50];
@@ -84,6 +102,10 @@ void stockStorage(Game* game){
     } while(continueInteraction);
 }
 
+/**
+ * Récupère un inventaire du stockage
+ * @param game Le jeu
+ */
 void retrieveStorage(Game* game){
     int continueInteraction = 1;
     char input[50];
